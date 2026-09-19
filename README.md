@@ -1,5 +1,9 @@
 # AI Risk Map
 
+![AI Risk Map v1.0 — detail](AI-Risk-Map-v1.0-preview.png)
+
+*Detail of the upper-left. The full poster is [`AI-Risk-Map-v1.0.pdf`](AI-Risk-Map-v1.0.pdf) (print-ready) or [`.png`](AI-Risk-Map-v1.0.png).*
+
 **A single-page visual reference built to improve the quality of AI risk conversations.**
 
 Most teams naturally gravitate toward familiar concerns like hallucinations, prompt injection, and bias. But AI risk extends well beyond the usual talking points. The AI Risk Map helps teams quickly widen their perspective, surface blind spots, and identify overlooked risks before moving into deeper analysis.
@@ -19,6 +23,7 @@ It is not a risk library or exhaustive catalog. It is a practical tool designed 
 | `AI-Risk-Map-Taxonomy-v1.0.xlsx` | The workbook: every factor with its ID, source provenance, cross-references, scope decisions, and version history. | You want to see *why* something is or isn't on the map. |
 | `AI-Risk-Map-v1.0.md` | The full corpus in one markdown file — factors plus all the reasoning, with a self-contained header. | You want to load the map into your own AI assistant and ask it questions. **Start here if you do that.** |
 | `AI-Risk-Map-v1.0.csv` | Flat table, one row per factor, frozen nine-column schema. | You are mapping controls, tools, or systems to the map programmatically. |
+| `AI-Risk-Map-v1.0-preview.png` | Cropped detail used at the top of this page. | Social posts, slides — a readable teaser. |
 | `LICENSE` | CC BY-SA 4.0 legal text. | |
 
 
@@ -84,7 +89,7 @@ Every factor carries a source citation in the workbook and markdown. Sources spa
 Crosswalked against fifteen frameworks; stress-tested through persona review and named-expert critique; reviewed by external practitioners; used as the validation standard for a separate 264-control catalog built on the CSA AI Controls Matrix; and put through a full citation audit before release in which every source locator was verified against the primary text and every `Original` tag was checked against every cited framework. The workbook's provenance appendix shows how many factors each source anchors.
 
 **How do I cite it?**
-> Wheeler, E. (2026). *AI Risk Map* v1.0. Licensed CC BY-SA 4.0. [repository URL]
+> Wheeler, E. (2026). *AI Risk Map* v1.0. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map
 
 Cite individual factors by ID: `AIRM-042`.
 
