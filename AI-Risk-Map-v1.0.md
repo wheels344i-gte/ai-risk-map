@@ -712,7 +712,7 @@ Excluded by the incremental-risk lens — already on every enterprise register.
 Kept only the slice the enterprise owns (its workforce, its reputation).
 
 **Pure controls and threats**  
-Excluded by form; leaves are risk statements, not 'MFA' or 'an attacker'.
+Excluded by form; entries are risk factors — conditions and failure modes — never a control ('MFA') or a threat actor ('an attacker').
 
 
 ### Retained when challenged
@@ -816,7 +816,7 @@ Factor wording changes between versions. IDs do not. Cite IDs.
 
 | Version | Date | Factors | What changed |
 |---|---|---|---|
-| **v1.0** | September 2026 | 189 | First public release. 12 domains, 54 categories, 189 risk factors, each with a permanent identifier (AIRM-001 onward). Structure: organized by the enterprise function that owns the risk, not by AI lifecycle. Scope: risk arising from the organization's own adoption of AI. Validation before release: crosswalked against fifteen frameworks and regulations; persona and named-expert critique; five rounds of external practitioner review; used as the validation standard for an independent 264-control catalog; and a full citation audit in which every named source locator was verified against the primary text and every factor tagged Original was checked against every cited framework. Result: 189 of 189 factors traceable; 98 carry the author's framing; 30 are named by no reviewed framework. From this version, changes are recorded at factor grain on the Change log sheet, and identifiers never change. |
+| **v1.0** | September 2026 | 189 | First public release. 12 domains, 54 categories, 189 risk factors, each with a permanent identifier (AIRM-001 onward). Structure: organized by the enterprise function that owns the risk, not by AI lifecycle. Scope: risk arising from the organization's own adoption of AI. Validation before release: crosswalked against 22 frameworks, regulations, and taxonomies; persona and named-expert critique; several rounds of external practitioner review; used as the validation standard for an independent 264-control catalog; and a full citation audit in which every named source locator was verified against the primary text and every factor tagged Original was checked against every cited framework. Result: 189 of 189 factors traceable; 98 carry the author's framing; 30 are named by no reviewed framework. From this version, changes are recorded at factor grain on the Change log sheet, and identifiers never change. |
 
 ---
 
