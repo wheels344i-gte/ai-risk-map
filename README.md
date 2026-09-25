@@ -1,8 +1,8 @@
 # AI Risk Map
 
-![AI Risk Map v1.0 — detail](AI-Risk-Map-v1.0-preview.png)
+![AI Risk Map — detail](AI-Risk-Map-preview.png)
 
-*Detail of the upper-left. The full poster is [`AI-Risk-Map-v1.0.pdf`](AI-Risk-Map-v1.0.pdf) (print-ready) or [`.png`](AI-Risk-Map-v1.0.png).*
+*Detail of the upper-left. The full poster is [`AI-Risk-Map.pdf`](AI-Risk-Map.pdf) (print-ready) or [`.png`](AI-Risk-Map.png).*
 
 **A single-page visual reference built to improve the quality of AI risk conversations.**
 
@@ -18,12 +18,12 @@ It is not a risk library or exhaustive catalog. It is a practical tool designed 
 
 | File | What it is | Use it when |
 |---|---|---|
-| `AI-Risk-Map-v1.0.pdf` | The poster. Print-ready at 48×36 in (ARCH E). | You want it on the wall, or in the workshop. |
-| `AI-Risk-Map-v1.0.png` / `.svg` | Same poster, raster and vector. | Slides, intranet pages, editing the graphic. |
-| `AI-Risk-Map-Taxonomy-v1.0.xlsx` | The workbook: every factor with its ID, source provenance, cross-references, scope decisions, and version history. | You want to see *why* something is or isn't on the map. |
-| `AI-Risk-Map-v1.0.md` | The full corpus in one markdown file — factors plus all the reasoning, with a self-contained header. | You want to load the map into your own AI assistant and ask it questions. **Start here if you do that.** |
-| `AI-Risk-Map-v1.0.csv` | Flat table, one row per factor, frozen nine-column schema. | You are mapping controls, tools, or systems to the map programmatically. |
-| `AI-Risk-Map-v1.0-preview.png` | Cropped detail used at the top of this page. | Social posts, slides — a readable teaser. |
+| `AI-Risk-Map.pdf` | The poster. Print-ready at 48×36 in (ARCH E). | You want it on the wall, or in the workshop. |
+| `AI-Risk-Map.png` / `.svg` | Same poster, raster and vector. | Slides, intranet pages, editing the graphic. |
+| `AI-Risk-Map-Taxonomy.xlsx` | The workbook: every factor with its ID, source provenance, cross-references, scope decisions, and version history. | You want to see *why* something is or isn't on the map. |
+| `AI-Risk-Map.md` | The full corpus in one markdown file — factors plus all the reasoning, with a self-contained header. | You want to load the map into your own AI assistant and ask it questions. **Start here if you do that.** |
+| `AI-Risk-Map.csv` | Flat table, one row per factor, frozen nine-column schema. | You are mapping controls, tools, or systems to the map programmatically. |
+| `AI-Risk-Map-preview.png` | Cropped detail used at the top of this page. | Social posts, slides — a readable teaser. |
 | `LICENSE` | CC BY-SA 4.0 legal text. | |
 
 
@@ -51,7 +51,7 @@ Passing a gate is admission, not priority. When there were more good candidates 
 
 **In a workshop.** Put it on the wall. Walk the room through it domain by domain and ask: which of these have we not discussed? The columns furthest from the room's expertise are where the value is.
 
-**With your AI assistant.** Load `AI-Risk-Map-v1.0.md` into your tool of choice. Its header includes a copy-paste instruction block that keeps the assistant grounded in the map — answer only from this document, cite the factor ID, say plainly when something is not covered. Then ask things like *"We're deploying a customer-facing agent. Walk me through the factors we should discuss, domain by domain."*
+**With your AI assistant.** Load `AI-Risk-Map.md` into your tool of choice. Its header includes a copy-paste instruction block that keeps the assistant grounded in the map — answer only from this document, cite the factor ID, say plainly when something is not covered. Then ask things like *"We're deploying a customer-facing agent. Walk me through the factors we should discuss, domain by domain."*
 
 **Programmatically.** Use the CSV. Every factor has a permanent identifier (`AIRM-001` … `AIRM-189`). IDs are flat, opaque, and stable across versions. Wording is not stable; cite the ID.
 
@@ -65,7 +65,7 @@ The column layout is frozen at v1.0 — adding, removing, or reordering a column
 | D | `Risk factor — full description (L3)` | Authoritative wording. May change; cite the ID. |
 | E | `Poster label` | Short form used on the poster |
 | F | `Source(s)` | Semicolon-separated; notation in the workbook's Source key |
-| G | `X-ref` | `→n` = another face of this risk is owned by domain n |
+| G | `X-ref` | `→n` = a related factor is owned by domain n (the poster's `»n`) |
 | H | `Status` | `active` / `retired` |
 | I | `Superseded by` | Surviving ID after a merge |
 
@@ -89,9 +89,19 @@ Every factor carries a source citation in the workbook and markdown. Sources spa
 Crosswalked against 22 frameworks, regulations, and taxonomies; stress-tested through persona review and named-expert critique; reviewed by external practitioners; used as the validation standard for a separate 264-control catalog built on the CSA AI Controls Matrix; and put through a full citation audit before release in which every source locator was verified against the primary text and every `Original` tag was checked against every cited framework. The workbook's provenance appendix shows how many factors each source anchors.
 
 **How do I cite it?**
-> Wheeler, E. (2026). *AI Risk Map* v1.0. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map
+> Wheeler, E. (2026). *AI Risk Map* v1.1. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map/releases/tag/v1.1
 
-Cite individual factors by ID: `AIRM-042`.
+Cite individual factors by ID: `AIRM-042`. Identifiers are permanent; factor wording can change between versions, so name the version when the exact wording matters.
+
+**How do I link to it?**
+File names carry no version number, so links don't break when a new version ships. The current version is stated inside every file (on the poster, on the workbook's Version History sheet, and in the markdown header) and in the [release list](https://github.com/wheels344i-gte/ai-risk-map/releases).
+
+| You want | Link pattern |
+|---|---|
+| Always the current version (websites, slides, bookmarks) | `https://github.com/wheels344i-gte/ai-risk-map/releases/latest/download/AI-Risk-Map.pdf` |
+| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/releases/download/v1.1/AI-Risk-Map.pdf` |
+
+Replace `AI-Risk-Map.pdf` with any file in the table above. To see what changed between versions, open a file's **History** on GitHub. The CSV and markdown show line-by-line differences, and the PNG and SVG can be compared side by side.
 
 ## Proposing changes
 

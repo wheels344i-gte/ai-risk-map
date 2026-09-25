@@ -1,6 +1,6 @@
 # AI Risk Map — Full Corpus
 
-**Version 1.0 · September 2026 · © 2026 Evan Wheeler · Licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**
+**Version 1.1 · September 2026 · © 2026 Evan Wheeler · Licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**
 
 12 domains · 54 categories · 189 risk factors
 
@@ -226,7 +226,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-045`** — Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery  *(also has a face in Domain 8 — see Cross-references)*  
   <sub>Source: Cloud Risk Map analog; Original</sub>
-- **`AIRM-046`** — Inadequate retention / disposal, where deletion from source systems does not remove data already absorbed into models, embeddings, or caches  *(also has a face in Domain 3 — see Cross-references)*  
+- **`AIRM-046`** — Inadequate retention / disposal, where deletion from source systems does not remove data already absorbed into models, embeddings, or caches  
   <sub>Source: DASF 1.8; ISO A.7; Original</sub>
 - **`AIRM-047`** — Persistence of sensitive data in embeddings, caches, or model weights  
   <sub>Source: OWASP LLM08; DASF 1.8; Original</sub>
@@ -553,7 +553,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-151`** — Shortage of AI and AI-risk talent, competing against AI-native employers for scarce skills  
   <sub>Source: Original</sub>
-- **`AIRM-152`** — Inability to retain specialists, who leave taking undocumented model and prompt knowledge with them  *(also has a face in Domain 10 — see Cross-references)*  
+- **`AIRM-152`** — Inability to retain specialists, who leave taking undocumented model and prompt knowledge with them  
   <sub>Source: Cloud Risk Map analog; Original</sub>
 - **`AIRM-153`** — Inadequate AI literacy across the workforce and leadership  
   <sub>Source: EU Art 4 (amended 2026); CRI GV-1.2.4; CSA AICM; Original</sub>
@@ -687,6 +687,7 @@ Many AI risks have an **attack face** and a **condition face**, owned by differe
 | Availability / scaling | 7 uptime / performance | AIRM-112, AIRM-113 | 11 compute affordability / supply | AIRM-170, AIRM-171 |
 | Human oversight | 6 humans have lost meaningful control (outcome) | AIRM-101 | 12 no checkpoint or interrupt mechanism exists (capability) | AIRM-176 |
 | Privilege scope | 5 credentials / keys for AI components | AIRM-083 | 12 breadth of tools an agent may invoke | AIRM-177 |
+| Accountability for autonomous action | 1 accountability undefined before the fact (governance) | AIRM-006 | 12 accountability gap once harm occurs (outcome) | AIRM-187 |
 | Audit & traceability | 7 logging of inputs, outputs, agent actions | AIRM-109 | 1 accountability for who owns the decision | AIRM-006 |
 
 
@@ -791,6 +792,10 @@ SOURCE: raised in review of the containment factor. Guardrails, access scopes, e
 | Version | Date | Change | Factor ID(s) | Detail |
 |---|---|---|---|---|
 | v1.0 | September 2026 | baseline | — | Baseline established. All 189 factors and their identifiers are as of this release. Pre-release iteration is not carried here; identifiers assigned during pre-release were preserved. |
+| v1.1 | September 2026 | x-ref | AIRM-046 | X-ref '→3' removed. It pointed at the factor's own domain (Data & Privacy), so it named no other owner. The related persistence factor, AIRM-047, is in the same category. |
+| v1.1 | September 2026 | x-ref | AIRM-152 | X-ref '→10' removed. It pointed at the factor's own domain (Workforce). The related knowledge-loss factor, AIRM-155, is in the same domain. |
+| v1.1 | September 2026 | x-ref (render) | AIRM-187 | No data change. The factor has always carried two targets (→1 Governance, →8 Legal); the v1.0 poster printed only the first. v1.1 shows both. |
+| v1.1 | September 2026 | cross-ref sheet | AIRM-006, AIRM-187 | Accountability pair added to the Cross-references sheet. It was already a recorded two-faced split in Scope decisions; the sheet had omitted it. |
 
 ---
 
@@ -817,6 +822,7 @@ Factor wording changes between versions. IDs do not. Cite IDs.
 | Version | Date | Factors | What changed |
 |---|---|---|---|
 | **v1.0** | September 2026 | 189 | First public release. 12 domains, 54 categories, 189 risk factors, each with a permanent identifier (AIRM-001 onward). Structure: organized by the enterprise function that owns the risk, not by AI lifecycle. Scope: risk arising from the organization's own adoption of AI. Validation before release: crosswalked against 22 frameworks, regulations, and taxonomies; persona and named-expert critique; several rounds of external practitioner review; used as the validation standard for an independent 264-control catalog; and a full citation audit in which every named source locator was verified against the primary text and every factor tagged Original was checked against every cited framework. Result: 189 of 189 factors traceable; 98 carry the author's framing; 30 are named by no reviewed framework. From this version, changes are recorded at factor grain on the Change log sheet, and identifiers never change. |
+| **v1.1** | September 2026 | 189 | Poster redesign: new typeface (Figtree), lighter header with a reading key, categories set as colored text, and cross-reference markers drawn as pills in the target domain's color. Cross-reference corrections: two markers that pointed at their own domain were removed (AIRM-046, AIRM-152), and AIRM-187 now shows both of its targets, Governance and Legal, where v1.0 printed only the first. The D1/D12 accountability pair (AIRM-006 / AIRM-187) was added to the Cross-references sheet, where it had been recorded only in Scope decisions. No factors added, removed, reworded, or re-homed; all identifiers unchanged. |
 
 ---
 
@@ -829,4 +835,4 @@ Databricks DASF and AI Governance Framework are © Databricks, licensed CC BY-SA
 
 ---
 
-*AI Risk Map v1.0 · © 2026 Evan Wheeler · CC BY-SA 4.0. If you build on this, attribution and share-alike apply.*
+*AI Risk Map v1.1 · © 2026 Evan Wheeler · CC BY-SA 4.0. If you build on this, attribution and share-alike apply.*
