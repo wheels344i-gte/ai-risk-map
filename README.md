@@ -98,10 +98,11 @@ File names carry no version number, so links don't break when a new version ship
 
 | You want | Link pattern |
 |---|---|
-| Always the current version (websites, slides, bookmarks) | `https://github.com/wheels344i-gte/ai-risk-map/releases/latest/download/AI-Risk-Map.pdf` |
-| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/releases/download/v1.1/AI-Risk-Map.pdf` |
+| Always the current version (websites, slides, bookmarks) | `https://github.com/wheels344i-gte/ai-risk-map/blob/main/AI-Risk-Map.pdf` |
+| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/blob/v1.1/AI-Risk-Map.pdf` |
+| The file itself, for tools, scripts, AI assistants, or embedding an image | Replace `blob` with `raw` in either link above |
 
-Replace `AI-Risk-Map.pdf` with any file in the table above. To see what changed between versions, open a file's **History** on GitHub. The CSV and markdown show line-by-line differences, and the PNG and SVG can be compared side by side.
+Replace `AI-Risk-Map.pdf` with any file in the table above. `blob` links open the file on GitHub with a preview and a download button; `raw` links return the file alone. To see what changed between versions, open a file's **History** on GitHub. The CSV and markdown show line-by-line differences, and the PNG and SVG can be compared side by side.
 
 ## Proposing changes
 
