@@ -31,7 +31,7 @@ It is not a risk library or exhaustive catalog. It is a practical tool designed 
 
 **By who owns the risk, not by how the technology works.** The twelve domains are enterprise functions — governance, strategy, data, model development, security, safety, operations, legal, third-party, workforce, financial, and autonomous action. A CFO, a general counsel, and a security lead can each open it and find themselves in it.
 
-Three tiers: Domain → Category → Risk factor. Each risk factor is a condition, failure mode, or event that contributes to risk. It is not a scored risk, and it is not a control.
+Three tiers: Domain → Category → Risk factor. Each risk factor is a condition, failure mode, or event that contributes to risk. It is not a scored risk. A factor may imply a missing or deficient control condition, but it is never phrased as a control to implement.
 
 **Scope.** The map covers risk arising from *your organization's own adoption of AI*. Risk arising from *others' use of AI against you* — AI-enabled fraud, deepfake impersonation, adversarial automation — is deliberately out of scope. That risk is real; it belongs on your threat register, not on an adoption map. The scope decisions sheet in the workbook records this and every other deliberate exclusion.
 
@@ -45,7 +45,14 @@ Three tiers: Domain → Category → Risk factor. Each risk factor is a conditio
 
 Passing a gate is admission, not priority. When there were more good candidates than the page could hold, the tiebreak was how likely a competent team is to overlook the factor — because the poster exists to surface what gets missed, not to restate what everyone already tracks.
 
-**Two-faced risks.** Many AI risks have an attack face and a condition face owned by different functions — data poisoning versus poor data quality, for example. The map routes each face to its owner and cross-references them (`»n` on the poster). They are split on purpose. Check the Cross-references sheet before reporting one as a duplicate.
+**Two-faced risks.** Many AI risks have an attack face and a condition face owned by different functions — data poisoning versus poor data quality, for example. The map routes each face to its owner and cross-references them. They are split on purpose. Check the Cross-references sheet before reporting one as a duplicate.
+
+**Cross-reference markers.** `»n` on the poster (`→n` in the CSV) means the other face of this risk is owned by domain *n*. The marker is used only for two-faced pairs. Both faces of every pair are marked, on at least one factor per face. The workbook's Cross-references sheet records two kinds of relationship:
+
+| Kind | What it means | On the poster | When counting |
+|---|---|---|---|
+| **Two-faced pair** | One underlying risk, seen from two owners' chairs | `»n` | Count once |
+| **See-also pointer** | A different risk worth reading alongside: a more general factor, or the mirror image of the same behavior (done to you vs. done by you). One-way. | Not marked; workbook and markdown only | Count both |
 
 ## How to use it
 
@@ -65,16 +72,16 @@ The column layout is frozen at v1.0 — adding, removing, or reordering a column
 | D | `Risk factor — full description (L3)` | Authoritative wording. May change; cite the ID. |
 | E | `Poster label` | Short form used on the poster |
 | F | `Source(s)` | Semicolon-separated; notation in the workbook's Source key |
-| G | `X-ref` | `→n` = a related factor is owned by domain n (the poster's `»n`) |
+| G | `X-ref` | `→n` = the other face of this risk is owned by domain n (the poster's `»n`). Two-faced pairs only. |
 | H | `Status` | `active` / `retired` |
 | I | `Superseded by` | Surviving ID after a merge |
 
-Two-faced splits are authoritative on the workbook's **Cross-references** sheet, as factor-ID pairs in both directions. Use that, not the `X-ref` column, to avoid double-counting. Factor-level changes between versions are on the **Change log** sheet.
+The workbook's **Cross-references** sheet is authoritative. Part 1 lists each two-faced pair with the factor IDs on both faces; Part 2 lists each see-also pointer from one ID to another. A multi-factor face carries its marker on at least one of its factors, so use the sheet, not the `X-ref` column, to count. Factor-level changes between versions are on the **Change log** sheet.
 
 ## Frequently asked
 
 **Is this a control framework? Where are the controls?**
-No, and deliberately. The map names risks and never controls — that is what keeps a one-page artifact from becoming a several-hundred-row control library. The stable `AIRM` identifiers exist precisely so you can map *your* control catalog, tool inventory, or architecture to it. That has already been done once: a separate project used the map as the validation standard for a 264-control catalog (all 247 controls in the CSA AI Controls Matrix plus 17 extensions), and the mapping is what showed the owner-based structure partitions cleanly between "security's job" and "someone else's job." If you build a controls mapping, the share-alike license means others can benefit from it too.
+No. It is not a control standard or a control library, and that is deliberate: it is what keeps a one-page artifact from becoming a several-hundred-row catalog. Many factors do imply a missing or deficient control condition. *"Inadequate access controls on serving endpoints and inference APIs"* is one. That is because a control gap is a condition that contributes to risk. What the map does not do is tell you which control closes the gap. One factor may call for several controls, and one control may address several factors. The stable `AIRM` identifiers exist precisely so you can map *your* control catalog, tool inventory, or architecture to it. That has already been done once: a separate project used the map as the validation standard for a 264-control catalog (all 247 controls in the CSA AI Controls Matrix plus 17 extensions), and the mapping is what showed the owner-based structure partitions cleanly between "security's job" and "someone else's job." If you build a controls mapping, the share-alike license means others can benefit from it too.
 
 **Why isn't *X* on the map?**
 Open the workbook's **Scope decisions** sheet first. It records what was deliberately excluded and why, what was challenged and kept, and what was considered and not added. If *X* isn't there, open an issue.
@@ -89,7 +96,7 @@ Every factor carries a source citation in the workbook and markdown. Sources spa
 Crosswalked against 22 frameworks, regulations, and taxonomies; stress-tested through persona review and named-expert critique; reviewed by external practitioners; used as the validation standard for a separate 264-control catalog built on the CSA AI Controls Matrix; and put through a full citation audit before release in which every source locator was verified against the primary text and every `Original` tag was checked against every cited framework. The workbook's provenance appendix shows how many factors each source anchors.
 
 **How do I cite it?**
-> Wheeler, E. (2026). *AI Risk Map* v1.1. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map/releases/tag/v1.1
+> Wheeler, E. (2026). *AI Risk Map* v1.2. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map/releases/tag/v1.2
 
 Cite individual factors by ID: `AIRM-042`. Identifiers are permanent; factor wording can change between versions, so name the version when the exact wording matters.
 
@@ -99,7 +106,7 @@ File names carry no version number, so links don't break when a new version ship
 | You want | Link pattern |
 |---|---|
 | Always the current version (websites, slides, bookmarks) | `https://github.com/wheels344i-gte/ai-risk-map/blob/main/AI-Risk-Map.pdf` |
-| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/blob/v1.1/AI-Risk-Map.pdf` |
+| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/blob/v1.2/AI-Risk-Map.pdf` |
 | The file itself, for tools, scripts, AI assistants, or embedding an image | Replace `blob` with `raw` in either link above |
 
 Replace `AI-Risk-Map.pdf` with any file in the table above. `blob` links open the file on GitHub with a preview and a download button; `raw` links return the file alone. To see what changed between versions, open a file's **History** on GitHub. The CSV and markdown show line-by-line differences, and the PNG and SVG can be compared side by side.
@@ -108,7 +115,7 @@ Replace `AI-Risk-Map.pdf` with any file in the table above. `blob` links open th
 
 Proposals are welcome — **as Issues, not pull requests.** The files in this repository are generated from a single source that is not published here, so a pull request against the workbook, CSV, or markdown cannot be merged; it would be overwritten by the next build. Open an Issue instead. Every proposal is reviewed by the author against the three gates above and the Scope decisions sheet, and accepted changes appear in the next release with a row in the Change log.
 
-A good proposal names the risk as a condition or failure mode (not a control), says which gate it clears, and checks that a neighboring factor does not already own it. Corrections to a citation are especially welcome: quote the source.
+A good proposal names the risk as a condition or failure mode (not as a control to implement), says which gate it clears, and checks that a neighboring factor does not already own it. Corrections to a citation are especially welcome: quote the source.
 
 ## License
 

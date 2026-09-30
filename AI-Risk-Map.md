@@ -1,6 +1,6 @@
 # AI Risk Map — Full Corpus
 
-**Version 1.1 · September 2026 · © 2026 Evan Wheeler · Licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**
+**Version 1.2 · September 2026 · © 2026 Evan Wheeler · Licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**
 
 12 domains · 54 categories · 189 risk factors
 
@@ -19,7 +19,7 @@ This file is the machine-readable companion to the poster. It carries every risk
 - **Not a scored or ranked risk register.** Position, order, and ID number carry no meaning about likelihood or severity. A rare catastrophic factor sits beside a common minor one.
 - **Not a list of well-formed risk statements.** Each entry is a risk *factor* — a condition, failure mode, threat event, or loss event that contributes to risk. In FAIR terms these are not loss-event statements. Scope one properly before using it in analysis.
 - **Not exhaustive.** It is a thought-starter. Customize it to your industry, geography, and context.
-- **Not a control framework.** It names risks, never controls and never threat actors.
+- **Not a control standard or control library.** Many factors imply a missing or deficient control condition. That is deliberate: a control gap is a condition that contributes to risk. But no factor is phrased as a control to implement, and the map does not say which control closes a gap. One factor may call for several controls, and one control may address several factors. It never names threat actors.
 - **Not a replacement for system-specific threat modeling.** It seeds that work; it does not substitute for it.
 
 ## Scope boundary — read this before answering coverage questions
@@ -29,6 +29,19 @@ This file is the machine-readable companion to the poster. It carries every risk
 **Out of scope:** risk arising from **others' use of AI against you** — AI-enabled fraud, deepfake impersonation of executives or vendors, adversarial automation of attacks. That risk is real and growing, but it belongs on the enterprise threat and cyber register, not on an adoption map.
 
 This is a boundary of *subject*, not of degree. AI-enabled phishing is unambiguously amplified by AI and is still out of scope. Do not infer that it is covered.
+
+## Design principles — how factors were admitted and how to read them
+
+These are the rules the map was built by. Use them to judge whether something belongs on the map, and to read the factors and markers correctly.
+
+- **Incremental-risk lens.** Within that boundary, only risks AI introduces or amplifies. Generic IT, cyber, and vendor risk that exists identically without AI stays off.
+- **Three retention gates.** A factor earns its place if it clears ANY one: (A) AI-specific: remove AI and the risk vanishes; (B) management delta: the risk is not new, but the way it must be managed is; (C) corroboration: two or more independent AI standards name it.
+- **Gate B bounding principle.** The management delta must be specific and nameable, not merely 'there is more of it'. 'Agent-framework sprawl outpacing credential governance' qualifies; 'cyber risk went up' does not.
+- **Admission vs. priority.** Passing a gate is admission, not priority. When there were more good candidates than the page could hold, the tiebreak was how likely a competent team is to overlook the factor.
+- **Owner-based axis.** Domains are organized by who owns the risk, not by AI lifecycle.
+- **What a risk factor is.** A condition, failure mode, or event that contributes to risk. It may imply a missing or deficient control condition, but it is never phrased as a control to implement ('implement MFA') and never as a threat actor ('an attacker'). A proposal that arrives as a control is inverted into the condition it prevents, then checked against neighboring factors before it is added or declined.
+- **Two-faced risk rule.** Many AI risks have an attack face and a condition face, owned by different functions. The attack face routes to Security or Autonomy; the condition face to the function that owns it. The two are cross-referenced, never duplicated.
+- **Cross-reference markers.** »n on the poster (→n in the X-ref column) means the other face of this risk is owned by domain n: a TWO-FACED PAIR, one underlying risk seen from two owners' chairs; count it once. The marker is used for nothing else. Both faces of every pair are marked, on at least one factor per face; the Cross-references sheet lists every factor ID on each face. SEE-ALSO POINTERS link different risks worth reading together (a more general factor, or the mirror image of the same behavior: done to you vs. done by you); count both. They are listed on the Cross-references sheet and carry no poster marker.
 
 ## Identifiers
 
@@ -65,9 +78,13 @@ You are helping me use the AI Risk Map. Follow these rules:
 4. Do not score, rank, rate, or quantify anything. This document
    contains no likelihood or severity data.
 5. Before flagging two factors as duplicates, check the
-   "Cross-references" section. Many risks have two legitimate faces
-   owned by different functions and are split on purpose.
-6. Your job is to widen my thinking, not narrow it. When I describe
+   "Cross-references" section. A two-faced pair (marked →n) is one
+   risk seen from two owners' chairs and is split on purpose: count
+   it once. A see-also pointer links two different risks: count both.
+6. Many factors imply a missing or deficient control condition, but
+   this document does not say which control closes a gap. If you
+   suggest controls, say they are your suggestions, not the map's.
+7. Your job is to widen my thinking, not narrow it. When I describe
    a system or a decision, surface the factors I have not considered
    yet, including ones from domains outside my own function.
 ```
@@ -107,9 +124,9 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: NIST Govern; ISO A.3</sub>
 - **`AIRM-005`** — Diffusion of responsibility, as AI spans data science, security, legal, and business owners with no established convention for who decides  
   <sub>Source: Original</sub>
-- **`AIRM-006`** — Failure to define accountability for autonomous / agent-driven decisions — internally, and across the AI stack of model provider, platform, developer, and deployer, where the allocation shifts as autonomy increases  *(also has a face in Domain 12 — see Cross-references)*  
+- **`AIRM-006`** — Failure to define accountability for autonomous / agent-driven decisions — internally, and across the AI stack of model provider, platform, developer, and deployer, where the allocation shifts as autonomy increases  *(two-faced: other face in Domain 7, `AIRM-109` — count once; two-faced: other face in Domain 12, `AIRM-187` — count once)*  
   <sub>Source: EU Art 14; EU Art 25 (amended 2026); CSA AICM; CoSAI AI SRF</sub>
-- **`AIRM-007`** — Segregation of duties collapses where the same person or agent configures the AI, operates it, and reviews its output  *(also has a face in Domain 12 — see Cross-references)*  
+- **`AIRM-007`** — Segregation of duties collapses where the same person or agent configures the AI, operates it, and reviews its output  *(see also `AIRM-175`, Domain 12 — count both)*  
   <sub>Source: COSO GenAI 2026; OWASP AISVS AC.8</sub>
 
 ### Policy & standards
@@ -134,13 +151,13 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Audit & assurance
 
-- **`AIRM-015`** — Inability to audit AI due to a missing or incomplete inventory of models, agents, and connectors, and their lineage  
+- **`AIRM-015`** — Inability to audit AI due to a missing or incomplete inventory of models, agents, and connectors, and their lineage  *(two-faced: other face in Domain 4, `AIRM-063` — count once; two-faced: other face in Domain 6, `AIRM-093` — count once)*  
   <sub>Source: ISO A.4; NIST Govern; CRI GV-1.6.1</sub>
 - **`AIRM-016`** — Insufficient internal-audit competence to assess AI controls  
   <sub>Source: Original</sub>
 - **`AIRM-017`** — Absence of independent assurance over AI control effectiveness  
   <sub>Source: CRI GV-1.5.4; Original</sub>
-- **`AIRM-018`** — AI output relied upon as evidence in financial-reporting or other regulated control chains without recognizing the expansion of assurance scope  *(also has a face in Domain 8 — see Cross-references)*  
+- **`AIRM-018`** — AI output relied upon as evidence in financial-reporting or other regulated control chains without recognizing the expansion of assurance scope  *(see also `AIRM-138`, Domain 8 — count both)*  
   <sub>Source: COSO GenAI 2026 p.13</sub>
 - **`AIRM-019`** — No reliable way to identify which artifacts, code, or analyses were AI-generated, so a systemic model or prompt flaw cannot be scoped or remediated after the fact  
   <sub>Source: OWASP AISVS AC.9 / AC.10; COSO GenAI 2026 (AI bill of materials)</sub>
@@ -152,7 +169,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-020`** — Lack of a coherent AI strategy aligned to objectives and risk appetite  
   <sub>Source: Databricks AIGF; Original</sub>
-- **`AIRM-021`** — AI adoption driven by hype rather than demonstrated business value  
+- **`AIRM-021`** — AI adoption driven by hype rather than demonstrated business value  *(two-faced: other face in Domain 11, `AIRM-167` — count once)*  
   <sub>Source: Original</sub>
 - **`AIRM-022`** — Inability to adapt the roadmap as foundation-model capabilities shift  
   <sub>Source: Original</sub>
@@ -163,7 +180,7 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: CRI MP-3.2.1; Original</sub>
 - **`AIRM-024`** — ‘Pilot purgatory’ — pilots stalling on data readiness, evaluation difficulty, or inability to demonstrate value  
   <sub>Source: Original</sub>
-- **`AIRM-025`** — Misjudged AI sourcing fork — train, fine-tune, retrieval-augment, or call an API — each carrying a different risk and obligation profile  *(also has a face in Domain 8 — see Cross-references)*  
+- **`AIRM-025`** — Misjudged AI sourcing fork — train, fine-tune, retrieval-augment, or call an API — each carrying a different risk and obligation profile  *(see also `AIRM-129`, Domain 8 — count both)*  
   <sub>Source: Original</sub>
 - **`AIRM-026`** — Failure to weigh the competitive risk of not adopting AI (inaction)  
   <sub>Source: Databricks AIGF; Cloud Risk Map analog; Original</sub>
@@ -174,7 +191,7 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: Original</sub>
 - **`AIRM-028`** — Inability to attribute value actually delivered by AI investments  
   <sub>Source: Original</sub>
-- **`AIRM-029`** — Hidden total cost of ownership (data, talent, integration) eroding returns  *(also has a face in Domain 11 — see Cross-references)*  
+- **`AIRM-029`** — Hidden total cost of ownership (data, talent, integration) eroding returns  *(see also `AIRM-165`, Domain 11 — count both)*  
   <sub>Source: Databricks AIGF; CRI MP-3.2.2; Original</sub>
 
 ## 3. Data & Privacy
@@ -200,7 +217,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Privacy & consent
 
-- **`AIRM-036`** — Personal data used for training without consent or purpose limitation  
+- **`AIRM-036`** — Personal data used for training without consent or purpose limitation  *(two-faced: other face in Domain 5, `AIRM-069` — count once)*  
   <sub>Source: EU Art 10 (amended 2026); NIST GenAI #4</sub>
 - **`AIRM-037`** — Inability to honor data-subject rights once data is in a model  
   <sub>Source: GDPR; DASF 1.8; Original</sub>
@@ -215,7 +232,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Training-data rights & IP
 
-- **`AIRM-042`** — Use of copyrighted or licensed material in training without rights  *(also has a face in Domain 8 — see Cross-references)*  
+- **`AIRM-042`** — Use of copyrighted or licensed material in training without rights  *(two-faced: other face in Domain 8, `AIRM-131`, `AIRM-132` — count once)*  
   <sub>Source: NIST GenAI #10; EU Art 53(1)(c) (amended 2026)</sub>
 - **`AIRM-043`** — Contamination of datasets with third-party IP or trade secrets  
   <sub>Source: Original</sub>
@@ -224,7 +241,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Retention & disposal
 
-- **`AIRM-045`** — Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery  *(also has a face in Domain 8 — see Cross-references)*  
+- **`AIRM-045`** — Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery  *(see also `AIRM-130`, Domain 8 — count both)*  
   <sub>Source: Cloud Risk Map analog; Original</sub>
 - **`AIRM-046`** — Inadequate retention / disposal, where deletion from source systems does not remove data already absorbed into models, embeddings, or caches  
   <sub>Source: DASF 1.8; ISO A.7; Original</sub>
@@ -247,7 +264,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Accuracy & validation
 
-- **`AIRM-052`** — Fluent but factually incorrect output (hallucination) accepted as reliable  *(also has a face in Domain 6 — see Cross-references)*  
+- **`AIRM-052`** — Fluent but factually incorrect output (hallucination) accepted as reliable  *(two-faced: other face in Domain 6, `AIRM-091` — count once)*  
   <sub>Source: NIST GenAI #2; DASF 9.8</sub>
 - **`AIRM-053`** — Validation/evaluation data not representative of real-world use  
   <sub>Source: DASF 6.2</sub>
@@ -258,7 +275,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Robustness & drift
 
-- **`AIRM-056`** — Model drift degrading performance as data / conditions change  *(also has a face in Domain 7 — see Cross-references)*  
+- **`AIRM-056`** — Model drift degrading performance as data / conditions change  *(two-faced: other face in Domain 7, `AIRM-108`, `AIRM-110` — count once)*  
   <sub>Source: DASF 5.2</sub>
 - **`AIRM-057`** — Lack of robustness to edge cases and distribution shift  
   <sub>Source: NIST Measure; ATLAS</sub>
@@ -278,7 +295,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-062`** — Non-reproducible training pipelines undermining validation and audit  
   <sub>Source: DASF 5.1; Original</sub>
-- **`AIRM-063`** — Inadequate model documentation / model cards  
+- **`AIRM-063`** — Inadequate model documentation / model cards  *(two-faced: other face in Domain 1, `AIRM-015` — count once)*  
   <sub>Source: EU Art 11 (amended 2026); NIST Map</sub>
 - **`AIRM-064`** — Loss of traceability between model versions, data, and results  
   <sub>Source: DASF 4.1</sub>
@@ -299,7 +316,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-068`** — Model extraction / theft via inference-API querying  
   <sub>Source: DASF 8.2; ATLAS AML.T0024.002</sub>
-- **`AIRM-069`** — Membership-inference or model-inversion exposing training data  
+- **`AIRM-069`** — Membership-inference or model-inversion exposing training data  *(two-faced: other face in Domain 3, `AIRM-036`, `AIRM-038`, `AIRM-039` — count once)*  
   <sub>Source: DASF 9.2 / 9.5; NIST GenAI #4</sub>
 - **`AIRM-070`** — Backdoored / trojaned pre-trained model from a public hub  
   <sub>Source: DASF 7.1</sub>
@@ -310,7 +327,7 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: OWASP LLM01; DASF 9.1</sub>
 - **`AIRM-072`** — Indirect / cross-domain prompt injection via retrieved content  
   <sub>Source: OWASP LLM01; DASF 9.1 / 9.9</sub>
-- **`AIRM-073`** — Jailbreaks defeating safety controls and restrictions  *(also has a face in Domain 6 — see Cross-references)*  
+- **`AIRM-073`** — Jailbreaks defeating safety controls and restrictions  *(two-faced: other face in Domain 6, `AIRM-090`, `AIRM-097` — count once)*  
   <sub>Source: OWASP LLM01; DASF 9.12</sub>
 - **`AIRM-074`** — System-prompt leakage exposing operational instructions  
   <sub>Source: OWASP LLM07</sub>
@@ -326,24 +343,24 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Supply-chain & artifact integrity
 
-- **`AIRM-078`** — Compromised or malicious model / component from the AI supply chain  *(also has a face in Domain 9 — see Cross-references)*  
+- **`AIRM-078`** — Compromised or malicious model / component from the AI supply chain  *(two-faced: other face in Domain 9, `AIRM-148`, `AIRM-149`, `AIRM-189` — count once)*  
   <sub>Source: OWASP LLM03; NIST GenAI #12</sub>
 - **`AIRM-079`** — Vulnerable or unmaintained ML dependencies and libraries  
   <sub>Source: DASF 5.4; OWASP LLM03</sub>
 - **`AIRM-080`** — Tampering with model artifacts in registries or during deployment  
   <sub>Source: DASF 7.3; ATLAS AML.T0010.004; Original</sub>
-- **`AIRM-081`** — Model-invented package, image, or endpoint names that resolve to adversary-registered artifacts, because the same hallucination recurs across users and model families  *(also has a face in Domain 4 — see Cross-references)*  
+- **`AIRM-081`** — Model-invented package, image, or endpoint names that resolve to adversary-registered artifacts, because the same hallucination recurs across users and model families  *(see also `AIRM-052`, Domain 4 — count both)*  
   <sub>Source: OWASP AISVS AC.13</sub>
 
 ### AI access & identity
 
-- **`AIRM-082`** — Inadequate access controls on serving endpoints and inference APIs  *(also has a face in Domain 12 — see Cross-references)*  
+- **`AIRM-082`** — Inadequate access controls on serving endpoints and inference APIs  *(two-faced: other face in Domain 12, `AIRM-178` — count once)*  
   <sub>Source: DASF 9.11</sub>
-- **`AIRM-083`** — Over-privileged service accounts and keys for AI platform components (distinct from an agent's tool scope)  
+- **`AIRM-083`** — Over-privileged service accounts and keys for AI platform components (distinct from an agent's tool scope)  *(two-faced: other face in Domain 12, `AIRM-178`, `AIRM-177` — count once)*  
   <sub>Source: DASF 1.1; Original</sub>
 - **`AIRM-084`** — Insecure storage / exposure of credentials and tokens, as AI tool, harness, and agent-framework sprawl outpaces credential governance  
   <sub>Source: DASF 13.19 / 13.27</sub>
-- **`AIRM-085`** — Retrieval and RAG pipelines serving content beyond the requesting user’s own entitlements, because authorization is applied when the index is built rather than when it is queried  *(also has a face in Domain 3 — see Cross-references)*  
+- **`AIRM-085`** — Retrieval and RAG pipelines serving content beyond the requesting user’s own entitlements, because authorization is applied when the index is built rather than when it is queried  *(see also `AIRM-039`, Domain 3 — count both)*  
   <sub>Source: OWASP AISVS 5.2.2</sub>
 
 ## 6. Safety, Ethics & Responsible AI
@@ -362,16 +379,16 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Harmful / inaccurate output
 
-- **`AIRM-090`** — Generation of toxic, dangerous, or hateful content  
+- **`AIRM-090`** — Generation of toxic, dangerous, or hateful content  *(two-faced: other face in Domain 5, `AIRM-073` — count once)*  
   <sub>Source: NIST GenAI #3; Weidinger I</sub>
-- **`AIRM-091`** — Harmful, misleading, or defamatory output driving decisions  *(also has a face in Domain 4 — see Cross-references)*  
+- **`AIRM-091`** — Harmful, misleading, or defamatory output driving decisions  *(two-faced: other face in Domain 4, `AIRM-052` — count once)*  
   <sub>Source: NIST GenAI #2; Original</sub>
 - **`AIRM-092`** — Harm to minors / vulnerable users from inappropriate output  
   <sub>Source: NIST GenAI #11; Colorado HB 26-1263</sub>
 
 ### Transparency, disclosure & provenance
 
-- **`AIRM-093`** — Failure to disclose to users that they are interacting with AI  
+- **`AIRM-093`** — Failure to disclose to users that they are interacting with AI  *(two-faced: other face in Domain 1, `AIRM-015` — count once)*  
   <sub>Source: EU Art 50 (amended 2026); Weidinger V</sub>
 - **`AIRM-094`** — Undisclosed synthetic media / deepfakes lacking provenance  
   <sub>Source: EU Art 50 (amended 2026); NIST GenAI #8</sub>
@@ -393,9 +410,9 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: NIST GenAI #7; Weidinger V</sub>
 - **`AIRM-100`** — Anthropomorphism and emotional dependence on conversational AI  
   <sub>Source: Weidinger V; Colorado HB 26-1263</sub>
-- **`AIRM-101`** — Erosion of meaningful human control over decisions  *(also has a face in Domain 12 — see Cross-references)*  
+- **`AIRM-101`** — Erosion of meaningful human control over decisions  *(two-faced: other face in Domain 12, `AIRM-176` — count once)*  
   <sub>Source: EU Art 14; MIT 5.2</sub>
-- **`AIRM-102`** — Human review, approval, and triage capacity cannot scale to the volume AI produces — code, alerts, content, decisions — so oversight gates degrade into rubber-stamping while still appearing effective  *(also has a face in Domain 7 — see Cross-references)*  
+- **`AIRM-102`** — Human review, approval, and triage capacity cannot scale to the volume AI produces — code, alerts, content, decisions — so oversight gates degrade into rubber-stamping while still appearing effective  *(see also `AIRM-117`, Domain 7 — count both)*  
   <sub>Source: COSO GenAI 2026; OWASP AISVS AC.4; CRI MP-3.5.4</sub>
 
 ## 7. Operations & Resilience
@@ -405,20 +422,20 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-103`** — Immature MLOps / fragile deployment pipelines  
   <sub>Source: DASF 11.1; Original</sub>
-- **`AIRM-104`** — Inconsistent or unsanctioned (shadow) model deployment  *(also has a face in Domain 1 — see Cross-references)*  
+- **`AIRM-104`** — Inconsistent or unsanctioned (shadow) model deployment  *(see also `AIRM-002`, Domain 1 — count both)*  
   <sub>Source: DASF 8.3; Original</sub>
 - **`AIRM-105`** — Inadequate environment and configuration management across model versions, dependency pinning, and accelerator configuration, undermining reproducibility  
   <sub>Source: DASF 12.5</sub>
 - **`AIRM-106`** — Training-serving skew: features or input data differ between training and production, degrading live performance  
   <sub>Source: Databricks AIGF; Original</sub>
-- **`AIRM-107`** — Containment of an AI test, evaluation, or development environment fails — unverified, misconfigured, defeated, or degraded over time — allowing the system to reach production or third-party systems  *(also has a face in Domain 12 — see Cross-references)*  
+- **`AIRM-107`** — Containment of an AI test, evaluation, or development environment fails — unverified, misconfigured, defeated, or degraded over time — allowing the system to reach production or third-party systems  *(see also `AIRM-174`, Domain 12 — count both)*  
   <sub>Source: OpenAI/Anthropic 2026 incidents</sub>
 
 ### Monitoring & observability
 
-- **`AIRM-108`** — Absence of monitoring for performance, drift, and abuse in any environment — including evaluation, test, and sandbox environments assumed to be contained  
+- **`AIRM-108`** — Absence of monitoring for performance, drift, and abuse in any environment — including evaluation, test, and sandbox environments assumed to be contained  *(two-faced: other face in Domain 4, `AIRM-056` — count once)*  
   <sub>Source: DASF 10.1; NIST Manage; CSA HF post-mortem</sub>
-- **`AIRM-109`** — Inadequate logging / audit of inputs, outputs, tool calls, agent decision paths, and the human authorization behind them  *(also has a face in Domain 12 — see Cross-references)*  
+- **`AIRM-109`** — Inadequate logging / audit of inputs, outputs, tool calls, agent decision paths, and the human authorization behind them  *(two-faced: other face in Domain 1, `AIRM-006` — count once; see also `AIRM-187`, Domain 12 — count both)*  
   <sub>Source: EU Art 12; DASF 10.1</sub>
 - **`AIRM-110`** — Inability to detect anomalous or degraded behavior, where non-determinism makes 'anomalous' hard to define and baseline  
   <sub>Source: DASF 10.1; Original</sub>
@@ -427,7 +444,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Availability & scalability
 
-- **`AIRM-112`** — Inference latency or unavailability degrading dependent services  *(also has a face in Domain 11 — see Cross-references)*  
+- **`AIRM-112`** — Inference latency or unavailability degrading dependent services  *(two-faced: other face in Domain 11, `AIRM-170`, `AIRM-171` — count once)*  
   <sub>Source: Databricks AIGF; CSA AICM; Original</sub>
 - **`AIRM-113`** — Inability to scale inference to peak demand  
   <sub>Source: Original</sub>
@@ -442,12 +459,12 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: DASF 12.3; CRI MS-2.4.4; Original</sub>
 - **`AIRM-117`** — Inadequate content-moderation / trust-&-safety operations at scale  
   <sub>Source: Colorado HB 26-1263; Original</sub>
-- **`AIRM-118`** — Safety guardrails on models relied on for defense refusing to assist incident response, blocking analysis of attack data  *(also has a face in Domain 9 — see Cross-references)*  
+- **`AIRM-118`** — Safety guardrails on models relied on for defense refusing to assist incident response, blocking analysis of attack data  
   <sub>Source: CSA HF post-mortem</sub>
 
 ### Change & lifecycle management
 
-- **`AIRM-119`** — Silent vendor / model updates changing behavior without notice  *(also has a face in Domain 9 — see Cross-references)*  
+- **`AIRM-119`** — Silent vendor / model updates changing behavior without notice  *(see also `AIRM-141`, Domain 9 — count both)*  
   <sub>Source: COSO GenAI 2026; OWASP AISVS 3.2.3; Original</sub>
 - **`AIRM-120`** — Inadequate versioning, rollback, and change control for models  
   <sub>Source: DASF 8.3; CRI MG-4.1.4; Original</sub>
@@ -455,7 +472,7 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: CRI GV-1.7.1; CRI MG-2.4.2; Original</sub>
 - **`AIRM-122`** — Uncontrolled continuous / online learning introducing drift or poisoning  
   <sub>Source: DASF 5.2; Original</sub>
-- **`AIRM-123`** — Guardrails, access scopes, and approval gates re-verified less often than the AI system's capability and integration surface changes  *(also has a face in Domain 1 — see Cross-references)*  
+- **`AIRM-123`** — Guardrails, access scopes, and approval gates re-verified less often than the AI system's capability and integration surface changes  *(see also `AIRM-017`, Domain 1 — count both)*  
   <sub>Source: 2026 sandbox-escape incidents; Original</sub>
 - **`AIRM-124`** — Prompts, system prompts, and retrieval configuration changed outside change control, though they determine system behavior as directly as code  
   <sub>Source: COSO GenAI 2026 Principle 11; OWASP AISVS AC.11</sub>
@@ -480,7 +497,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-130`** — Liability for harm caused by AI decisions or outputs  
   <sub>Source: Databricks AIGF; Original</sub>
-- **`AIRM-131`** — Infringement claims arising from AI-generated output  
+- **`AIRM-131`** — Infringement claims arising from AI-generated output  *(two-faced: other face in Domain 3, `AIRM-042`, `AIRM-043`, `AIRM-044` — count once)*  
   <sub>Source: NIST GenAI #10; Original</sub>
 - **`AIRM-132`** — Uncertain ownership / copyrightability of AI-generated content  
   <sub>Source: Databricks AIGF; Original</sub>
@@ -489,7 +506,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-133`** — Vendor contracts lacking AI-specific terms: training use of your data, output ownership, model-change notice, evaluation rights  
   <sub>Source: CRI GV-6.2.3; Databricks AIGF; Original</sub>
-- **`AIRM-134`** — Violation of open-weight / model license terms  *(also has a face in Domain 9 — see Cross-references)*  
+- **`AIRM-134`** — Violation of open-weight / model license terms  *(see also `AIRM-189`, Domain 9 — count both)*  
   <sub>Source: Databricks AIGF; Original</sub>
 - **`AIRM-135`** — Failure to update contracts as AI use and regulation evolve  
   <sub>Source: CRI GV-6.2.3; Databricks AIGF; Cloud Risk Map analog; Original</sub>
@@ -510,16 +527,16 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-139`** — Concentration risk from dependence on a few model providers  
   <sub>Source: IAISR; CRI GV-6.1.8; Original</sub>
-- **`AIRM-140`** — Systemic / correlated ‘model monoculture’ — shared-model failure  
+- **`AIRM-140`** — Systemic / correlated ‘model monoculture’ — shared-model failure  *(two-faced: other face in Domain 11, `AIRM-172` — count once)*  
   <sub>Source: IAISR; Original</sub>
-- **`AIRM-141`** — Model deprecation or behavior change forcing unplanned migration  *(also has a face in Domain 7 — see Cross-references)*  
+- **`AIRM-141`** — Model deprecation or behavior change forcing unplanned migration  *(see also `AIRM-120`, Domain 7 — count both)*  
   <sub>Source: Original</sub>
 
 ### Vendor due diligence
 
-- **`AIRM-142`** — Inadequate vendor due diligence, including whether prompts and outputs are retained, used for training, or exposed to sub-processors  
+- **`AIRM-142`** — Inadequate vendor due diligence, including whether prompts and outputs are retained, used for training, or exposed to sub-processors  *(see also `AIRM-036`, Domain 3 — count both)*  
   <sub>Source: NIST GenAI #12; CRI GV-6.1.4; Original</sub>
-- **`AIRM-188`** — No defined method to assess whether a vendor's claimed AI capability is real, secure, and fit for purpose: conventional vendor assurance says nothing about model behavior, and the buyer inherits whatever sits behind the claim  *(also has a face in Domain 10 — see Cross-references)*  
+- **`AIRM-188`** — No defined method to assess whether a vendor's claimed AI capability is real, secure, and fit for purpose: conventional vendor assurance says nothing about model behavior, and the buyer inherits whatever sits behind the claim  *(see also `AIRM-163`, Domain 10 — count both)*  
   <sub>Source: CRI GV-6.1.1; Original</sub>
 - **`AIRM-143`** — Vendor viability risk in an unusually volatile provider market with frequent pivots and deprecations  
   <sub>Source: Original</sub>
@@ -543,7 +560,7 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: OWASP LLM03; DASF 5.4</sub>
 - **`AIRM-150`** — Opaque sub-processor chains, including models served behind a vendor's own API without disclosure  
   <sub>Source: CRI GV-6.1.6; Original</sub>
-- **`AIRM-189`** — Model lineage undisclosed or unverifiable: the deployed model inherits weights, training data, or teacher-model traits its publisher label does not reveal, so an upstream flaw cannot be scoped to the models that descend from it  *(also has a face in Domain 5 — see Cross-references)*  
+- **`AIRM-189`** — Model lineage undisclosed or unverifiable: the deployed model inherits weights, training data, or teacher-model traits its publisher label does not reveal, so an upstream flaw cannot be scoped to the models that descend from it  *(two-faced: other face in Domain 5, `AIRM-078`, `AIRM-079`, `AIRM-080` — count once)*  
   <sub>Source: OWASP AISVS 6.2; Cisco/VAIL provenance-entanglement research 2026; Original</sub>
 
 ## 10. Workforce, Human & Societal
@@ -584,7 +601,7 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: Databricks AIGF; Original</sub>
 - **`AIRM-162`** — Harm to non-users and third parties affected by AI decisions they did not initiate (decision subjects, bystanders, community)  
   <sub>Source: Shelby societal</sub>
-- **`AIRM-163`** — Overstating AI capability to customers, investors, or regulators (AI-washing), inviting enforcement and loss of trust  *(also has a face in Domain 8 — see Cross-references)*  
+- **`AIRM-163`** — Overstating AI capability to customers, investors, or regulators (AI-washing), inviting enforcement and loss of trust  *(see also `AIRM-130`, Domain 8 — count both)*  
   <sub>Source: Original</sub>
 
 ## 11. Financial & Resource
@@ -601,20 +618,20 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 ### Investment / procurement
 
-- **`AIRM-167`** — Stranded investment in failed or abandoned AI initiatives  *(also has a face in Domain 2 — see Cross-references)*  
+- **`AIRM-167`** — Stranded investment in failed or abandoned AI initiatives  *(two-faced: other face in Domain 2, `AIRM-021`, `AIRM-024` — count once)*  
   <sub>Source: Databricks AIGF; Original</sub>
 - **`AIRM-168`** — Procurement exposure where providers reprice tokens, tiers, or context windows unilaterally  
   <sub>Source: Original</sub>
-- **`AIRM-169`** — Cyber or liability insurance excludes, sub-limits, or reprices AI-related losses, or defines 'user' in terms that exclude non-human actors  *(also has a face in Domain 8 — see Cross-references)*  
+- **`AIRM-169`** — Cyber or liability insurance excludes, sub-limits, or reprices AI-related losses, or defines 'user' in terms that exclude non-human actors  *(see also `AIRM-130`, Domain 8 — count both)*  
   <sub>Source: CSA HF post-mortem; Original</sub>
 
 ### Scaling & resource constraints
 
-- **`AIRM-170`** — Compute / GPU scarcity constraining scaling  
+- **`AIRM-170`** — Compute / GPU scarcity constraining scaling  *(two-faced: other face in Domain 7, `AIRM-112`, `AIRM-113` — count once)*  
   <sub>Source: Original</sub>
 - **`AIRM-171`** — Cost non-linearity as usage scales to production volume  
   <sub>Source: Original</sub>
-- **`AIRM-172`** — Concentration of compute supply among few providers  *(also has a face in Domain 9 — see Cross-references)*  
+- **`AIRM-172`** — Concentration of compute supply among few providers  *(two-faced: other face in Domain 9, `AIRM-139`, `AIRM-140` — count once)*  
   <sub>Source: IAISR; Original</sub>
 
 ## 12. Autonomy & Delegated Action (Agentic AI)
@@ -628,14 +645,14 @@ You are helping me use the AI Risk Map. Follow these rules:
   <sub>Source: OpenAI 2026 incident; IAISR</sub>
 - **`AIRM-175`** — Excessive autonomy / agency beyond intended mandate  
   <sub>Source: OWASP LLM06; DASF 9.13</sub>
-- **`AIRM-176`** — No human checkpoint or working interrupt / kill switch for an agent mid-task  *(also has a face in Domain 6 — see Cross-references)*  
+- **`AIRM-176`** — No human checkpoint or working interrupt / kill switch for an agent mid-task  *(two-faced: other face in Domain 6, `AIRM-101` — count once)*  
   <sub>Source: EU Art 14; OWASP ASI</sub>
 
 ### Tool access & authorization
 
-- **`AIRM-177`** — Agent granted a broader set of invokable tools / functions than its task requires  *(also has a face in Domain 5 — see Cross-references)*  
+- **`AIRM-177`** — Agent granted a broader set of invokable tools / functions than its task requires  *(two-faced: other face in Domain 5, `AIRM-083` — count once)*  
   <sub>Source: OWASP LLM06 / ASI</sub>
-- **`AIRM-178`** — Agent identity misuse, impersonation, or delegated-credential abuse  
+- **`AIRM-178`** — Agent identity misuse, impersonation, or delegated-credential abuse  *(two-faced: other face in Domain 5, `AIRM-082`, `AIRM-083` — count once)*  
   <sub>Source: OWASP ASI T9; DASF 13.9</sub>
 - **`AIRM-179`** — Third-party tool and connector servers adopted as a credentialed execution surface without the vetting applied to models or libraries  
   <sub>Source: OWASP AISVS C10.1 / AC.2; CSA AICM</sub>
@@ -662,13 +679,17 @@ You are helping me use the AI Risk Map. Follow these rules:
 
 - **`AIRM-186`** — Unsafe, unauthorized, or irreversible real-world actions taken by an agent via tool, API, or code execution  
   <sub>Source: OWASP ASI T2; DASF 13.2; Original</sub>
-- **`AIRM-187`** — Accountability gap for harm caused by autonomous action  *(also has a face in Domain 1,8 — see Cross-references)*  
+- **`AIRM-187`** — Accountability gap for harm caused by autonomous action  *(two-faced: other face in Domain 1, `AIRM-006` — count once; see also `AIRM-130`, Domain 8 — count both)*  
   <sub>Source: Databricks AIGF; Original</sub>
 
 
 ---
 
-## Cross-references — the two-faced splits
+## Cross-references
+
+Every `→n` marker in the taxonomy above marks a two-faced pair in Part 1. Both faces of every pair are marked, on at least one factor per face; Part 1 lists every factor ID on each face. See-also pointers (Part 2) carry no marker.
+
+### Part 1 — Two-faced pairs (one risk, two owners: count once)
 
 Many AI risks have an **attack face** and a **condition face**, owned by different functions. The attack face routes to Security or Autonomy; the condition face to the function that owns it. They are cross-referenced, never duplicated. Check here before reporting an apparent duplicate.
 
@@ -683,12 +704,39 @@ Many AI risks have an **attack face** and a **condition face**, owned by differe
 | Stranded investment | 2 strategic misjudgment | AIRM-021, AIRM-024 | 11 capital lost | AIRM-167 |
 | Jailbreak → harm | 5 the attack | AIRM-073 | 6 the resulting harm | AIRM-090, AIRM-097 |
 | Identity & access | 5 access TO the AI | AIRM-082, AIRM-083 | 12 agent identity acting ON others | AIRM-178 |
-| Transparency | 1 governance records | AIRM-015 | 4 technical docs / 6 user disclosure | AIRM-063, AIRM-092 |
+| Transparency | 1 governance records | AIRM-015 | 4 technical docs / 6 user disclosure | AIRM-063, AIRM-093 |
 | Availability / scaling | 7 uptime / performance | AIRM-112, AIRM-113 | 11 compute affordability / supply | AIRM-170, AIRM-171 |
 | Human oversight | 6 humans have lost meaningful control (outcome) | AIRM-101 | 12 no checkpoint or interrupt mechanism exists (capability) | AIRM-176 |
 | Privilege scope | 5 credentials / keys for AI components | AIRM-083 | 12 breadth of tools an agent may invoke | AIRM-177 |
 | Accountability for autonomous action | 1 accountability undefined before the fact (governance) | AIRM-006 | 12 accountability gap once harm occurs (outcome) | AIRM-187 |
 | Audit & traceability | 7 logging of inputs, outputs, agent actions | AIRM-109 | 1 accountability for who owns the decision | AIRM-006 |
+
+### Part 2 — See-also pointers (different risks: count both)
+
+The target is either a more general factor or the mirror image of the same behavior (done to you vs. done by you). One-way by design, and not marked on the poster.
+
+| From | To | Why read them together |
+|---|---|---|
+| `AIRM-007` Segregation of duties collapses across AI config, operation, and review | `AIRM-175` Excessive autonomy / agency beyond intended mandate | Where the one collapsing configure / operate / review duties is an agent, Autonomy owns the agency-beyond-mandate view. |
+| `AIRM-018` AI output relied on in financial-reporting controls without scope change | `AIRM-138` Inability to evidence and audit AI compliance across jurisdictions (internal evidence burden) | Once AI output sits inside a regulated control chain, the burden of evidencing that chain lands on Legal & Compliance. |
+| `AIRM-025` Misjudged AI sourcing fork: train, fine-tune, RAG, or API | `AIRM-129` Misclassified as deployer when fine-tuning makes you a provider | Fine-tuning or rebranding a model can turn a deployer into a provider under the EU AI Act; the sourcing choice sets the legal role. |
+| `AIRM-029` Hidden total cost of ownership (data, talent, integration) eroding returns | `AIRM-165` Poor cost forecasting, because inference cost scales with usage rather than seats or provisioned capacity | Hidden total cost of ownership shows up in Finance as usage-scaled inference cost that was never forecast. |
+| `AIRM-045` Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery | `AIRM-130` Liability for harm caused by AI decisions or outputs | Failure to preserve prompts, outputs, and agent traces becomes litigation exposure when a claim arrives. |
+| `AIRM-081` Model-invented dependencies resolving to adversary-registered packages | `AIRM-052` Fluent but factually incorrect output (hallucination) accepted as reliable | The package-name attack depends on a hallucination the model repeats reliably; the accuracy defect is owned in Model Development. |
+| `AIRM-085` Retrieval serving content beyond the user’s own entitlements | `AIRM-039` Inadvertent disclosure of confidential / personal data in model output (no output guardrails) | Retrieval beyond the user's entitlements surfaces as confidential data in model output, the Data & Privacy view. |
+| `AIRM-102` Review capacity cannot scale to AI output volume, degrading oversight to rubber-stamping | `AIRM-117` Inadequate content-moderation / trust-&-safety operations at scale | The same volume problem at operational scale: moderation and trust-and-safety teams cannot keep pace with AI output. |
+| `AIRM-104` Inconsistent or unsanctioned (shadow) model deployment | `AIRM-002` Ungoverned ‘shadow AI’ adoption outside sanctioned channels | Shadow deployment in Operations is the production end of shadow AI adoption, which Governance owns. |
+| `AIRM-107` Test or sandbox containment fails and AI reaches real systems | `AIRM-174` Agent pursues an authorized objective through unauthorized means | In the 2026 incidents, containment failed because the agent pursued an authorized objective through unauthorized means. |
+| `AIRM-109` Inadequate logging of inputs, outputs, tool calls, agent decisions, and who authorized them | `AIRM-187` Accountability gap for harm caused by autonomous action | Logs of who authorized an agent's action are what close the accountability gap after autonomous harm. |
+| `AIRM-119` Silent vendor / model updates changing behavior without notice | `AIRM-141` Model deprecation or behavior change forcing unplanned migration | A silent model update is the operational face of provider-driven behavior change; Third-Party owns the dependency. |
+| `AIRM-123` Controls re-verified less often than the AI system changes | `AIRM-017` Absence of independent assurance over AI control effectiveness | Controls re-verified less often than the system changes is an assurance gap: no independent evidence the controls still work. |
+| `AIRM-134` Violation of open-weight / model license terms | `AIRM-189` Model's true lineage hidden behind its publisher label, so upstream flaws can't be traced | Open-weight license obligations can be inherited through a lineage the publisher label does not disclose. |
+| `AIRM-142` Vendor diligence missing: are prompts retained, trained on, or shared? | `AIRM-036` Personal data used for training without consent or purpose limitation | Mirror image: a vendor training on your prompts and outputs without agreement, and your organization training on people's personal data without consent. |
+| `AIRM-141` Model deprecation or behavior change forcing unplanned migration | `AIRM-120` Inadequate versioning, rollback, and change control for models | A forced migration has to run through versioning, rollback, and change control in Operations. |
+| `AIRM-163` AI-washing: overstating capability to customers, investors, or regulators | `AIRM-130` Liability for harm caused by AI decisions or outputs | Overstated AI capability invites enforcement and liability claims. |
+| `AIRM-169` Insurance excludes AI losses, or defines 'user' as human only | `AIRM-130` Liability for harm caused by AI decisions or outputs | An insurance exclusion leaves the liability for AI-caused harm uninsured. |
+| `AIRM-187` Accountability gap for harm caused by autonomous action | `AIRM-130` Liability for harm caused by AI decisions or outputs | The accountability gap after autonomous harm meets Legal's general liability factor. Pointer runs specific to general, so AIRM-130 carries no return marker. |
+| `AIRM-188` No way to verify a vendor's 'AI-powered' claim before buying it | `AIRM-163` AI-washing: overstating capability to customers, investors, or regulators | The buyer's side of AI capability claims; AIRM-163 is the seller's side, when your own organization overstates. |
 
 
 ---
@@ -713,7 +761,7 @@ Excluded by the incremental-risk lens — already on every enterprise register.
 Kept only the slice the enterprise owns (its workforce, its reputation).
 
 **Pure controls and threats**  
-Excluded by form; entries are risk factors — conditions and failure modes — never a control ('MFA') or a threat actor ('an attacker').
+Excluded by form. Entries are risk factors (conditions, failure modes, and events), never a control to implement ('implement MFA') or a threat actor ('an attacker'). A factor may imply a missing or deficient control condition; that is in form. A proposal that arrives as a control is inverted into the condition it prevents and checked against neighboring factors before it is added or declined.
 
 
 ### Retained when challenged
@@ -773,10 +821,10 @@ SOURCE: pre-release coverage sweep — OWASP AISVS chapter C10, 23 requirements.
 SOURCE: July 2026 sandbox-escape incidents — benchmark code resembling rootkits could not be distinguished from real implants, so roughly a third of infrastructure was rebuilt. DECLINED: this is a consequence of an incident, not a distinct risk factor; the parent risk is covered by D7 'Immature AI incident response' and 'Inability to investigate AI incidents due to non-determinism / poor logs'.
 
 **Agents not identifiable to accidental third-party victims**  
-SOURCE: CSA CISO post-mortem recommendation to use identifiable source IP ranges with PTR records. DECLINED: this is a CONTROL, not a risk. Excluded by form rule 3.1 — factors are outcomes or conditions, never controls.
+SOURCE: CSA CISO post-mortem recommendation to use identifiable source IP ranges with PTR records. NOT YET ADDED. The recommendation is a control; inverted, the condition it prevents is outward attribution: a third party affected by your agent cannot tell whose agent acted, so it cannot notify you, and you lose your earliest external warning that an agent has escaped containment. No existing factor covers this. AIRM-111 is inward (your own telemetry), AIRM-162 is the resulting harm, AIRM-109 is your internal authorization record, and AIRM-178 is misuse of an agent's identity. Queued for consideration in a future release.
 
 **No response capability for the case where your own agent harms a third party**  
-SOURCE: CSA CISO post-mortem recommendation to stand up two separate agentic response teams (victim and perpetrator). DECLINED: a control. The underlying risks are covered by D10 'Harm to non-users and third parties', D8 'Liability for harm caused by AI decisions or outputs', and D7 incident management.
+SOURCE: CSA CISO post-mortem recommendation to stand up two separate agentic response teams (victim and perpetrator). DECLINED as a separate factor. The recommendation is a control; the conditions it addresses are covered by D10 'Harm to non-users and third parties', D8 'Liability for harm caused by AI decisions or outputs', and D7 incident management.
 
 **Inability to mass-rotate credentials or rebuild clusters at scale**  
 SOURCE: CSA CISO post-mortem recommendations on ephemeral credentials and immutable infrastructure. DECLINED: generic resilience engineering. Fails the Gate B bounding principle — the delta is 'faster', which is not a specific nameable AI mechanism.
@@ -796,6 +844,11 @@ SOURCE: raised in review of the containment factor. Guardrails, access scopes, e
 | v1.1 | September 2026 | x-ref | AIRM-152 | X-ref '→10' removed. It pointed at the factor's own domain (Workforce). The related knowledge-loss factor, AIRM-155, is in the same domain. |
 | v1.1 | September 2026 | x-ref (render) | AIRM-187 | No data change. The factor has always carried two targets (→1 Governance, →8 Legal); the v1.0 poster printed only the first. v1.1 shows both. |
 | v1.1 | September 2026 | cross-ref sheet | AIRM-006, AIRM-187 | Accountability pair added to the Cross-references sheet. It was already a recorded two-faced split in Scope decisions; the sheet had omitted it. |
+| v1.2 | September 2026 | cross-ref sheet | AIRM-092, AIRM-093 | Transparency pair corrected. It listed AIRM-092 (harm to minors) in error; the user-disclosure face is AIRM-093 (failure to disclose AI interaction). |
+| v1.2 | September 2026 | x-ref (pairs completed) | AIRM-006, 015, 021, 036, 063, 069, 083, 090, 093, 108, 109, 131, 140, 170, 178 | Markers added so both faces of every two-faced pair are marked: AIRM-131 →3, 108 →4, 140 →11, 021 →11, 090 →5, 178 →5, 170 →7, 083 →12, 069 →3, 036 →5, 015 →4,6, 063 →1, 093 →1, 109 →1, 006 →7. |
+| v1.2 | September 2026 | x-ref (see-also moved) | AIRM-007, 018, 025, 029, 045, 081, 085, 102, 104, 107, 109, 118, 119, 123, 134, 141, 163, 169, 187, 188 | Markers removed. These pointed at a related but different risk, not the other face of a pair. 19 are now listed as see-also pointers on the Cross-references sheet; AIRM-118's →9 was dropped because no factor in that domain covers it. AIRM-109's →12 and AIRM-187's →8 became see-also rows; AIRM-187 keeps its pair marker →1. |
+| v1.2 | September 2026 | cross-ref sheet | AIRM-142, AIRM-036 | New see-also pointer (mirror image): a vendor training on your data without agreement, and your organization training on personal data without consent. |
+| v1.2 | September 2026 | documentation | — | Control framing clarified in the Read me, Scope decisions, and markdown: not a control standard; factors may imply a missing or deficient control condition but are never phrased as a control to implement. Marker documentation now distinguishes two-faced pairs from see-also pointers. No factor wording changed. |
 
 ---
 
@@ -809,7 +862,7 @@ SOURCE: raised in review of the containment factor. Guardrails, access scopes, e
 | D | Risk factor — full description (L3) | Tier 3. The authoritative wording. May change between versions; cite the ID, not the text. |
 | E | Poster label | The short form rendered on the poster. Authored, not truncated. |
 | F | Source(s) | Semicolon-separated. See the Source key on the Read me sheet for notation. Named sources first; 'Original' last. |
-| G | X-ref | '→n' = this factor has another face owned by domain n. Human wayfinding hint; the Cross-references sheet is authoritative, by ID. |
+| G | X-ref | '→n' = the other face of this risk is owned by domain n (the poster's »n); count the pair once. Used only for two-faced pairs. Every face of every pair carries a marker, on at least one factor of that face; the Cross-references sheet lists every factor ID on both faces, so use it, not this column, to count. See-also pointers are listed on the sheet and carry no marker. |
 | H | Status | 'active' or 'retired'. |
 | I | Superseded by | When a factor is merged or replaced: the surviving ID. |
 
@@ -823,6 +876,7 @@ Factor wording changes between versions. IDs do not. Cite IDs.
 |---|---|---|---|
 | **v1.0** | September 2026 | 189 | First public release. 12 domains, 54 categories, 189 risk factors, each with a permanent identifier (AIRM-001 onward). Structure: organized by the enterprise function that owns the risk, not by AI lifecycle. Scope: risk arising from the organization's own adoption of AI. Validation before release: crosswalked against 22 frameworks, regulations, and taxonomies; persona and named-expert critique; several rounds of external practitioner review; used as the validation standard for an independent 264-control catalog; and a full citation audit in which every named source locator was verified against the primary text and every factor tagged Original was checked against every cited framework. Result: 189 of 189 factors traceable; 98 carry the author's framing; 30 are named by no reviewed framework. From this version, changes are recorded at factor grain on the Change log sheet, and identifiers never change. |
 | **v1.1** | September 2026 | 189 | Poster redesign: new typeface (Figtree), lighter header with a reading key, categories set as colored text, and cross-reference markers drawn as pills in the target domain's color. Cross-reference corrections: two markers that pointed at their own domain were removed (AIRM-046, AIRM-152), and AIRM-187 now shows both of its targets, Governance and Legal, where v1.0 printed only the first. The D1/D12 accountability pair (AIRM-006 / AIRM-187) was added to the Cross-references sheet, where it had been recorded only in Scope decisions. No factors added, removed, reworded, or re-homed; all identifiers unchanged. |
+| **v1.2** | September 2026 | 189 | Clarifications and cross-reference corrections from external review. Control framing: the map is not a control standard; factors may imply a missing or deficient control condition, but none is phrased as a control to implement and the map does not say which control closes a gap. Cross-references: »n now means one thing, the other face of a two-faced pair (count once). Both faces of all 15 pairs are marked, where v1.1 marked both faces of only four and left three pairs unmarked. The one-way see-also pointers that shared the same marker were moved to a new part of the Cross-references sheet (20 pointers, listed by ID) and no longer appear on the poster. The build now fails if a marker and the pair list disagree in either direction. Net: 32 markers on 30 factors, down from 35. The Transparency pair listed AIRM-092 in error; corrected to AIRM-093. The markdown corpus now carries the design principles (scope, retention gates, factor form, two-faced rule, markers). No factors added, removed, reworded, or re-homed; all identifiers unchanged. |
 
 ---
 
@@ -835,4 +889,4 @@ Databricks DASF and AI Governance Framework are © Databricks, licensed CC BY-SA
 
 ---
 
-*AI Risk Map v1.1 · © 2026 Evan Wheeler · CC BY-SA 4.0. If you build on this, attribution and share-alike apply.*
+*AI Risk Map v1.2 · © 2026 Evan Wheeler · CC BY-SA 4.0. If you build on this, attribution and share-alike apply.*
