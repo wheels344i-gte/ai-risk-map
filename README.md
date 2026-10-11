@@ -10,7 +10,9 @@ Most teams naturally gravitate toward familiar concerns like hallucinations, pro
 
 It is not a risk library or exhaustive catalog. It is a practical tool designed to spark better conversations and uncover overlooked risks.
 
-12 domains · 54 categories · 189 risk factors · one page.
+12 domains · 55 categories · 196 risk factors · one page.
+
+**Using an earlier version?** v1.3 adds eight factors and narrows four. See [What changed in v1.3](#what-changed-in-v13) before you update an existing mapping.
 
 ---
 
@@ -33,7 +35,7 @@ It is not a risk library or exhaustive catalog. It is a practical tool designed 
 
 Three tiers: Domain → Category → Risk factor. Each risk factor is a condition, failure mode, or event that contributes to risk. It is not a scored risk. A factor may imply a missing or deficient control condition, but it is never phrased as a control to implement.
 
-**Scope.** The map covers risk arising from *your organization's own adoption of AI*. Risk arising from *others' use of AI against you* — AI-enabled fraud, deepfake impersonation, adversarial automation — is deliberately out of scope. That risk is real; it belongs on your threat register, not on an adoption map. The scope decisions sheet in the workbook records this and every other deliberate exclusion.
+**Scope.** The map covers risk arising from *your organization's own adoption of AI*. Risk arising from *others' adversarial or malicious use of AI against you* — AI-enabled fraud, deepfake impersonation, adversarial automation — is deliberately out of scope. That risk is real; it belongs on your threat register, not on an adoption map. The effect of competitors' and customers' AI on the value of your own strategy is in scope. The scope decisions sheet in the workbook records this and every other deliberate exclusion.
 
 **What gets in.** The map does not list every risk that applies to managing an AI system. It lists the risks that AI *introduces*, or that AI *amplifies* in a specific and nameable way. Generic IT, cyber, and vendor risk that exists identically without AI stays off; that one constraint is what keeps the map finite. A candidate earns a place by clearing any one of three gates:
 
@@ -45,14 +47,14 @@ Three tiers: Domain → Category → Risk factor. Each risk factor is a conditio
 
 Passing a gate is admission, not priority. When there were more good candidates than the page could hold, the tiebreak was how likely a competent team is to overlook the factor — because the poster exists to surface what gets missed, not to restate what everyone already tracks.
 
-**Two-faced risks.** Many AI risks have an attack face and a condition face owned by different functions — data poisoning versus poor data quality, for example. The map routes each face to its owner and cross-references them. They are split on purpose. Check the Cross-references sheet before reporting one as a duplicate.
+**Split pairs.** Some risks are the same loss seen from two owners' columns, such as a compromised model component, which Security sees as an attack on artifacts and Third-Party sees as a bad dependency. The map routes each side to its owner and cross-references them. They are split on purpose. The test is one question: would assessing both factors as separate scenarios count the same loss twice? If so, they are a split pair. Check the Cross-references sheet before reporting one as a duplicate.
 
-**Cross-reference markers.** `»n` on the poster (`→n` in the CSV) means the other face of this risk is owned by domain *n*. The marker is used only for two-faced pairs. Both faces of every pair are marked, on at least one factor per face. The workbook's Cross-references sheet records two kinds of relationship:
+**Cross-reference markers.** `»n` on the poster (`→n` in the CSV) means this factor is one side of a split pair whose other side is owned by domain *n*. The marker is used for nothing else, and both sides of every pair are marked. The workbook's Cross-references sheet records two kinds of relationship:
 
 | Kind | What it means | On the poster | When counting |
 |---|---|---|---|
-| **Two-faced pair** | One underlying risk, seen from two owners' chairs | `»n` | Count once |
-| **See-also pointer** | A different risk worth reading alongside: a more general factor, or the mirror image of the same behavior (done to you vs. done by you). One-way. | Not marked; workbook and markdown only | Count both |
+| **Split pair** | The same loss, seen from two owners' columns | `»n` | Count once |
+| **See-also pointer** | A different risk worth reading alongside: a more general factor, the mirror image of the same behavior, the same kind of loss arising a different way, a parallel instance, or a missing safeguard and the risk it protects against. One-way. | Not marked; workbook and markdown only | Count both |
 
 ## How to use it
 
@@ -60,7 +62,7 @@ Passing a gate is admission, not priority. When there were more good candidates 
 
 **With your AI assistant.** Load `AI-Risk-Map.md` into your tool of choice. Its header includes a copy-paste instruction block that keeps the assistant grounded in the map — answer only from this document, cite the factor ID, say plainly when something is not covered. Then ask things like *"We're deploying a customer-facing agent. Walk me through the factors we should discuss, domain by domain."*
 
-**Programmatically.** Use the CSV. Every factor has a permanent identifier (`AIRM-001` … `AIRM-189`). IDs are flat, opaque, and stable across versions. Wording is not stable; cite the ID.
+**Programmatically.** Use the CSV. Every factor has a permanent identifier (`AIRM-001` … `AIRM-197`). IDs are flat, opaque, and stable across versions. Wording is not stable; cite the ID.
 
 The column layout is frozen at v1.0 — adding, removing, or reordering a column is a major version. The contract:
 
@@ -72,11 +74,36 @@ The column layout is frozen at v1.0 — adding, removing, or reordering a column
 | D | `Risk factor — full description (L3)` | Authoritative wording. May change; cite the ID. |
 | E | `Poster label` | Short form used on the poster |
 | F | `Source(s)` | Semicolon-separated; notation in the workbook's Source key |
-| G | `X-ref` | `→n` = the other face of this risk is owned by domain n (the poster's `»n`). Two-faced pairs only. |
+| G | `X-ref` | `→n` = one side of a split pair; the other side is owned by domain n (the poster's `»n`). Split pairs only. |
 | H | `Status` | `active` / `retired` |
 | I | `Superseded by` | Surviving ID after a merge |
 
-The workbook's **Cross-references** sheet is authoritative. Part 1 lists each two-faced pair with the factor IDs on both faces; Part 2 lists each see-also pointer from one ID to another. A multi-factor face carries its marker on at least one of its factors, so use the sheet, not the `X-ref` column, to count. Factor-level changes between versions are on the **Change log** sheet.
+The workbook's **Cross-references** sheet is authoritative. Part 1 lists each split pair with the factor IDs on both sides; Part 2 lists each see-also pointer from one ID to another. Use the sheet, not the `X-ref` column, to count. Factor-level changes between versions are on the **Change log** sheet.
+
+## What changed in v1.3
+
+If you used v1.2, nothing you cited has disappeared: identifiers, columns, and file names are unchanged. The full list is on the workbook's **Change log** sheet.
+
+**New to leverage**
+
+- **Eight factors.** Agent actions third parties can't attribute to you (`AIRM-190`); safety training stripped or eroded in a self-hosted model (`AIRM-191`); changes to your own AI service made without notice to customers (`AIRM-192`); your advantage eroding as competitors and customers approximate it with AI (`AIRM-193`); AI agents disintermediating you from your customers (`AIRM-194`); leaders managing AI like a conventional IT rollout (`AIRM-195`); insiders using AI agents to reach beyond their own access (`AIRM-196`); inputs crafted to evade AI detection models (`AIRM-197`).
+- **A new category, Competitive position,** in Strategy & Value Realization: `AIRM-193`, `AIRM-194`, and `AIRM-026` (moved, wording unchanged).
+- **A wider scope statement.** Only others' *adversarial or malicious* use of AI is excluded. How competitors' and customers' AI changes the value of your own strategy is now in scope.
+- **More see-also pointers** (54, up from 20), so related risks are easier to read together.
+
+**Check against earlier work**
+
+- **Four factors narrowed.** If you mapped controls or scenarios to these, some may belong elsewhere now:
+  - `AIRM-149` covers abandoned open-source dependencies only. Known vulnerabilities left unpatched are `AIRM-079`.
+  - `AIRM-114` covers deliberate denial-of-wallet only. Unmanaged usage of your own systems is `AIRM-164`.
+  - `AIRM-122` covers drift from uncontrolled learning only. Deliberate poisoning through a learning loop is `AIRM-065`.
+  - `AIRM-153` covers workforce literacy only. Leadership understanding is the new `AIRM-195`.
+- **One factor clarified to its cause.** `AIRM-161` now means customers distrusting or avoiding AI-mediated services. If you used it for loss of trust after an incident, use `AIRM-160`.
+- **One merge.** `AIRM-171` is merged into `AIRM-165`. It stays in the CSV and workbook as a retired row pointing to `AIRM-165`.
+- **Fewer split pairs, so counts may change.** Every v1.2 pair was re-tested against the counting question above. Six remain (14 marked factors, down from 32). The rest are now see-also pointers, which count both. If you counted a v1.2 pair once, check whether it is still a pair.
+- **Sources.** `DASF 5.4` (malicious libraries) moved from `AIRM-079` and `AIRM-149` to `AIRM-148`. The ATLAS evasion citations moved from `AIRM-057` and `AIRM-058` to the new `AIRM-197`. MAS Guidelines on AI Risk Management are a new source.
+- **Wording.** Fourteen other factors were reworded to widen or clarify the same condition. Cite by ID and these need no action.
+- **Terminology.** "Two-faced pair" is now "split pair."
 
 ## Frequently asked
 
@@ -90,13 +117,13 @@ Open the workbook's **Scope decisions** sheet first. It records what was deliber
 Not with what is here. Position, order, and ID number carry no meaning about likelihood or severity. A rare catastrophic factor sits beside a common minor one. Scope a factor into a proper risk scenario before you quantify it.
 
 **Where do the factors come from?**
-Every factor carries a source citation in the workbook and markdown. Sources span regulation (EU AI Act, Colorado), standards (NIST AI RMF and GenAI Profile, ISO/IEC 42001), threat frameworks (OWASP LLM / Agentic / AISVS, MITRE ATLAS, Databricks DASF), internal-control and financial-services guidance (COSO, CRI FS-AI-RMF, SR 11-7), practitioner frameworks (CSA AICM, Databricks AI Governance Framework), and academic taxonomies (MIT AI Risk Repository, International AI Safety Report, Weidinger, Shelby). Every one of the 189 factors is traceable. 98 carry the author's own framing of a risk a cited framework names (`…; Original`). 30 are named by no reviewed framework at all; those cluster in Strategy, Financial, and Workforce, which is where the map does work the technical frameworks do not.
+Every factor carries a source citation in the workbook and markdown. Sources span regulation (EU AI Act, Colorado), standards (NIST AI RMF, GenAI Profile, and AI 100-2, ISO/IEC 42001), threat frameworks (OWASP LLM / Agentic / AISVS, MITRE ATLAS, Databricks DASF), internal-control and financial-services guidance (COSO, CRI FS-AI-RMF, MAS, SR 11-7), practitioner frameworks (CSA AICM, Databricks AI Governance Framework), and academic taxonomies (MIT AI Risk Repository, International AI Safety Report, Weidinger, Shelby). Every one of the 196 factors is traceable. 73 carry the author's own framing of a risk a cited framework names (`…; Original`). 30 are named by no reviewed framework at all; those cluster in Strategy and Workforce, which is where the map does work the technical frameworks do not.
 
 **How is it validated?**
 Crosswalked against 22 frameworks, regulations, and taxonomies; stress-tested through persona review and named-expert critique; reviewed by external practitioners; used as the validation standard for a separate 264-control catalog built on the CSA AI Controls Matrix; and put through a full citation audit before release in which every source locator was verified against the primary text and every `Original` tag was checked against every cited framework. The workbook's provenance appendix shows how many factors each source anchors.
 
 **How do I cite it?**
-> Wheeler, E. (2026). *AI Risk Map* v1.2. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map/releases/tag/v1.2
+> Wheeler, E. (2026). *AI Risk Map* v1.3. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map/releases/tag/v1.3
 
 Cite individual factors by ID: `AIRM-042`. Identifiers are permanent; factor wording can change between versions, so name the version when the exact wording matters.
 
@@ -106,7 +133,7 @@ File names carry no version number, so links don't break when a new version ship
 | You want | Link pattern |
 |---|---|
 | Always the current version (websites, slides, bookmarks) | `https://github.com/wheels344i-gte/ai-risk-map/blob/main/AI-Risk-Map.pdf` |
-| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/blob/v1.2/AI-Risk-Map.pdf` |
+| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/blob/v1.3/AI-Risk-Map.pdf` |
 | The file itself, for tools, scripts, AI assistants, or embedding an image | Replace `blob` with `raw` in either link above |
 
 Replace `AI-Risk-Map.pdf` with any file in the table above. `blob` links open the file on GitHub with a preview and a download button; `raw` links return the file alone. To see what changed between versions, open a file's **History** on GitHub. The CSV and markdown show line-by-line differences, and the PNG and SVG can be compared side by side.
