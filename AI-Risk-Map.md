@@ -1,8 +1,8 @@
-# AI Risk Map — Full Corpus
+# AI Risk Map™ — Full Corpus
 
-**Version 1.3 · October 2026 · © 2026 Evan Wheeler · Licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**
+**Version 2.0 · November 2026 · © 2026 Evan Wheeler · Licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**
 
-12 domains · 55 categories · 196 risk factors
+12 domains · 55 categories · 204 risk factors
 
 ---
 
@@ -17,7 +17,7 @@ This file is the machine-readable companion to the poster. It carries every risk
 ## What this is NOT
 
 - **Not a scored or ranked risk register.** Position, order, and ID number carry no meaning about likelihood or severity. A rare catastrophic factor sits beside a common minor one.
-- **Not a list of well-formed risk statements.** Each entry is a risk *factor* — a condition, failure mode, threat event, or loss event that contributes to risk. In FAIR terms these are not loss-event statements. Scope one properly before using it in analysis.
+- **Not a list of well-formed risk statements.** Each entry is a risk *factor*: a cause, a missing or weak safeguard, an amplifier, or (for a few) an outcome. The Condition type column says which. In FAIR terms these are not loss-event statements. Scope one properly before using it in analysis.
 - **Not exhaustive.** It is a thought-starter. Customize it to your industry, geography, and context.
 - **Not a control standard or control library.** Many factors imply a missing or deficient control condition. That is deliberate: a control gap is a condition that contributes to risk. But no factor is phrased as a control to implement, and the map does not say which control closes a gap. One factor may call for several controls, and one control may address several factors. It never names threat actors.
 - **Not a replacement for system-specific threat modeling.** It seeds that work; it does not substitute for it.
@@ -37,15 +37,16 @@ These are the rules the map was built by. Use them to judge whether something be
 - **Incremental-risk lens.** Within that boundary, only risks AI introduces or amplifies. Generic IT, cyber, and vendor risk that exists identically without AI stays off.
 - **Three retention gates.** A factor earns its place if it clears ANY one: (A) AI-specific: remove AI and the risk vanishes; (B) management delta: the risk is not new, but the way it must be managed is; (C) corroboration: two or more independent AI standards name it.
 - **Gate B bounding principle.** The management delta must be specific and nameable, not merely 'there is more of it'. 'Agent-framework sprawl outpacing credential governance' qualifies; 'cyber risk went up' does not.
-- **Admission vs. priority.** Passing a gate is admission, not priority. When there were more good candidates than the page could hold, the tiebreak was how likely a competent team is to overlook the factor.
-- **Owner-based axis.** Domains are organized by who owns the risk, not by AI lifecycle.
-- **What a risk factor is.** A condition, failure mode, or event that contributes to risk. It may imply a missing or deficient control condition, but it is never phrased as a control to implement ('implement MFA') and never as a threat actor ('an attacker'). A proposal that arrives as a control is inverted into the condition it prevents, then checked against neighboring factors before it is added or declined. A factor names what produces a loss, not the impact itself: 'energy use not weighed in deployment choices', not 'environmental footprint'.
+- **Admission vs. priority.** Passing a gate is admission, not priority. When there were more good candidates than the page could hold, the tiebreak was how likely a competent team is to overlook the factor. A candidate safeguard gap is judged against the neighboring safeguards, not against the risks they protect.
+- **Owner-based axis.** Domains are organized by who owns the risk, not by AI lifecycle. A domain owns the condition (the cause or the missing safeguard), not the impact: a factor sits with the function that owns it, not the function that absorbs the loss.
+- **What a risk factor is.** A condition that contributes to risk: a cause, a missing or weak safeguard, or an amplifier (see Condition type). It may imply a missing or deficient control condition, but it is never phrased as a control to implement ('implement MFA') and never as a threat actor ('an attacker'). A proposal that arrives as a control is inverted into the condition it prevents, then checked against neighboring factors before it is added or declined. A factor names what produces a loss, not the impact itself: 'energy use not weighed in deployment choices', not 'environmental footprint'. Wording stops at the condition; the loss belongs to the scenario. A list in parentheses is illustrative and starts with 'e.g.'
+- **Condition type.** How a factor enters a scenario. CAUSE: the first thing that goes wrong; fix it and the loss never starts. SAFEGUARD GAP: a missing or weak control; fix it and the first failure still happens, but a later step is stopped or the loss is softened. It is a condition on the scenarios it protects, never a scenario of its own. AMPLIFIER: changes how often losses happen, how far they spread, or how badly they land, without causing them. OUTCOME: names the loss event itself; few factors are outcomes, and each is a candidate for rewording to the condition behind it. A factor takes more than one value only when it plays different roles in different scenarios.
 - **Split routing rule.** When a risk has an attack side and a condition side owned by different functions, the attack side routes to Security or Autonomy and the condition side to the function that owns it. Whether the two are then a split pair or a see-also depends on the counting test under Cross-reference markers.
 - **Cross-reference markers.** »n on the poster (→n in the X-ref column) means this factor is one side of a SPLIT PAIR whose other side is owned by domain n: the same loss seen from two owners' columns; count it once. The test: would assessing both factors as separate scenarios count the same loss twice? The marker is used for nothing else. Both sides of every pair are marked; the Cross-references sheet lists every factor ID on each side. SEE-ALSO POINTERS link different risks worth reading together (a more general factor; the mirror image of the same behavior; the same kind of loss arising a different way; a parallel instance; or a missing safeguard and the risk it protects against); count both. They are listed on the Cross-references sheet and carry no poster marker.
 
 ## Identifiers
 
-Every factor carries a permanent ID (`AIRM-001` onward; 196 active). IDs are flat, opaque and sequential. They encode nothing — not domain, not category, not priority. An ID is stable across versions; **the wording of a factor is not**. Cite the ID, not the sentence.
+Every factor carries a permanent ID (`AIRM-001` onward; 204 active). IDs are flat, opaque and sequential. They encode nothing — not domain, not category, not priority. An ID is stable across versions; **the wording of a factor is not**. Cite the ID, not the sentence.
 
 ## How to read the Source(s) field
 
@@ -90,6 +91,10 @@ You are helping me use the AI Risk Map. Follow these rules:
 8. If I cite an ID marked retired, say so and give the surviving ID.
    If I am working from an earlier version, check the Change log:
    rows marked NARROWED say where the old meaning now lives.
+9. Use each factor's condition type. A cause can start a scenario.
+   A safeguard gap is a condition on the scenarios it protects, never a
+   scenario of its own. An amplifier changes how often or how badly
+   losses land. An outcome names the loss event.
 ```
 
 **Questions this file answers well:**
@@ -98,6 +103,7 @@ You are helping me use the AI Risk Map. Follow these rules:
 - "Is *X* covered? If not, was it deliberately excluded, and why?"
 - "Show me everything Legal owns. Now everything Finance owns."
 - "Which factors are split pairs I might double-count?"
+- "For this scenario, which causes could start it, and which safeguard gaps would let it through?"
 - "We just had this incident. Which factors does it touch?"
 - "We mapped our controls to an earlier version. What changed that affects the mapping?"
 - "Which of these factors would a security team typically miss?"
@@ -116,150 +122,152 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Governance & oversight
 
 - **`AIRM-001`** — Inadequate executive/board oversight of AI adoption and risk  
-  <sub>Source: NIST Govern; ISO A.2</sub>
-- **`AIRM-002`** — Ungoverned ‘shadow AI’ adoption outside sanctioned channels  *(pointed to by `AIRM-104`, Domain 7)*  
-  <sub>Source: NIST Govern; CRI GV-1.6.3; COSO GenAI 2026; Original</sub>
+  <sub>Condition type: safeguard gap · Source: NIST Govern; ISO A.2</sub>
+- **`AIRM-002`** — Ungoverned ‘shadow AI’ adoption outside sanctioned channels  *(pointed to by `AIRM-104`, Domain 7; pointed to by `AIRM-204`, Domain 2)*  
+  <sub>Condition type: cause · Source: NIST Govern; CRI GV-1.6.3; COSO GenAI 2026; Original</sub>
 - **`AIRM-003`** — Absence of an AI governance body or charter with a clear mandate  
-  <sub>Source: ISO A.3</sub>
+  <sub>Condition type: safeguard gap · Source: ISO A.3</sub>
 
 ### Roles & accountability
 
 - **`AIRM-004`** — Unclear ownership and accountability (RACI) for AI risk decisions  *(see also `AIRM-005`, Domain 1 (kept separate on purpose) — count both)*  
-  <sub>Source: NIST Govern; ISO A.3</sub>
-- **`AIRM-005`** — No clear executive owner for AI adoption: responsibility for strategy, prioritization, and integration into the business diffuses across technology, data science, and business leaders, with no convention for who decides  *(pointed to by `AIRM-004`, Domain 1 (kept separate on purpose))*  
-  <sub>Source: Original</sub>
-- **`AIRM-006`** — Failure to define accountability for autonomous / agent-driven decisions — internally, and across the AI stack of model provider, platform, developer, and deployer, where the allocation shifts as autonomy increases  *(split pair: other side in Domain 12, `AIRM-187` — count once; pointed to by `AIRM-109`, Domain 7 (missing safeguard))*  
-  <sub>Source: EU Art 14; EU Art 25 (amended 2026); CSA AICM; CoSAI AI SRF</sub>
+  <sub>Condition type: safeguard gap · Source: NIST Govern; ISO A.3</sub>
+- **`AIRM-005`** — No clear executive owner for AI adoption: responsibility for strategy, prioritization, and integration into the business diffuses across technology, data science, and business leaders, with no convention for who decides, or against what criteria, to start, scale, or stop an initiative  *(pointed to by `AIRM-004`, Domain 1 (kept separate on purpose))*  
+  <sub>Condition type: safeguard gap · Source: Original</sub>
+- **`AIRM-006`** — Failure to define accountability for autonomous / agent-driven decisions — internally, and across the AI stack of model provider, platform, developer, and deployer, where the allocation shifts as autonomy increases  *(split pair: other side in Domain 12, `AIRM-187` — count once; pointed to by `AIRM-109`, Domain 7 (parallel))*  
+  <sub>Condition type: safeguard gap · Source: EU Art 14; EU Art 25 (amended 2026); CSA AICM; CoSAI AI SRF</sub>
 - **`AIRM-007`** — Segregation of duties collapses where the same person or agent configures the AI, operates it, and reviews its output  *(see also `AIRM-175`, Domain 12 — count both)*  
-  <sub>Source: COSO GenAI 2026; OWASP AISVS AC.8</sub>
+  <sub>Condition type: safeguard gap · Source: COSO GenAI 2026; OWASP AISVS AC.8</sub>
 
 ### Policy & standards
 
 - **`AIRM-008`** — Absence of an AI acceptable-use policy and model-approval gates  
-  <sub>Source: ISO A.2; NIST Govern</sub>
+  <sub>Condition type: safeguard gap · Source: ISO A.2; NIST Govern</sub>
 - **`AIRM-009`** — AI policies not kept current with evolving capabilities and regulation  
-  <sub>Source: ISO A.2; Original</sub>
+  <sub>Condition type: safeguard gap · Source: ISO A.2; Original</sub>
 - **`AIRM-010`** — Inconsistent standards across business units, as AI adoption proliferates independently faster than central standards can follow  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: safeguard gap · Source: Databricks AIGF; Original</sub>
 - **`AIRM-011`** — No agreed definition of what counts as ‘AI’, leaving policy scope, inventory boundaries, and regulatory classification undefined  
-  <sub>Source: CRI FS-AI-RMF GV-1.2.2</sub>
+  <sub>Condition type: safeguard gap · Source: CRI FS-AI-RMF GV-1.2.2</sub>
 
 ### Risk-management integration
 
 - **`AIRM-012`** — AI risk not integrated into enterprise risk management (ERM)  
-  <sub>Source: NIST Govern; CRI MG-1.2.1; Original</sub>
+  <sub>Condition type: safeguard gap · Source: NIST Govern; CRI MG-1.2.1; Original</sub>
 - **`AIRM-013`** — Failure to conduct AI impact assessments for individuals and society  
-  <sub>Source: EU Art 27 (amended 2026); ISO A.5</sub>
+  <sub>Condition type: safeguard gap · Source: EU Art 27 (amended 2026); ISO A.5</sub>
 - **`AIRM-014`** — No defined risk appetite or tolerance thresholds for AI  
-  <sub>Source: NIST Govern; CRI GV-2.3.2; Original</sub>
+  <sub>Condition type: safeguard gap · Source: NIST Govern; CRI GV-2.3.2; Original</sub>
 
 ### Audit & assurance
 
 - **`AIRM-015`** — Inability to audit AI due to a missing or incomplete inventory of models, agents, and connectors, and their lineage  *(see also `AIRM-063`, Domain 4 (parallel) — count both)*  
-  <sub>Source: ISO A.4; NIST Govern; CRI GV-1.6.1</sub>
+  <sub>Condition type: safeguard gap · Source: ISO A.4; NIST Govern; CRI GV-1.6.1</sub>
 - **`AIRM-016`** — Insufficient internal-audit competence to assess AI controls  
-  <sub>Source: Original</sub>
+  <sub>Condition type: safeguard gap · Source: Original</sub>
 - **`AIRM-017`** — Absence of independent assurance over AI control effectiveness  *(pointed to by `AIRM-123`, Domain 7)*  
-  <sub>Source: CRI GV-1.5.4; Original</sub>
+  <sub>Condition type: safeguard gap · Source: CRI GV-1.5.4; Original</sub>
 - **`AIRM-018`** — AI output relied upon as evidence in financial-reporting or other regulated control chains without recognizing the expansion of assurance scope  *(see also `AIRM-138`, Domain 8 — count both)*  
-  <sub>Source: COSO GenAI 2026 p.13</sub>
-- **`AIRM-019`** — No reliable way to identify which artifacts, code, or analyses were AI-generated, so a systemic model or prompt flaw cannot be scoped or remediated after the fact  
-  <sub>Source: OWASP AISVS AC.9 / AC.10; COSO GenAI 2026 (AI bill of materials)</sub>
+  <sub>Condition type: cause · Source: COSO GenAI 2026 p.13</sub>
+- **`AIRM-019`** — No reliable way to identify which artifacts, code, or analyses were AI-generated, so a systemic model or prompt flaw cannot be scoped or remediated after the fact  *(pointed to by `AIRM-200`, Domain 8 (parallel))*  
+  <sub>Condition type: safeguard gap · Source: OWASP AISVS AC.9 / AC.10; COSO GenAI 2026 (AI bill of materials)</sub>
 
 ## 2. Strategy & Value Realization
 
 
 ### Competitive position
 
-- **`AIRM-193`** — Advantages built on knowledge, data, or skilled work lose their value as competitors, and even customers, approximate them with general-purpose AI, faster and more cheaply than earlier automation allowed, and our own adoption of AI does not restore the advantage  
-  <sub>Source: Original</sub>
+- **`AIRM-193`** — Advantages built on knowledge, data, or skilled work lose their value as competitors, and even customers, approximate them with general-purpose AI, faster and more cheaply than earlier automation allowed, and our own adoption of AI does not restore the advantage  *(pointed to by `AIRM-198`, Domain 8 (kept separate on purpose))*  
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-194`** — Third-party AI assistants and agents increasingly stand between the organization and its customers, searching, comparing, and choosing on the customer's behalf, so the organization loses direct access to the customer, brand preference counts for less, and its offering is compared as a commodity  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-026`** — Failure to weigh the competitive risk of not adopting AI (inaction)  
-  <sub>Source: Databricks AIGF; Cloud Risk Map analog; Original</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF; Cloud Risk Map analog; Original</sub>
 
 ### AI strategy & roadmap
 
 - **`AIRM-020`** — Lack of a coherent AI strategy aligned to objectives and risk appetite  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF; Original</sub>
 - **`AIRM-021`** — AI adoption driven by hype rather than demonstrated business value  *(split pair: other side in Domain 11, `AIRM-167` — count once)*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-022`** — Inability to adapt the roadmap as foundation-model capabilities shift  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
+- **`AIRM-204`** — Blanket bans or restrictions on AI use driven by fear rather than assessed risk, pushing use into unsanctioned tools and forgoing value  *(see also `AIRM-002`, Domain 1 — count both)*  
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Use-case selection & sourcing
 
 - **`AIRM-023`** — Selection of use cases without a clearly defined problem and success measure, or without weighing incremental risk against benefit  
-  <sub>Source: CRI MP-3.2.1; Original</sub>
+  <sub>Condition type: cause · Source: CRI MP-3.2.1; Original</sub>
 - **`AIRM-024`** — ‘Pilot purgatory’ — pilots stalling on data readiness, evaluation difficulty, or inability to demonstrate value  *(split pair: other side in Domain 11, `AIRM-167` — count once)*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-025`** — Misjudged AI sourcing fork — train, fine-tune, retrieval-augment, or call an API — each carrying a different risk and obligation profile  *(see also `AIRM-129`, Domain 8 — count both)*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Value measurement / ROI
 
 - **`AIRM-027`** — Unrealistic ROI expectations, where AI benefits are diffuse, hard to attribute, or depend on redesigning workflows around the AI rather than adding it to existing ones  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-028`** — Inability to attribute value actually delivered by AI investments  
-  <sub>Source: Original</sub>
-- **`AIRM-029`** — Hidden total cost of ownership (data, talent, integration) eroding returns  *(see also `AIRM-165`, Domain 11 — count both)*  
-  <sub>Source: Databricks AIGF; CRI MP-3.2.2; Original</sub>
+  <sub>Condition type: safeguard gap · Source: Original</sub>
+- **`AIRM-029`** — Hidden total cost of ownership (e.g., data, talent, integration) eroding returns  *(see also `AIRM-165`, Domain 11 — count both)*  
+  <sub>Condition type: cause · Source: Databricks AIGF; CRI MP-3.2.2; Original</sub>
 
 ## 3. Data & Privacy
 
 
 ### Sourcing & provenance
 
-- **`AIRM-030`** — Unknown or undocumented provenance of training / grounding data  
-  <sub>Source: NIST GenAI #10; DASF 1.6</sub>
+- **`AIRM-030`** — Unknown, undocumented, or unverified provenance and integrity of training, fine-tuning, or retrieval (RAG) data  
+  <sub>Condition type: safeguard gap · Source: NIST GenAI #10; DASF 1.6</sub>
 - **`AIRM-031`** — Reliance on data scraped without lawful basis or clear rights  
-  <sub>Source: EU Art 10 (amended 2026); NIST Map</sub>
+  <sub>Condition type: cause · Source: EU Art 10 (amended 2026); NIST Map</sub>
 - **`AIRM-032`** — Inadequate data lineage to trace data through the AI pipeline  
-  <sub>Source: DASF 1.6</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 1.6</sub>
 
 ### Quality & labeling
 
 - **`AIRM-033`** — Poor data quality undermining model reliability  
-  <sub>Source: DASF 1.3</sub>
+  <sub>Condition type: cause · Source: DASF 1.3</sub>
 - **`AIRM-034`** — Inadequate or biased labeling introducing systematic error  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-035`** — Stale data, including grounding and retrieval sources that drift out of date behind a confident-sounding model  
-  <sub>Source: DASF 1.9</sub>
+  <sub>Condition type: cause · Source: DASF 1.9</sub>
 
 ### Privacy & consent
 
 - **`AIRM-036`** — Personal data used for training without consent or purpose limitation  *(pointed to by `AIRM-142`, Domain 9 (mirror image); pointed to by `AIRM-069`, Domain 5 (different cause))*  
-  <sub>Source: EU Art 10 (amended 2026); NIST GenAI #4</sub>
+  <sub>Condition type: cause · Source: EU Art 10 (amended 2026); NIST GenAI #4</sub>
 - **`AIRM-037`** — Inability to honor data-subject rights once data is in a model  
-  <sub>Source: GDPR; DASF 1.8; Original</sub>
+  <sub>Condition type: cause · Source: GDPR; DASF 1.8; Original</sub>
 - **`AIRM-038`** — Re-identification of individuals from aggregated or model-derived data  *(pointed to by `AIRM-069`, Domain 5 (different cause))*  
-  <sub>Source: MIT 2.1</sub>
-- **`AIRM-039`** — Inadvertent disclosure of confidential / personal data in model output (no output guardrails)  *(pointed to by `AIRM-085`, Domain 5; pointed to by `AIRM-069`, Domain 5 (different cause))*  
-  <sub>Source: OWASP LLM02; DASF 10.6</sub>
+  <sub>Condition type: cause · Source: MIT 2.1</sub>
+- **`AIRM-039`** — No guardrails preventing confidential or personal data from appearing in model output  *(pointed to by `AIRM-085`, Domain 5 (missing safeguard); pointed to by `AIRM-199`, Domain 6 (parallel))*  
+  <sub>Condition type: safeguard gap · Source: OWASP LLM02; DASF 10.6</sub>
 - **`AIRM-040`** — Sensitive or regulated data used in AI without classification, so handling and access controls are not applied  
-  <sub>Source: Databricks AIGF; ISO A.7</sub>
+  <sub>Condition type: safeguard gap · Source: Databricks AIGF; ISO A.7</sub>
 - **`AIRM-041`** — Users pasting confidential or client data into a sanctioned AI tool, moving data outside its control boundary despite upstream access controls working  
-  <sub>Source: OWASP AISVS AC.3; COSO GenAI 2026; Original</sub>
+  <sub>Condition type: cause · Source: OWASP AISVS AC.3; COSO GenAI 2026; Original</sub>
 
 ### Training-data rights & IP
 
-- **`AIRM-042`** — Use of copyrighted or licensed material in training without rights  *(split pair: other side in Domain 8, `AIRM-131` — count once; see also `AIRM-132`, Domain 8 (parallel) — count both)*  
-  <sub>Source: NIST GenAI #10; EU Art 53(1)(c) (amended 2026)</sub>
-- **`AIRM-043`** — Contamination of datasets with third-party IP or trade secrets  *(split pair: other side in Domain 8, `AIRM-131` — count once)*  
-  <sub>Source: Original</sub>
-- **`AIRM-044`** — Inability to prove the organization held the rights to the training data it used  *(see also `AIRM-131`, Domain 8 (missing safeguard) — count both)*  
-  <sub>Source: OWASP AISVS 1.1.2; DASF 1.8; Original</sub>
+- **`AIRM-042`** — Use of copyrighted or licensed material in training without rights  *(see also `AIRM-132`, Domain 8 (parallel) — count both; see also `AIRM-131`, Domain 8 (parallel) — count both; pointed to by `AIRM-044`, Domain 3 (missing safeguard))*  
+  <sub>Condition type: cause · Source: NIST GenAI #10; EU Art 53(1)(c) (amended 2026)</sub>
+- **`AIRM-043`** — Contamination of datasets with third-party IP or trade secrets  
+  <sub>Condition type: cause · Source: Original</sub>
+- **`AIRM-044`** — Inability to prove the organization held the rights to the training data it used  *(see also `AIRM-042`, Domain 3 (missing safeguard) — count both)*  
+  <sub>Condition type: safeguard gap · Source: OWASP AISVS 1.1.2; DASF 1.8; Original</sub>
 
 ### Retention & disposal
 
 - **`AIRM-045`** — Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery  *(see also `AIRM-130`, Domain 8 — count both)*  
-  <sub>Source: Cloud Risk Map analog; Original</sub>
+  <sub>Condition type: cause · Source: Cloud Risk Map analog; Original</sub>
 - **`AIRM-046`** — Inadequate retention / disposal, where deletion from source systems does not remove data already absorbed into models, embeddings, or caches  
-  <sub>Source: DASF 1.8; ISO A.7; Original</sub>
-- **`AIRM-047`** — Persistence of sensitive data in embeddings, caches, or model weights  *(pointed to by `AIRM-182`, Domain 12 (parallel))*  
-  <sub>Source: OWASP LLM08; DASF 1.8; Original</sub>
+  <sub>Condition type: cause · Source: DASF 1.8; ISO A.7; Original</sub>
+- **`AIRM-047`** — Persistence of sensitive data in embeddings, caches, or model weights  *(pointed to by `AIRM-069`, Domain 5 (different cause); pointed to by `AIRM-182`, Domain 12 (parallel))*  
+  <sub>Condition type: cause · Source: OWASP LLM09; DASF 1.8; Original</sub>
 - **`AIRM-048`** — Failure to remove data across distributed / replicated AI stores  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 
 ## 4. Model Development & Performance
 
@@ -267,49 +275,49 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Design & training
 
 - **`AIRM-049`** — Inappropriate model/algorithm choice for the problem and risk context  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-050`** — Poorly documented or untracked model development  
-  <sub>Source: DASF 5.1</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 5.1</sub>
 - **`AIRM-051`** — Insecure or unmanaged hyperparameters and training configuration  
-  <sub>Source: DASF 5.3</sub>
+  <sub>Condition type: cause · Source: DASF 5.3</sub>
 
 ### Accuracy & validation
 
-- **`AIRM-052`** — Fluent but factually incorrect output (hallucination) accepted as reliable  *(split pair: other side in Domain 6, `AIRM-091` — count once; pointed to by `AIRM-081`, Domain 5)*  
-  <sub>Source: NIST GenAI #2; DASF 9.8</sub>
+- **`AIRM-052`** — Fluent but incorrect output (hallucination), or summaries and transformations that change what the source said, accepted as reliable  *(split pair: other side in Domain 6, `AIRM-091` — count once; pointed to by `AIRM-081`, Domain 5; pointed to by `AIRM-202`, Domain 6)*  
+  <sub>Condition type: cause · Source: NIST GenAI #2; DASF 9.8</sub>
 - **`AIRM-053`** — Validation/evaluation data not representative of real-world use, so performance can only be established once real users are exposed, as in pilots and phased rollouts  
-  <sub>Source: DASF 6.2; MAS AIRG fn 28 / fn 45</sub>
-- **`AIRM-054`** — Skipped or insufficient pre-deployment red-teaming / safety evaluation  
-  <sub>Source: EU Art 9; NIST Measure</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 6.2; MAS AIRG fn 28 / fn 45</sub>
+- **`AIRM-054`** — Skipped or insufficient adversarial, safety, and fairness testing before deployment  
+  <sub>Condition type: safeguard gap · Source: EU Art 9; NIST Measure</sub>
 - **`AIRM-055`** — Absence of independent model validation / effective challenge  
-  <sub>Source: SR 11-7; CRI MS-2.5.1; Original</sub>
+  <sub>Condition type: safeguard gap · Source: SR 11-7; CRI MS-2.5.1; Original</sub>
 
 ### Robustness & drift
 
 - **`AIRM-056`** — Model drift degrading performance as data / conditions change  *(see also `AIRM-108`, Domain 7 (missing safeguard) — count both; see also `AIRM-110`, Domain 7 (missing safeguard) — count both)*  
-  <sub>Source: DASF 5.2</sub>
+  <sub>Condition type: cause · Source: DASF 5.2</sub>
 - **`AIRM-057`** — Lack of robustness to edge cases and distribution shift  *(see also `AIRM-197`, Domain 5 (different cause) — count both)*  
-  <sub>Source: NIST Measure</sub>
+  <sub>Condition type: cause · Source: NIST Measure</sub>
 - **`AIRM-058`** — Small changes to the input produce very different output  *(see also `AIRM-197`, Domain 5 (different cause) — count both)*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Explainability
 
 - **`AIRM-059`** — Black-box models used in high-stakes decisions without interpretability  
-  <sub>Source: NIST Measure; EU Art 13; DASF 6.3</sub>
+  <sub>Condition type: cause · Source: NIST Measure; EU Art 13; DASF 6.3</sub>
 - **`AIRM-060`** — Inability to produce adverse-action / decision explanations  
-  <sub>Source: EU Art 86; Colorado SB 26-189; CRI MS-2.9.2; DASF 6.3; Original</sub>
+  <sub>Condition type: cause · Source: EU Art 86; Colorado SB 26-189; CRI MS-2.9.2; DASF 6.3; Original</sub>
 - **`AIRM-061`** — Over-reliance on post-hoc explanations that misrepresent the model  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Reproducibility & documentation
 
 - **`AIRM-062`** — Non-reproducible training pipelines undermining validation and audit  
-  <sub>Source: DASF 5.1; Original</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 5.1; Original</sub>
 - **`AIRM-063`** — Inadequate model documentation / model cards  *(pointed to by `AIRM-015`, Domain 1 (parallel))*  
-  <sub>Source: EU Art 11 (amended 2026); NIST Map</sub>
+  <sub>Condition type: safeguard gap · Source: EU Art 11 (amended 2026); NIST Map</sub>
 - **`AIRM-064`** — Loss of traceability between model versions, data, and results  
-  <sub>Source: DASF 4.1</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 4.1</sub>
 
 ## 5. Security & Adversarial Threats
 
@@ -317,66 +325,68 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Data & pipeline attacks
 
 - **`AIRM-065`** — Training-data poisoning that degrades or backdoors model behavior  *(pointed to by `AIRM-122`, Domain 7 (different cause))*  
-  <sub>Source: DASF 3.1; OWASP LLM04; ATLAS AML.T0020</sub>
+  <sub>Condition type: cause · Source: DASF 3.1; OWASP LLM05; ATLAS AML.T0020</sub>
 - **`AIRM-066`** — Tampering with RAG / knowledge-base sources consumed at inference  
-  <sub>Source: OWASP LLM08; DASF 9.9</sub>
+  <sub>Condition type: cause · Source: OWASP LLM09; DASF 9.9</sub>
 - **`AIRM-067`** — Label-flipping or adversarial dataset partitioning to skew outputs  
-  <sub>Source: DASF 3.3 / 2.4</sub>
+  <sub>Condition type: cause · Source: DASF 3.3 / 2.4</sub>
 
 ### Model attacks
 
-- **`AIRM-068`** — Model extraction / theft via inference-API querying  
-  <sub>Source: DASF 8.2; ATLAS AML.T0024.002</sub>
-- **`AIRM-069`** — Membership-inference or model-inversion exposing training data  *(see also `AIRM-036`, Domain 3 (different cause) — count both; see also `AIRM-038`, Domain 3 (different cause) — count both; see also `AIRM-039`, Domain 3 (different cause) — count both)*  
-  <sub>Source: DASF 9.2 / 9.5; NIST GenAI #4</sub>
+- **`AIRM-068`** — Model, reasoning, or insight extraction through API or product use, reproducing what our AI learned, how it reasons, or what it produces  
+  <sub>Condition type: cause · Source: DASF 8.2; ATLAS AML.T0024.002</sub>
+- **`AIRM-069`** — Membership-inference or model-inversion exposing training data  *(see also `AIRM-036`, Domain 3 (different cause) — count both; see also `AIRM-038`, Domain 3 (different cause) — count both; see also `AIRM-047`, Domain 3 (different cause) — count both)*  
+  <sub>Condition type: cause · Source: DASF 9.2 / 9.5; NIST GenAI #4</sub>
 - **`AIRM-070`** — Backdoored / trojaned pre-trained model from a public hub  
-  <sub>Source: DASF 7.1</sub>
+  <sub>Condition type: cause · Source: DASF 7.1</sub>
 
 ### Inference-time (input) attacks
 
-- **`AIRM-071`** — Direct prompt injection altering behavior or bypassing guardrails  
-  <sub>Source: OWASP LLM01; DASF 9.1</sub>
-- **`AIRM-072`** — Indirect / cross-domain prompt injection via retrieved content  
-  <sub>Source: OWASP LLM01; DASF 9.1 / 9.9</sub>
+- **`AIRM-071`** — Direct prompt injection altering behavior or bypassing guardrails  *(pointed to by `AIRM-199`, Domain 6 (missing safeguard))*  
+  <sub>Condition type: cause · Source: OWASP LLM01; DASF 9.1</sub>
+- **`AIRM-072`** — Indirect / cross-domain prompt injection via retrieved content  *(pointed to by `AIRM-205`, Domain 5 (missing safeguard))*  
+  <sub>Condition type: cause · Source: OWASP LLM01; DASF 9.1 / 9.9</sub>
 - **`AIRM-073`** — Jailbreaks defeating safety controls and restrictions  *(split pair: other side in Domain 6, `AIRM-097` — count once; see also `AIRM-090`, Domain 6 (different cause) — count both)*  
-  <sub>Source: OWASP LLM01; DASF 9.12</sub>
+  <sub>Condition type: cause · Source: OWASP LLM01; DASF 9.12</sub>
 - **`AIRM-074`** — System-prompt leakage exposing operational instructions  
-  <sub>Source: OWASP LLM07</sub>
+  <sub>Condition type: cause · Source: OWASP LLM08</sub>
 - **`AIRM-197`** — Inputs crafted so a model misclassifies or misses what it is meant to catch, such as fraud, malware, or content and identity checks, without touching the model or its data  *(pointed to by `AIRM-057`, Domain 4 (different cause); pointed to by `AIRM-058`, Domain 4 (different cause))*  
-  <sub>Source: ATLAS AML.T0015; ATLAS AML.T0043; NIST AI 100-2 E2025; Original</sub>
+  <sub>Condition type: cause · Source: ATLAS AML.T0015; ATLAS AML.T0043; NIST AI 100-2 E2025 §2.2; Original</sub>
+- **`AIRM-205`** — Untrusted content the AI processes (e.g., user input, retrieved documents, tool results) treated with the same authority as the organization's own instructions  *(see also `AIRM-072`, Domain 5 (missing safeguard) — count both; see also `AIRM-181`, Domain 12 (missing safeguard) — count both; see also `AIRM-199`, Domain 6 (parallel) — count both)*  
+  <sub>Condition type: safeguard gap · Source: OWASP LLM01; CSA AICM AIS-15</sub>
 
 ### Output & integration security
 
 - **`AIRM-075`** — Unsanitized output reaching downstream interpreters (code exec / XSS / SQLi)  
-  <sub>Source: OWASP LLM05</sub>
+  <sub>Condition type: cause · Source: OWASP LLM10</sub>
 - **`AIRM-076`** — Interception or manipulation of the inference output stream  
-  <sub>Source: DASF 10.2</sub>
-- **`AIRM-077`** — Over-trusted output triggering unsafe automated actions  *(see also `AIRM-099`, Domain 6 (different cause) — count both)*  
-  <sub>Source: OWASP LLM05 / LLM06</sub>
+  <sub>Condition type: cause · Source: DASF 10.2</sub>
+- **`AIRM-077`** — Over-trusted output triggering unsafe automated actions  *(see also `AIRM-099`, Domain 6 (kept separate on purpose) — count both)*  
+  <sub>Condition type: cause · Source: OWASP LLM10 / LLM06</sub>
 
 ### Supply-chain & artifact integrity
 
 - **`AIRM-078`** — Compromised or malicious model / component from the AI supply chain  *(split pair: other side in Domain 9, `AIRM-148` — count once; pointed to by `AIRM-189`, Domain 9 (missing safeguard))*  
-  <sub>Source: OWASP LLM03; NIST GenAI #12</sub>
+  <sub>Condition type: cause · Source: OWASP LLM04; NIST GenAI #12</sub>
 - **`AIRM-079`** — Known vulnerabilities in ML dependencies and libraries left unpatched  *(see also `AIRM-149`, Domain 9 (different cause) — count both)*  
-  <sub>Source: OWASP LLM03</sub>
+  <sub>Condition type: cause · Source: OWASP LLM04</sub>
 - **`AIRM-080`** — Tampering with model artifacts, prompts, or agent configuration in registries or during deployment  *(see also `AIRM-148`, Domain 9 (parallel) — count both; pointed to by `AIRM-124`, Domain 7 (different cause))*  
-  <sub>Source: DASF 7.3; ATLAS AML.T0010.004; Original</sub>
+  <sub>Condition type: cause · Source: DASF 7.3; ATLAS AML.T0010.004; Original</sub>
 - **`AIRM-081`** — Model-invented package, image, or endpoint names that resolve to adversary-registered artifacts, because the same hallucination recurs across users and model families  *(see also `AIRM-052`, Domain 4 — count both)*  
-  <sub>Source: OWASP AISVS AC.13</sub>
+  <sub>Condition type: cause · Source: OWASP AISVS AC.13</sub>
 
 ### AI access & identity
 
-- **`AIRM-082`** — Inadequate access controls on serving endpoints and inference APIs  *(see also `AIRM-178`, Domain 12 (parallel) — count both)*  
-  <sub>Source: DASF 9.11</sub>
-- **`AIRM-083`** — Over-privileged service accounts and keys for AI platform components (distinct from an agent's tool scope)  *(see also `AIRM-178`, Domain 12 (parallel) — count both; see also `AIRM-177`, Domain 12 (parallel) — count both)*  
-  <sub>Source: DASF 1.1; Original</sub>
+- **`AIRM-082`** — Inadequate access controls and usage limits on serving endpoints and inference APIs  *(see also `AIRM-178`, Domain 12 (kept separate on purpose) — count both)*  
+  <sub>Condition type: safeguard gap · Source: DASF 9.11</sub>
+- **`AIRM-083`** — Over-privileged service accounts and keys for AI platform components (distinct from an agent's tool scope)  *(see also `AIRM-178`, Domain 12 (kept separate on purpose) — count both; see also `AIRM-177`, Domain 12 (parallel) — count both)*  
+  <sub>Condition type: safeguard gap · Source: DASF 1.1; Original</sub>
 - **`AIRM-084`** — Insecure storage / exposure of credentials and tokens, as AI tool, harness, and agent-framework sprawl outpaces credential governance  
-  <sub>Source: DASF 13.19 / 13.27</sub>
-- **`AIRM-085`** — Retrieval and RAG pipelines serving content beyond the requesting user’s own entitlements, because authorization is applied when the index is built rather than when it is queried  *(see also `AIRM-039`, Domain 3 — count both)*  
-  <sub>Source: OWASP AISVS 5.2.2</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 13.19 / 13.27</sub>
+- **`AIRM-085`** — Retrieval and RAG pipelines serving content beyond the requesting user’s own entitlements, because authorization is applied when the index is built rather than when it is queried  *(see also `AIRM-039`, Domain 3 (missing safeguard) — count both)*  
+  <sub>Condition type: cause · Source: OWASP AISVS 5.2.2</sub>
 - **`AIRM-196`** — Insiders direct a sanctioned AI assistant or agent, within its broad access, to find, aggregate, or move data or take actions beyond their own entitlements, with the activity attributed to the agent rather than the person  *(pointed to by `AIRM-178`, Domain 12 (different cause))*  
-  <sub>Source: OWASP ASI T3; Original</sub>
+  <sub>Condition type: cause · Source: OWASP ASI T3; Original</sub>
 
 ## 6. Safety, Ethics & Responsible AI
 
@@ -384,53 +394,57 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Bias & fairness
 
 - **`AIRM-086`** — Discriminatory or biased outputs causing disparate impact  
-  <sub>Source: NIST GenAI #6; Weidinger I; Shelby</sub>
+  <sub>Condition type: cause · Source: NIST GenAI #6; Weidinger I; Shelby</sub>
 - **`AIRM-087`** — Inequitable performance or accessibility across languages, demographics, and disabilities, marginalizing underrepresented groups  
-  <sub>Source: MIT 1.3; Shelby QoS; Original</sub>
-- **`AIRM-088`** — Bias amplification / homogenization from feedback and scale  
-  <sub>Source: NIST GenAI #6</sub>
+  <sub>Condition type: cause · Source: MIT 1.3; Shelby QoS; Original</sub>
+- **`AIRM-088`** — Bias amplification / homogenization from feedback and scale  *(pointed to by `AIRM-200`, Domain 8 (missing safeguard))*  
+  <sub>Condition type: cause · Source: NIST GenAI #6</sub>
 - **`AIRM-089`** — Culturally insensitive or inappropriate output, or erosion of local norms, when AI is scaled across regions  
-  <sub>Source: Databricks AIGF</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF</sub>
 
 ### Harmful / inaccurate output
 
 - **`AIRM-090`** — Generation of toxic, dangerous, or hateful content  *(pointed to by `AIRM-073`, Domain 5 (different cause))*  
-  <sub>Source: NIST GenAI #3; Weidinger I</sub>
+  <sub>Condition type: cause · Source: NIST GenAI #3; Weidinger I</sub>
 - **`AIRM-091`** — Harmful, misleading, or defamatory output driving decisions  *(split pair: other side in Domain 4, `AIRM-052` — count once)*  
-  <sub>Source: NIST GenAI #2; Original</sub>
-- **`AIRM-092`** — Harm to minors / vulnerable users from inappropriate output  
-  <sub>Source: NIST GenAI #11; Colorado HB 26-1263</sub>
+  <sub>Condition type: outcome · Source: NIST GenAI #2; Original</sub>
+- **`AIRM-092`** — Inappropriate or unsafe AI output reaching minors or other vulnerable users  
+  <sub>Condition type: cause · Source: NIST GenAI #11; Colorado HB 26-1263</sub>
+- **`AIRM-199`** — No content guardrails constraining what a customer-facing AI service can publish or say on the organization's behalf  *(see also `AIRM-039`, Domain 3 (parallel) — count both; see also `AIRM-071`, Domain 5 (missing safeguard) — count both; pointed to by `AIRM-205`, Domain 5 (parallel))*  
+  <sub>Condition type: safeguard gap · Source: Original</sub>
+- **`AIRM-202`** — AI output that makes false or defamatory statements about real, identifiable people or organizations  *(see also `AIRM-052`, Domain 4 — count both)*  
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Transparency, disclosure & provenance
 
 - **`AIRM-093`** — Failure to disclose to users that they are interacting with AI  
-  <sub>Source: EU Art 50 (amended 2026); Weidinger V</sub>
+  <sub>Condition type: cause · Source: EU Art 50 (amended 2026); Weidinger V</sub>
 - **`AIRM-094`** — Undisclosed synthetic media / deepfakes lacking provenance  
-  <sub>Source: EU Art 50 (amended 2026); NIST GenAI #8</sub>
+  <sub>Condition type: cause · Source: EU Art 50 (amended 2026); NIST GenAI #8</sub>
 - **`AIRM-095`** — Inadequate transparency to affected parties about AI's role  
-  <sub>Source: EU Art 13; ISO A.8</sub>
+  <sub>Condition type: cause · Source: EU Art 13; ISO A.8</sub>
 - **`AIRM-192`** — Changes to the model, prompts, or guardrails behind an AI-powered service we provide, made without notice to the customers and deployers who depend on it, so their validations, disclosures, and controls silently go stale  
-  <sub>Source: EU Art 13; EU Art 25 (amended 2026); NIST GenAI #12</sub>
+  <sub>Condition type: cause · Source: EU Art 13(3)(c); EU Art 25 (amended 2026); NIST GenAI #12</sub>
 
 ### Misuse & dual-use
 
 - **`AIRM-096`** — Misuse of AI for disinformation, fraud, or social engineering  
-  <sub>Source: NIST GenAI; Weidinger IV; IAISR</sub>
+  <sub>Condition type: cause · Source: NIST GenAI; Weidinger IV; IAISR</sub>
 - **`AIRM-097`** — Dangerous-capability uplift: the model gives meaningful help toward chemical, biological, radiological, nuclear, or cyber attack capability  *(split pair: other side in Domain 5, `AIRM-073` — count once)*  
-  <sub>Source: NIST GenAI #1; Weidinger IV; IAISR</sub>
-- **`AIRM-098`** — AI optimized for a proxy measure (engagement, conversion, or revenue) that diverges from users' interests, driving addiction, polarization, or unsuitable recommendations  
-  <sub>Source: Shelby societal; MAS AIRG §1.9(c); Original</sub>
+  <sub>Condition type: cause · Source: NIST GenAI #1; Weidinger IV; IAISR</sub>
+- **`AIRM-098`** — AI optimized for a proxy measure (e.g., engagement, conversion, or revenue) that diverges from users' interests, driving addiction, polarization, or unsuitable recommendations  
+  <sub>Condition type: cause · Source: Shelby societal; MAS AIRG §1.9(c); Original</sub>
 
 ### Human agency & over-reliance
 
-- **`AIRM-099`** — User over-trust / automation bias in AI outputs  *(pointed to by `AIRM-077`, Domain 5 (different cause))*  
-  <sub>Source: NIST GenAI #7; Weidinger V</sub>
+- **`AIRM-099`** — User over-trust / automation bias in AI outputs  *(pointed to by `AIRM-077`, Domain 5 (kept separate on purpose))*  
+  <sub>Condition type: amplifier · Source: NIST GenAI #7; Weidinger V</sub>
 - **`AIRM-100`** — Anthropomorphism and emotional dependence on conversational AI  
-  <sub>Source: Weidinger V; Colorado HB 26-1263</sub>
+  <sub>Condition type: cause · Source: Weidinger V; Colorado HB 26-1263</sub>
 - **`AIRM-101`** — Erosion of meaningful human control over decisions  *(see also `AIRM-176`, Domain 12 (missing safeguard) — count both)*  
-  <sub>Source: EU Art 14; MIT 5.2</sub>
+  <sub>Condition type: amplifier · Source: EU Art 14; MIT 5.2</sub>
 - **`AIRM-102`** — Human review, approval, and triage capacity cannot scale to the volume AI produces — code, alerts, content, decisions — so oversight gates degrade into rubber-stamping while still appearing effective  *(see also `AIRM-117`, Domain 7 — count both)*  
-  <sub>Source: COSO GenAI 2026; OWASP AISVS AC.4; CRI MP-3.5.4</sub>
+  <sub>Condition type: safeguard gap · Source: COSO GenAI 2026; OWASP AISVS AC.4; CRI MP-3.5.4</sub>
 
 ## 7. Operations & Resilience
 
@@ -438,61 +452,63 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### MLOps & deployment
 
 - **`AIRM-103`** — Immature MLOps / fragile deployment pipelines  
-  <sub>Source: DASF 11.1; Original</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 11.1; Original</sub>
 - **`AIRM-104`** — Inconsistent or unsanctioned (shadow) model deployment  *(see also `AIRM-002`, Domain 1 — count both)*  
-  <sub>Source: DASF 8.3; Original</sub>
+  <sub>Condition type: cause · Source: DASF 8.3; Original</sub>
 - **`AIRM-105`** — Inadequate environment and configuration management across model versions, dependency pinning, and accelerator configuration, undermining reproducibility  
-  <sub>Source: DASF 12.5</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 12.5</sub>
 - **`AIRM-106`** — Training-serving skew: features or input data differ between training and production, degrading live performance  
-  <sub>Source: Databricks AIGF; Original</sub>
-- **`AIRM-107`** — Containment of an AI test, evaluation, or development environment fails — unverified, misconfigured, defeated, or degraded over time — allowing the system to reach production or third-party systems  *(see also `AIRM-174`, Domain 12 — count both)*  
-  <sub>Source: OpenAI/Anthropic 2026 incidents</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF; Original</sub>
+- **`AIRM-107`** — Containment of AI tool or code execution, or of a test, evaluation, or development environment, fails — unverified, misconfigured, defeated, or degraded over time — allowing the system to reach production or third-party systems  *(see also `AIRM-174`, Domain 12 — count both)*  
+  <sub>Condition type: safeguard gap · Source: OpenAI/Anthropic 2026 incidents</sub>
 
 ### Monitoring & observability
 
-- **`AIRM-108`** — Absence of monitoring for performance, drift, and abuse in any environment — including evaluation, test, and sandbox environments assumed to be contained  *(pointed to by `AIRM-056`, Domain 4 (missing safeguard))*  
-  <sub>Source: DASF 10.1; NIST Manage; CSA HF post-mortem</sub>
-- **`AIRM-109`** — Inadequate logging / audit of inputs, outputs, tool calls, agent decision paths, and the human authorization behind them  *(see also `AIRM-187`, Domain 12 — count both; see also `AIRM-006`, Domain 1 (missing safeguard) — count both)*  
-  <sub>Source: EU Art 12; DASF 10.1</sub>
+- **`AIRM-108`** — Absence of monitoring, acted on, for degraded performance, drift, biased outcomes, or abuse in any environment — including evaluation, test, and sandbox environments assumed to be contained  *(pointed to by `AIRM-056`, Domain 4 (missing safeguard))*  
+  <sub>Condition type: safeguard gap · Source: DASF 10.1; NIST Manage; CSA HF post-mortem</sub>
+- **`AIRM-109`** — Inadequate logging / audit of inputs, outputs, tool calls, agent decision paths, and the human authorization behind them  *(see also `AIRM-187`, Domain 12 — count both; see also `AIRM-006`, Domain 1 (parallel) — count both)*  
+  <sub>Condition type: safeguard gap · Source: EU Art 12; DASF 10.1</sub>
 - **`AIRM-110`** — Inability to detect anomalous or degraded behavior, where non-determinism makes 'anomalous' hard to define and baseline  *(pointed to by `AIRM-056`, Domain 4 (missing safeguard))*  
-  <sub>Source: DASF 10.1; Original</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 10.1; Original</sub>
 - **`AIRM-111`** — Sanctioned agent activity indistinguishable from agentic attack in telemetry  
-  <sub>Source: CSA HF post-mortem</sub>
+  <sub>Condition type: safeguard gap · Source: CSA HF post-mortem</sub>
 
 ### Availability & scalability
 
 - **`AIRM-112`** — Inference latency or unavailability degrading dependent services  *(see also `AIRM-170`, Domain 11 (different cause) — count both)*  
-  <sub>Source: Databricks AIGF; CSA AICM; Original</sub>
+  <sub>Condition type: outcome · Source: Databricks AIGF; CSA AICM; Original</sub>
 - **`AIRM-113`** — Inability to scale inference to peak demand  *(see also `AIRM-170`, Domain 11 (different cause) — count both; see also `AIRM-165`, Domain 11 (different cause) — count both)*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-114`** — Deliberate resource exhaustion or denial-of-wallet: requests crafted to run up AI compute costs or exhaust capacity  *(see also `AIRM-164`, Domain 11 (different cause) — count both)*  
-  <sub>Source: OWASP LLM10</sub>
+  <sub>Condition type: cause · Source: OWASP LLM06</sub>
 
 ### Incident management
 
 - **`AIRM-115`** — Immature AI incident response and escalation processes  
-  <sub>Source: NIST Manage; CRI GV-4.3.2; DASF 12.3; Original</sub>
+  <sub>Condition type: safeguard gap · Source: NIST Manage; CRI GV-4.3.2; DASF 12.3; Original</sub>
 - **`AIRM-116`** — Inability to investigate AI incidents due to non-determinism / poor logs  
-  <sub>Source: DASF 12.3; CRI MS-2.4.4; Original</sub>
+  <sub>Condition type: safeguard gap · Source: DASF 12.3; CRI MS-2.4.4; Original</sub>
 - **`AIRM-117`** — Inadequate content-moderation / trust-&-safety operations at scale  *(pointed to by `AIRM-102`, Domain 6)*  
-  <sub>Source: Colorado HB 26-1263; Original</sub>
+  <sub>Condition type: safeguard gap · Source: Colorado HB 26-1263; Original</sub>
 - **`AIRM-118`** — Safety guardrails on models relied on for defense refusing to assist incident response, blocking analysis of attack data  
-  <sub>Source: CSA HF post-mortem</sub>
+  <sub>Condition type: cause · Source: CSA HF post-mortem</sub>
+- **`AIRM-201`** — No tested way to quickly disable, or fall back from, a customer-facing AI feature that misbehaves  *(see also `AIRM-176`, Domain 12 (parallel) — count both; see also `AIRM-156`, Domain 10 (parallel) — count both)*  
+  <sub>Condition type: safeguard gap · Source: NIST Manage; Original</sub>
 
 ### Change & lifecycle management
 
 - **`AIRM-119`** — Silent vendor / model updates changing behavior without notice  *(see also `AIRM-141`, Domain 9 — count both)*  
-  <sub>Source: COSO GenAI 2026; OWASP AISVS 3.2.3; Original</sub>
-- **`AIRM-120`** — Inadequate versioning, rollback, and change control for models  *(pointed to by `AIRM-141`, Domain 9)*  
-  <sub>Source: DASF 8.3; CRI MG-4.1.4; Original</sub>
+  <sub>Condition type: cause · Source: COSO GenAI 2026; OWASP AISVS 3.2.3; Original</sub>
+- **`AIRM-120`** — Inadequate versioning, change control, and tested rollback to a known-good model version  *(pointed to by `AIRM-141`, Domain 9)*  
+  <sub>Condition type: safeguard gap · Source: DASF 8.3; CRI MG-4.1.4; Original</sub>
 - **`AIRM-121`** — Unmanaged model decommissioning / sunset leaving orphaned dependencies  
-  <sub>Source: CRI GV-1.7.1; CRI MG-2.4.2; Original</sub>
-- **`AIRM-122`** — Uncontrolled continuous or online learning, where the model keeps changing in production without validation, introducing drift  *(see also `AIRM-065`, Domain 5 (different cause) — count both)*  
-  <sub>Source: DASF 5.2; Original</sub>
+  <sub>Condition type: cause · Source: CRI GV-1.7.1; CRI MG-2.4.2; Original</sub>
+- **`AIRM-122`** — Uncontrolled continuous or online learning, where the model keeps changing in production without validation, introducing drift  *(see also `AIRM-065`, Domain 5 (different cause) — count both; pointed to by `AIRM-203`, Domain 12 (parallel))*  
+  <sub>Condition type: cause · Source: DASF 5.2; Original</sub>
 - **`AIRM-123`** — Guardrails, access scopes, and approval gates re-verified less often than the AI system's capability and integration surface changes  *(see also `AIRM-017`, Domain 1 — count both)*  
-  <sub>Source: 2026 sandbox-escape incidents; Original</sub>
+  <sub>Condition type: safeguard gap · Source: 2026 sandbox-escape incidents; Original</sub>
 - **`AIRM-124`** — Prompts, system prompts, and retrieval configuration changed outside change control, though they determine system behavior as directly as code  *(see also `AIRM-080`, Domain 5 (different cause) — count both)*  
-  <sub>Source: COSO GenAI 2026 Principle 11; OWASP AISVS AC.11</sub>
+  <sub>Condition type: cause · Source: COSO GenAI 2026 Principle 11; OWASP AISVS AC.11</sub>
 
 ## 8. Legal, Regulatory & Compliance
 
@@ -500,42 +516,46 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Regulatory compliance
 
 - **`AIRM-125`** — Unknowingly deploying a prohibited or high-risk AI use case  
-  <sub>Source: EU Art 5 / Annex III</sub>
-- **`AIRM-126`** — Failure to meet high-risk obligations (risk mgmt, docs, oversight)  
-  <sub>Source: EU Arts 9-15</sub>
+  <sub>Condition type: cause · Source: EU Art 5 / Annex III</sub>
+- **`AIRM-126`** — AI-specific legal and regulatory obligations (e.g., risk management, documentation, human oversight) not identified, or not built into the system before it is deployed  
+  <sub>Condition type: cause · Source: EU Arts 9-15</sub>
 - **`AIRM-127`** — Inability to keep pace with fragmented, fast-changing AI regulation  
-  <sub>Source: Colorado SB 26-189; CRI GV-1.1.1; Databricks AIGF; Original</sub>
+  <sub>Condition type: safeguard gap · Source: Colorado SB 26-189; CRI GV-1.1.1; Databricks AIGF; Original</sub>
 - **`AIRM-128`** — User inability to contest or seek recourse on an AI-driven decision  
-  <sub>Source: EU Arts 85 / 86; Colorado SB 26-189</sub>
+  <sub>Condition type: safeguard gap · Source: EU Arts 85 / 86; Colorado SB 26-189</sub>
 - **`AIRM-129`** — Misclassifying the organization's regulatory role (deployer vs. provider), missing obligations triggered by fine-tuning or rebranding a model  *(pointed to by `AIRM-025`, Domain 2)*  
-  <sub>Source: EU Arts 16 / 25</sub>
+  <sub>Condition type: cause · Source: EU Arts 16 / 25</sub>
+- **`AIRM-200`** — No ability to identify everyone a flawed AI decision or output affected once the flaw is found, and to notify and remediate them  *(see also `AIRM-019`, Domain 1 (parallel) — count both; see also `AIRM-088`, Domain 6 (missing safeguard) — count both)*  
+  <sub>Condition type: safeguard gap · Source: Original</sub>
 
 ### IP & liability
 
-- **`AIRM-130`** — Liability for harm caused by AI decisions or outputs  *(pointed to by `AIRM-045`, Domain 3; pointed to by `AIRM-163`, Domain 10; pointed to by `AIRM-169`, Domain 11; pointed to by `AIRM-187`, Domain 12)*  
-  <sub>Source: Databricks AIGF; Original</sub>
-- **`AIRM-131`** — Infringement claims arising from AI-generated output  *(split pair: other side in Domain 3, `AIRM-042`, `AIRM-043` — count once; pointed to by `AIRM-044`, Domain 3 (missing safeguard))*  
-  <sub>Source: NIST GenAI #10; Original</sub>
+- **`AIRM-130`** — Unsettled liability for harm caused by AI decisions or outputs, leaving the organization exposed to claims it cannot price or pass on  *(pointed to by `AIRM-045`, Domain 3; pointed to by `AIRM-163`, Domain 10; pointed to by `AIRM-169`, Domain 11; pointed to by `AIRM-187`, Domain 12)*  
+  <sub>Condition type: amplifier · Source: Databricks AIGF; Original</sub>
+- **`AIRM-131`** — AI-generated output that closely reproduces or imitates others' copyrighted work or trademarks  *(pointed to by `AIRM-042`, Domain 3 (parallel))*  
+  <sub>Condition type: cause · Source: NIST GenAI #10; Original</sub>
 - **`AIRM-132`** — Uncertain ownership / copyrightability of AI-generated content  *(pointed to by `AIRM-042`, Domain 3 (parallel))*  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF; Original</sub>
 
 ### Contractual & licensing
 
-- **`AIRM-133`** — Vendor contracts lacking AI-specific terms: training use of your data, output ownership, model-change notice, evaluation rights  
-  <sub>Source: CRI GV-6.2.3; Databricks AIGF; Original</sub>
-- **`AIRM-134`** — Violation of open-weight / model license terms  *(see also `AIRM-189`, Domain 9 — count both)*  
-  <sub>Source: Databricks AIGF; Original</sub>
+- **`AIRM-133`** — Vendor contracts lacking AI-specific terms: training use of your data, output ownership, model-change notice, evaluation rights  *(pointed to by `AIRM-198`, Domain 8 (mirror image))*  
+  <sub>Condition type: safeguard gap · Source: CRI GV-6.2.3; Databricks AIGF; Original</sub>
+- **`AIRM-134`** — Use of open-weight or licensed models outside their license terms  *(see also `AIRM-189`, Domain 9 — count both)*  
+  <sub>Condition type: cause · Source: Databricks AIGF; Original</sub>
 - **`AIRM-135`** — Failure to update contracts as AI use and regulation evolve  
-  <sub>Source: CRI GV-6.2.3; Databricks AIGF; Cloud Risk Map analog; Original</sub>
+  <sub>Condition type: safeguard gap · Source: CRI GV-6.2.3; Databricks AIGF; Cloud Risk Map analog; Original</sub>
+- **`AIRM-198`** — No terms or visibility over how customers and partners use our data, insights, or AI outputs in their own AI, where training on them cannot be undone  *(see also `AIRM-133`, Domain 8 (mirror image) — count both; see also `AIRM-142`, Domain 9 (mirror image) — count both; see also `AIRM-193`, Domain 2 (kept separate on purpose) — count both)*  
+  <sub>Condition type: safeguard gap · Source: Original</sub>
 
 ### Cross-border
 
-- **`AIRM-136`** — Cross-jurisdictional data-transfer violations, including inference requests routed across borders invisibly by the provider  
-  <sub>Source: GDPR; Original</sub>
+- **`AIRM-136`** — Personal or regulated data crossing borders through AI services, including inference requests a provider routes to other regions without visibility  
+  <sub>Condition type: cause · Source: GDPR; Original</sub>
 - **`AIRM-137`** — Conflicting regional AI requirements the organization cannot reconcile for a single system (externally imposed)  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF; Original</sub>
 - **`AIRM-138`** — Inability to evidence and audit AI compliance across jurisdictions (internal evidence burden)  *(pointed to by `AIRM-018`, Domain 1)*  
-  <sub>Source: CRI GV-1.1.4; Databricks AIGF; Original</sub>
+  <sub>Condition type: safeguard gap · Source: CRI GV-1.1.4; Databricks AIGF; Original</sub>
 
 ## 9. Third-Party & Model Supply Chain
 
@@ -543,44 +563,44 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Foundation-model dependence
 
 - **`AIRM-139`** — Concentration risk from dependence on a few model providers  *(see also `AIRM-172`, Domain 11 (parallel) — count both)*  
-  <sub>Source: IAISR; CRI GV-6.1.8; Original</sub>
+  <sub>Condition type: amplifier · Source: IAISR; CRI GV-6.1.8; Original</sub>
 - **`AIRM-140`** — Systemic / correlated ‘model monoculture’ — shared-model failure, including the same defect or blind spot reproduced across everything one model produces  *(see also `AIRM-172`, Domain 11 (parallel) — count both)*  
-  <sub>Source: IAISR; Original</sub>
+  <sub>Condition type: amplifier · Source: IAISR; Original</sub>
 - **`AIRM-141`** — Model deprecation or behavior change forcing unplanned migration  *(see also `AIRM-120`, Domain 7 — count both; pointed to by `AIRM-119`, Domain 7)*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Vendor due diligence
 
-- **`AIRM-142`** — Inadequate vendor due diligence, including whether prompts and outputs are retained, used for training, or exposed to sub-processors  *(see also `AIRM-036`, Domain 3 (mirror image) — count both; pointed to by `AIRM-179`, Domain 12 (missing safeguard))*  
-  <sub>Source: NIST GenAI #12; CRI GV-6.1.4; Original</sub>
+- **`AIRM-142`** — Inadequate vendor due diligence, including whether prompts and outputs are retained, used for training, or exposed to sub-processors  *(see also `AIRM-036`, Domain 3 (mirror image) — count both; pointed to by `AIRM-179`, Domain 12 (parallel); pointed to by `AIRM-198`, Domain 8 (mirror image))*  
+  <sub>Condition type: safeguard gap · Source: NIST GenAI #12; CRI GV-6.1.4; Original</sub>
 - **`AIRM-188`** — No defined method to assess whether a vendor's claimed AI capability is real, secure, and fit for purpose: conventional vendor assurance says nothing about model behavior, and the buyer inherits whatever sits behind the claim  *(see also `AIRM-163`, Domain 10 — count both)*  
-  <sub>Source: CRI GV-6.1.1; Original</sub>
+  <sub>Condition type: safeguard gap · Source: CRI GV-6.1.1; Original</sub>
 - **`AIRM-143`** — Vendor viability risk in an unusually volatile provider market with frequent pivots and deprecations  
-  <sub>Source: Original</sub>
-- **`AIRM-144`** — Regulator / customer holding the firm responsible for the vendor's AI  
-  <sub>Source: EU Art 25 (amended 2026); Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
+- **`AIRM-144`** — Accountability for a vendor's AI failures staying with the organization, whatever the contract says  
+  <sub>Condition type: amplifier · Source: EU Art 25 (amended 2026); Original</sub>
 
 ### Lock-in & portability
 
 - **`AIRM-145`** — Vendor / model lock-in limiting portability and leverage  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-146`** — High switching cost from proprietary APIs and fine-tuning  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-147`** — Lack of exit provisions, where fine-tunes, embeddings, and prompt assets do not transfer between providers  
-  <sub>Source: Cloud Risk Map analog; Original</sub>
+  <sub>Condition type: safeguard gap · Source: Cloud Risk Map analog; Original</sub>
 
 ### Open-source component risk
 
 - **`AIRM-148`** — Malicious or compromised open-source models / components  *(split pair: other side in Domain 5, `AIRM-078` — count once; pointed to by `AIRM-080`, Domain 5 (parallel))*  
-  <sub>Source: OWASP LLM03; DASF 7.1; DASF 5.4</sub>
+  <sub>Condition type: cause · Source: OWASP LLM04; DASF 7.1; DASF 5.4</sub>
 - **`AIRM-149`** — Open-source AI dependencies abandoned by their maintainers, leaving no fixes, support, or upgrade path  *(pointed to by `AIRM-079`, Domain 5 (different cause))*  
-  <sub>Source: OWASP LLM03; Original</sub>
+  <sub>Condition type: cause · Source: OWASP LLM04; Original</sub>
 - **`AIRM-150`** — Opaque sub-processor chains, including models served behind a vendor's own API, or AI embedded as unannounced features in a service, without disclosure  
-  <sub>Source: CRI GV-6.1.6; MAS AIRG §4.2 / fn 21; Original</sub>
-- **`AIRM-189`** — Model lineage undisclosed or unverifiable: the deployed model inherits weights, training data, or teacher-model traits its publisher label does not reveal, so an upstream flaw cannot be scoped to the models that descend from it  *(see also `AIRM-078`, Domain 5 (missing safeguard) — count both; pointed to by `AIRM-134`, Domain 8)*  
-  <sub>Source: OWASP AISVS 6.2; Cisco/VAIL provenance-entanglement research 2026; Original</sub>
-- **`AIRM-191`** — Safety training absent, stripped, or eroded in a self-hosted or fine-tuned model (abliteration, drift from benign fine-tuning, or a variant sourced without it), so guardrails have nothing beneath them  
-  <sub>Source: NIST GenAI MS-2.7-008; IAISR; OWASP LLM03</sub>
+  <sub>Condition type: cause · Source: CRI GV-6.1.6; MAS AIRG §4.2 / fn 21; Original</sub>
+- **`AIRM-189`** — Models and AI components deployed without verifying their integrity or lineage: a tampered artifact goes undetected, and an upstream flaw cannot be scoped to the models that descend from it  *(see also `AIRM-078`, Domain 5 (missing safeguard) — count both; pointed to by `AIRM-134`, Domain 8)*  
+  <sub>Condition type: safeguard gap · Source: OWASP AISVS 6.2; Cisco/VAIL provenance-entanglement research 2026; Original</sub>
+- **`AIRM-191`** — Safety training absent, stripped, or eroded in a self-hosted or fine-tuned model (e.g., abliteration, drift from benign fine-tuning, or a variant sourced without it), so guardrails have nothing beneath them  
+  <sub>Condition type: cause · Source: NIST GenAI MS-2.7-008; IAISR; OWASP LLM04</sub>
 
 ## 10. Workforce, Human & Societal
 
@@ -588,70 +608,70 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Skills & talent
 
 - **`AIRM-151`** — Shortage of AI and AI-risk talent, competing against AI-native employers for scarce skills  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-152`** — Inability to retain specialists, who leave taking undocumented model and prompt knowledge with them  
-  <sub>Source: Cloud Risk Map analog; Original</sub>
+  <sub>Condition type: cause · Source: Cloud Risk Map analog; Original</sub>
 - **`AIRM-153`** — Inadequate AI literacy across the workforce, so staff cannot use, question, or oversee the AI they work with  *(see also `AIRM-195`, Domain 10 (kept separate on purpose) — count both)*  
-  <sub>Source: EU Art 4 (amended 2026); CRI GV-1.2.4; CSA AICM; Original</sub>
-- **`AIRM-195`** — Leaders do not understand how AI differs from earlier technology change (probabilistic output, capability that shifts mid-rollout, value that depends on redesigning work), so they manage it as a conventional IT rollout and cannot guide the organization through adoption  *(pointed to by `AIRM-153`, Domain 10 (kept separate on purpose))*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: safeguard gap · Source: EU Art 4 (amended 2026); CRI GV-1.2.4; CSA AICM; Original</sub>
+- **`AIRM-195`** — Leaders do not understand how AI differs from earlier technology change (e.g., probabilistic output, capability that shifts mid-rollout, value that depends on redesigning work), so they manage it as a conventional IT rollout and cannot guide the organization through adoption  *(pointed to by `AIRM-153`, Domain 10 (kept separate on purpose))*  
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Deskilling & loss of institutional knowledge
 
 - **`AIRM-154`** — Erosion of staff expertise through over-delegation to AI  
-  <sub>Source: MIT 5.2; Databricks AIGF; Original</sub>
+  <sub>Condition type: cause · Source: MIT 5.2; Databricks AIGF; Original</sub>
 - **`AIRM-155`** — Loss of institutional knowledge as AI replaces human processes  
-  <sub>Source: Original</sub>
-- **`AIRM-156`** — Capability atrophy — inability to operate if AI is unavailable  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
+- **`AIRM-156`** — Capability atrophy — inability to operate if AI is unavailable  *(pointed to by `AIRM-201`, Domain 7 (parallel))*  
+  <sub>Condition type: safeguard gap · Source: Original</sub>
 
 ### Workforce disruption / change
 
 - **`AIRM-157`** — Change management underestimated — sponsorship, communication, and transition support for a change to the nature of the work itself, where capability keeps shifting mid-rollout  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-158`** — Workforce resistance or low adoption driven by displacement fear or distrust of AI output  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-159`** — Labor-relations and morale impacts of AI deployment  
-  <sub>Source: MIT 6.2; Original</sub>
+  <sub>Condition type: outcome · Source: MIT 6.2; Original</sub>
 
 ### Societal & reputational
 
 - **`AIRM-160`** — Reputational damage from a visible AI failure or misuse, amplified because AI errors draw outsized attention and people lose confidence in an algorithm faster than in a person making the same mistake  *(see also `AIRM-161`, Domain 10 (kept separate on purpose) — count both)*  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: amplifier · Source: Databricks AIGF; Original</sub>
 - **`AIRM-161`** — Customers and stakeholders distrust or avoid AI-mediated services, so adoption and returns fall short  *(pointed to by `AIRM-160`, Domain 10 (kept separate on purpose))*  
-  <sub>Source: Databricks AIGF; Original</sub>
-- **`AIRM-162`** — Harm to non-users and third parties affected by AI decisions they did not initiate (decision subjects, bystanders, community)  
-  <sub>Source: Shelby societal</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF; Original</sub>
+- **`AIRM-162`** — AI decisions or actions affecting people who never chose to use the system (e.g., decision subjects, bystanders, communities)  
+  <sub>Condition type: cause · Source: Shelby societal</sub>
 - **`AIRM-163`** — Overstating AI capability to customers, investors, or regulators (AI-washing), inviting enforcement and loss of trust  *(see also `AIRM-130`, Domain 8 — count both; pointed to by `AIRM-188`, Domain 9)*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 
 ## 11. Financial & Resource
 
 
 ### Cost & compute economics
 
-- **`AIRM-164`** — Runaway inference / training costs without FinOps discipline  *(pointed to by `AIRM-114`, Domain 7 (different cause))*  
-  <sub>Source: OWASP LLM10; Original</sub>
+- **`AIRM-164`** — Uncontrolled AI consumption, as usage grows, agents loop, or routine work goes to premium models, driving up inference and training spend  *(pointed to by `AIRM-114`, Domain 7 (different cause))*  
+  <sub>Condition type: cause · Source: OWASP LLM06; Original</sub>
 - **`AIRM-165`** — Poor cost forecasting, because inference cost scales with usage rather than seats or provisioned capacity, and rises non-linearly as pilots reach production volume  *(pointed to by `AIRM-029`, Domain 2; pointed to by `AIRM-113`, Domain 7 (different cause))*  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: cause · Source: Databricks AIGF; Original</sub>
 - **`AIRM-166`** — Energy and water demands of AI training and inference, not measured or weighed in model and deployment choices, causing environmental harm and undermining sustainability commitments  
-  <sub>Source: NIST GenAI #5; Weidinger VI; MIT 6.6</sub>
+  <sub>Condition type: cause · Source: NIST GenAI #5; Weidinger VI; MIT 6.6</sub>
 
 ### Investment / procurement
 
 - **`AIRM-167`** — Stranded investment in failed or abandoned AI initiatives, including initiatives scaled before the evidence supported them or kept funded past the point of failure because their value is hard to attribute  *(split pair: other side in Domain 2, `AIRM-021`, `AIRM-024` — count once)*  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: outcome · Source: Databricks AIGF; Original</sub>
 - **`AIRM-168`** — Procurement exposure where providers reprice tokens, tiers, or context windows unilaterally  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-169`** — Cyber or liability insurance excludes, sub-limits, or reprices AI-related losses, or defines 'user' in terms that exclude non-human actors  *(see also `AIRM-130`, Domain 8 — count both)*  
-  <sub>Source: CSA HF post-mortem; Original</sub>
+  <sub>Condition type: safeguard gap · Source: CSA HF post-mortem; Original</sub>
 
 ### Scaling & resource constraints
 
 - **`AIRM-170`** — Compute, GPU, or power scarcity constraining scaling  *(pointed to by `AIRM-112`, Domain 7 (different cause); pointed to by `AIRM-113`, Domain 7 (different cause))*  
-  <sub>Source: Original</sub>
+  <sub>Condition type: cause · Source: Original</sub>
 - **`AIRM-172`** — Concentration of compute supply among few providers  *(pointed to by `AIRM-139`, Domain 9 (parallel); pointed to by `AIRM-140`, Domain 9 (parallel))*  
-  <sub>Source: IAISR; Original</sub>
+  <sub>Condition type: amplifier · Source: IAISR; Original</sub>
 
 ## 12. Autonomy & Delegated Action (Agentic AI)
 
@@ -659,49 +679,51 @@ You are helping me use the AI Risk Map. Follow these rules:
 ### Autonomy, alignment & oversight
 
 - **`AIRM-173`** — Agent pursues unintended goals or misgeneralizes its objective  
-  <sub>Source: IAISR; OWASP ASI T6</sub>
+  <sub>Condition type: cause · Source: IAISR; OWASP ASI T6</sub>
 - **`AIRM-174`** — Agent pursues an authorized objective through unauthorized means  *(pointed to by `AIRM-107`, Domain 7)*  
-  <sub>Source: OpenAI 2026 incident; IAISR</sub>
+  <sub>Condition type: cause · Source: OpenAI 2026 incident; IAISR</sub>
 - **`AIRM-175`** — Excessive autonomy / agency beyond intended mandate  *(pointed to by `AIRM-007`, Domain 1)*  
-  <sub>Source: OWASP LLM06; DASF 9.13</sub>
-- **`AIRM-176`** — No human checkpoint or working interrupt / kill switch for an agent mid-task  *(pointed to by `AIRM-101`, Domain 6 (missing safeguard))*  
-  <sub>Source: EU Art 14; OWASP ASI</sub>
+  <sub>Condition type: cause · Source: OWASP LLM03; DASF 9.13</sub>
+- **`AIRM-176`** — No human checkpoint or working interrupt / kill switch for an agent mid-task  *(pointed to by `AIRM-101`, Domain 6 (missing safeguard); pointed to by `AIRM-201`, Domain 7 (parallel))*  
+  <sub>Condition type: safeguard gap · Source: EU Art 14; OWASP ASI</sub>
+- **`AIRM-203`** — Agents able to change their own instructions, tools, memory, or code, so their behavior drifts beyond what was approved  *(see also `AIRM-122`, Domain 7 (parallel) — count both)*  
+  <sub>Condition type: cause · Source: Original</sub>
 
 ### Tool access & authorization
 
 - **`AIRM-177`** — Agent granted a broader set of invokable tools / functions than its task requires  *(pointed to by `AIRM-083`, Domain 5 (parallel))*  
-  <sub>Source: OWASP LLM06 / ASI</sub>
-- **`AIRM-178`** — Agent identity misuse, impersonation, or delegated-credential abuse  *(see also `AIRM-196`, Domain 5 (different cause) — count both; pointed to by `AIRM-082`, Domain 5 (parallel); pointed to by `AIRM-083`, Domain 5 (parallel))*  
-  <sub>Source: OWASP ASI T9; DASF 13.9</sub>
-- **`AIRM-179`** — Third-party tool and connector servers adopted as a credentialed execution surface without the vetting applied to models or libraries  *(see also `AIRM-142`, Domain 9 (missing safeguard) — count both)*  
-  <sub>Source: OWASP AISVS C10.1 / AC.2; CSA AICM</sub>
+  <sub>Condition type: safeguard gap · Source: OWASP LLM03 / ASI</sub>
+- **`AIRM-178`** — Agent identity misuse, impersonation, or delegated-credential abuse  *(see also `AIRM-196`, Domain 5 (different cause) — count both; pointed to by `AIRM-082`, Domain 5 (kept separate on purpose); pointed to by `AIRM-083`, Domain 5 (kept separate on purpose))*  
+  <sub>Condition type: cause · Source: OWASP ASI T9; DASF 13.9</sub>
+- **`AIRM-179`** — Third-party tool and connector servers adopted as a credentialed execution surface without the vetting applied to models or libraries  *(see also `AIRM-142`, Domain 9 (parallel) — count both)*  
+  <sub>Condition type: safeguard gap · Source: OWASP AISVS C10.1 / AC.2; CSA AICM</sub>
 
 ### Memory & context integrity
 
 - **`AIRM-180`** — Memory poisoning corrupting agent state across sessions  
-  <sub>Source: OWASP ASI T1; DASF 13.1; ATLAS AML.T0080.000; Original</sub>
-- **`AIRM-181`** — Context-window manipulation altering agent behavior  
-  <sub>Source: OWASP ASI; OWASP LLM01</sub>
+  <sub>Condition type: cause · Source: OWASP ASI T1; DASF 13.1; ATLAS AML.T0080.000; Original</sub>
+- **`AIRM-181`** — Context-window manipulation altering agent behavior  *(pointed to by `AIRM-205`, Domain 5 (missing safeguard))*  
+  <sub>Condition type: cause · Source: OWASP ASI; OWASP LLM01</sub>
 - **`AIRM-182`** — Persistence of corrupted or sensitive data in agent memory  *(see also `AIRM-047`, Domain 3 (parallel) — count both)*  
-  <sub>Source: OWASP ASI; OWASP AISVS 8.3; Original</sub>
+  <sub>Condition type: cause · Source: OWASP ASI; OWASP AISVS 8.3; Original</sub>
 
 ### Multi-agent orchestration
 
 - **`AIRM-183`** — Cascading failures or loops across interacting agents  
-  <sub>Source: OWASP ASI T5; MIT 7.6</sub>
+  <sub>Condition type: amplifier · Source: OWASP ASI T5; MIT 7.6</sub>
 - **`AIRM-184`** — Misplaced inter-agent trust or agent collusion  
-  <sub>Source: OWASP ASI T13; MIT 7.6</sub>
+  <sub>Condition type: cause · Source: OWASP ASI T13; MIT 7.6</sub>
 - **`AIRM-185`** — Emergent, unpredictable behavior in multi-agent systems  
-  <sub>Source: IAISR; MIT 7.6</sub>
+  <sub>Condition type: cause · Source: IAISR; MIT 7.6</sub>
 
 ### Action integrity & traceability
 
-- **`AIRM-186`** — Unsafe, unauthorized, or irreversible real-world actions taken by an agent via tool, API, or code execution  
-  <sub>Source: OWASP ASI T2; DASF 13.2; Original</sub>
+- **`AIRM-186`** — Agents able to take irreversible real-world actions through tools, APIs, or code execution, so an error or hijack becomes a loss before anyone can intervene  
+  <sub>Condition type: amplifier · Source: OWASP ASI T2; DASF 13.2; Original</sub>
 - **`AIRM-187`** — Accountability gap for harm caused by autonomous action  *(split pair: other side in Domain 1, `AIRM-006` — count once; see also `AIRM-130`, Domain 8 — count both; pointed to by `AIRM-109`, Domain 7)*  
-  <sub>Source: Databricks AIGF; Original</sub>
+  <sub>Condition type: safeguard gap · Source: Databricks AIGF; Original</sub>
 - **`AIRM-190`** — Agent actions not attributable to the organization by the external parties they affect, so those parties cannot detect, warn of, or contest them  
-  <sub>Source: CSA HF post-mortem; OWASP ASI T8</sub>
+  <sub>Condition type: safeguard gap · Source: CSA HF post-mortem; OWASP ASI T8; Original</sub>
 
 ### Retired factors (tombstones)
 
@@ -723,7 +745,6 @@ The test: would assessing both factors as separate scenarios count the same loss
 | Concept | Side A → owner | Side A IDs | Side B → owner | Side B IDs |
 |---|---|---|---|---|
 | Supply-chain compromise | 5 compromised artifact (the attack) | AIRM-078 | 9 compromised open-source component (the dependency) | AIRM-148 |
-| Intellectual property | 3 training-data rights (inbound) | AIRM-042, AIRM-043 | 8 infringement claims (outbound) | AIRM-131 |
 | Hallucination | 4 accuracy defect | AIRM-052 | 6 downstream harm | AIRM-091 |
 | Stranded investment | 2 strategic misjudgment | AIRM-021, AIRM-024 | 11 capital lost | AIRM-167 |
 | Jailbreak → dangerous uplift | 5 the attack | AIRM-073 | 6 the resulting uplift | AIRM-097 |
@@ -739,56 +760,72 @@ Different risks worth reading together. Each pointer is one of: a more general f
 | `AIRM-018` AI output relied on in financial-reporting controls without scope change | `AIRM-138` Inability to evidence and audit AI compliance across jurisdictions (internal evidence burden) | Once AI output sits inside a regulated control chain, the burden of evidencing that chain lands on Legal & Compliance. |
 | `AIRM-025` Misjudged AI sourcing fork: train, fine-tune, RAG, or API | `AIRM-129` Misclassified as deployer when fine-tuning makes you a provider | Fine-tuning or rebranding a model can turn a deployer into a provider under the EU AI Act; the sourcing choice sets the legal role. |
 | `AIRM-029` Hidden total cost of ownership (data, talent, integration) eroding returns | `AIRM-165` Poor AI cost forecasting as usage scales to production | Hidden total cost of ownership shows up in Finance as usage-scaled inference cost that was never forecast. |
-| `AIRM-045` Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery | `AIRM-130` Liability for harm caused by AI decisions or outputs | Failure to preserve prompts, outputs, and agent traces becomes litigation exposure when a claim arrives. |
-| `AIRM-081` Model-invented dependencies resolving to adversary-registered packages | `AIRM-052` Fluent but factually incorrect output (hallucination) accepted as reliable | The package-name attack depends on a hallucination the model repeats reliably; the accuracy defect is owned in Model Development. |
-| `AIRM-085` Retrieval serving content beyond the user’s own entitlements | `AIRM-039` Inadvertent disclosure of confidential / personal data in model output (no output guardrails) | Retrieval beyond the user's entitlements surfaces as confidential data in model output, the Data & Privacy view. |
+| `AIRM-045` Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery | `AIRM-130` Unsettled liability for harm caused by AI decisions | Failure to preserve prompts, outputs, and agent traces becomes litigation exposure when a claim arrives. |
+| `AIRM-081` Model-invented dependencies registered by attackers | `AIRM-052` Hallucinated or meaning-changing output accepted as reliable | The package-name attack depends on a hallucination the model repeats reliably; the accuracy defect is owned in Model Development. |
+| `AIRM-085` Retrieval serving content beyond the user’s own entitlements | `AIRM-039` No guardrails keeping confidential or personal data out of model output | Safeguard: output guardrails are the last check when retrieval returns more than the user may see. |
 | `AIRM-102` Review capacity cannot scale to AI output volume, degrading oversight to rubber-stamping | `AIRM-117` Inadequate content-moderation / trust-&-safety operations at scale | The same volume problem at operational scale: moderation and trust-and-safety teams cannot keep pace with AI output. |
 | `AIRM-104` Inconsistent or unsanctioned (shadow) model deployment | `AIRM-002` Ungoverned ‘shadow AI’ adoption outside sanctioned channels | Shadow deployment in Operations is the production end of shadow AI adoption, which Governance owns. |
-| `AIRM-107` Test or sandbox containment fails and AI reaches real systems | `AIRM-174` Agent pursues an authorized objective through unauthorized means | In the 2026 incidents, containment failed because the agent pursued an authorized objective through unauthorized means. |
+| `AIRM-107` AI tool-execution or test containment fails and AI reaches real systems | `AIRM-174` Agent pursues an authorized objective through unauthorized means | In the 2026 incidents, containment failed because the agent pursued an authorized objective through unauthorized means. |
 | `AIRM-109` Inadequate logging of inputs, outputs, tool calls, agent decisions, and who authorized them | `AIRM-187` Accountability gap for harm caused by autonomous action | Logs of who authorized an agent's action are what close the accountability gap after autonomous harm. |
 | `AIRM-119` Silent vendor / model updates changing behavior without notice | `AIRM-141` Model deprecation or behavior change forcing unplanned migration | A silent model update is the operational side of provider-driven behavior change; Third-Party owns the dependency. |
 | `AIRM-123` Controls re-verified less often than the AI system changes | `AIRM-017` Absence of independent assurance over AI control effectiveness | Controls re-verified less often than the system changes is an assurance gap: no independent evidence the controls still work. |
-| `AIRM-134` Violation of open-weight / model license terms | `AIRM-189` Model's true lineage hidden behind its publisher label, so upstream flaws can't be traced | Open-weight license obligations can be inherited through a lineage the publisher label does not disclose. |
+| `AIRM-134` Use of open-weight or licensed models outside their license terms | `AIRM-189` Models deployed without verifying integrity or lineage | Open-weight license obligations can be inherited through a lineage the publisher label does not disclose. |
 | `AIRM-142` Vendor diligence missing: are prompts retained, trained on, or shared? | `AIRM-036` Personal data used for training without consent or purpose limitation | Mirror image: a vendor training on your prompts and outputs without agreement, and your organization training on people's personal data without consent. |
-| `AIRM-141` Model deprecation or behavior change forcing unplanned migration | `AIRM-120` Inadequate versioning, rollback, and change control for models | A forced migration has to run through versioning, rollback, and change control in Operations. |
-| `AIRM-163` AI-washing: overstating capability to customers, investors, or regulators | `AIRM-130` Liability for harm caused by AI decisions or outputs | Overstated AI capability invites enforcement and liability claims. |
-| `AIRM-169` Insurance excludes AI losses, or defines 'user' as human only | `AIRM-130` Liability for harm caused by AI decisions or outputs | An insurance exclusion leaves the liability for AI-caused harm uninsured. |
-| `AIRM-187` Accountability gap for harm caused by autonomous action | `AIRM-130` Liability for harm caused by AI decisions or outputs | The accountability gap after autonomous harm meets Legal's general liability factor. Pointer runs specific to general, so AIRM-130 carries no return marker. |
+| `AIRM-141` Model deprecation or behavior change forcing unplanned migration | `AIRM-120` Inadequate versioning, change control, and tested rollback to a known-good model version | A forced migration has to run through versioning, rollback, and change control in Operations. |
+| `AIRM-163` AI-washing: overstating capability to customers, investors, or regulators | `AIRM-130` Unsettled liability for harm caused by AI decisions | Overstated AI capability invites enforcement and liability claims. |
+| `AIRM-169` Insurance excludes AI losses, or defines 'user' as human only | `AIRM-130` Unsettled liability for harm caused by AI decisions | An insurance exclusion leaves the liability for AI-caused harm uninsured. |
+| `AIRM-187` Accountability gap for harm caused by autonomous action | `AIRM-130` Unsettled liability for harm caused by AI decisions | The accountability gap after autonomous harm meets Legal's general liability factor. Pointer runs specific to general, so AIRM-130 carries no return marker. |
 | `AIRM-188` No way to verify a vendor's 'AI-powered' claim before buying it | `AIRM-163` AI-washing: overstating capability to customers, investors, or regulators | The buyer's side of AI capability claims; AIRM-163 is the seller's side, when your own organization overstates. |
 | `AIRM-079` Known vulnerabilities in ML dependencies left unpatched | `AIRM-149` Open-source AI dependencies abandoned by their maintainers | Same outcome, different cause: a known vulnerability exploited vs. a dependency its maintainers abandoned. |
 | `AIRM-080` Tampering with model artifacts, prompts, or configuration | `AIRM-148` Malicious or compromised open-source models / components | Parallel: compromise inside your own registries and pipeline vs. compromise upstream in an open-source component. |
-| `AIRM-189` Model's true lineage hidden behind its publisher label, so upstream flaws can't be traced | `AIRM-078` Compromised or malicious model from the AI supply chain | Safeguard: lineage is how a compromised upstream model is scoped to everything that descends from it. |
-| `AIRM-044` Inability to prove you held rights to the training data used | `AIRM-131` Infringement claims arising from AI-generated output | Safeguard: proof of rights to training data is the defense against an infringement claim, not its cause. |
+| `AIRM-189` Models deployed without verifying integrity or lineage | `AIRM-078` Compromised or malicious model from the AI supply chain | Safeguard: lineage is how a compromised upstream model is scoped to everything that descends from it. |
+| `AIRM-044` Inability to prove you held rights to the training data used | `AIRM-042` Use of copyrighted or licensed material in training without rights | Safeguard: proof of rights to training data is the defense when its use is challenged. |
 | `AIRM-042` Use of copyrighted or licensed material in training without rights | `AIRM-132` Uncertain ownership / copyrightability of AI-generated content | Parallel: whether you may use the inputs vs. whether you own the outputs. |
 | `AIRM-069` Membership-inference or model-inversion exposing training data | `AIRM-036` Personal data used for training without consent or purpose limitation | Same outcome, different cause: training data extracted by an attacker vs. personal data used without consent. |
 | `AIRM-069` Membership-inference or model-inversion exposing training data | `AIRM-038` Re-identification of individuals from aggregated or model-derived data | Same outcome, different cause: the model-derived part of re-identification overlaps with inference attacks. |
-| `AIRM-069` Membership-inference or model-inversion exposing training data | `AIRM-039` Inadvertent disclosure of confidential / personal data in model output (no output guardrails) | Same outcome, different cause: data extracted on purpose vs. disclosed by accident in ordinary use. |
-| `AIRM-056` Model drift degrading performance as data / conditions change | `AIRM-108` Absence of monitoring for performance, drift, and abuse in any environment | Safeguard: monitoring is how drift is caught; its absence is a condition on the drift scenario. |
+| `AIRM-069` Membership-inference or model-inversion exposing training data | `AIRM-047` Persistence of sensitive data in embeddings, caches, or model weights | Same outcome, different cause: training data extracted on purpose vs. sensitive data persisting in model weights and surfacing in ordinary use. |
+| `AIRM-056` Model drift degrading performance as data / conditions change | `AIRM-108` No monitoring, acted on, for drift, biased outcomes, or abuse | Safeguard: monitoring is how drift is caught; its absence is a condition on the drift scenario. |
 | `AIRM-056` Model drift degrading performance as data / conditions change | `AIRM-110` Non-determinism making anomalous behavior hard to define or detect | Safeguard: drift is hard to catch when 'anomalous' cannot be defined for a non-deterministic system. |
 | `AIRM-139` Concentration risk from dependence on a few model providers | `AIRM-172` Concentration of compute supply among few providers | Parallel: the same concentration pattern in model providers and in compute supply. |
 | `AIRM-140` Model monoculture, including one model's blind spot reproduced across everything it produces | `AIRM-172` Concentration of compute supply among few providers | Parallel: shared-model failure and concentrated compute supply both turn one provider's problem into everyone's. |
 | `AIRM-073` Jailbreaks defeating safety controls and restrictions | `AIRM-090` Generation of toxic, dangerous, or hateful content | Same outcome, different cause: toxic content can follow a jailbreak, and can also come from the model's ordinary failures. |
-| `AIRM-082` Inadequate access controls on serving endpoints and inference APIs | `AIRM-178` Agent identity misuse, impersonation, or delegated-credential abuse | Parallel: access to the AI vs. an agent acting on others with its identity. |
-| `AIRM-083` Over-privileged service accounts and keys for AI components | `AIRM-178` Agent identity misuse, impersonation, or delegated-credential abuse | Parallel: credentials for AI components vs. an agent's delegated identity. |
+| `AIRM-082` Weak access controls and usage limits on AI endpoints | `AIRM-178` Agent identity misuse, impersonation, or delegated-credential abuse | Kept separate on purpose: access to the AI vs. an agent acting on others with its identity. |
+| `AIRM-083` Over-privileged service accounts and keys for AI components | `AIRM-178` Agent identity misuse, impersonation, or delegated-credential abuse | Kept separate on purpose: credentials for AI components vs. an agent's delegated identity. |
 | `AIRM-015` Inability to audit AI: no complete inventory of models, agents, and connectors | `AIRM-063` Inadequate model documentation / model cards | Parallel: governance records vs. technical documentation. |
 | `AIRM-112` Inference latency or unavailability degrading dependent services | `AIRM-170` Compute, GPU, or power scarcity constraining scaling | Same outcome, different cause: uptime and latency in operations vs. scarce compute supply. |
 | `AIRM-113` Inability to scale inference to peak demand | `AIRM-170` Compute, GPU, or power scarcity constraining scaling | Same outcome, different cause: inability to scale to peak demand vs. compute that cannot be obtained. |
 | `AIRM-113` Inability to scale inference to peak demand | `AIRM-165` Poor AI cost forecasting as usage scales to production | Same outcome, different cause: scaling that fails operationally vs. scaling that fails financially. |
 | `AIRM-101` Erosion of meaningful human control over decisions | `AIRM-176` No human checkpoint or working interrupt / kill switch for an agent mid-task | Safeguard: a working checkpoint or interrupt is what preserves meaningful human control. |
 | `AIRM-083` Over-privileged service accounts and keys for AI components | `AIRM-177` Agent granted a broader set of invokable tools / functions than its task requires | Parallel: over-broad credentials for AI components vs. over-broad tools for an agent. |
-| `AIRM-109` Inadequate logging of inputs, outputs, tool calls, agent decisions, and who authorized them | `AIRM-006` Accountability for agent decisions undefined, internally and across the AI stack | Safeguard: logs of who authorized an agent's action are the evidence accountability depends on. |
-| `AIRM-077` Over-trusted output triggering unsafe automated actions | `AIRM-099` User over-trust / automation bias in AI outputs | Same outcome, different cause: unsafe actions triggered automatically vs. people over-trusting the output. |
+| `AIRM-109` Inadequate logging of inputs, outputs, tool calls, agent decisions, and who authorized them | `AIRM-006` Accountability for agent decisions undefined, internally and across the AI stack | Parallel: logs of who authorized an agent's action are the evidence accountability depends on. |
+| `AIRM-077` Over-trusted output triggering unsafe automated actions | `AIRM-099` User over-trust / automation bias in AI outputs | Kept separate on purpose: unsafe actions triggered automatically vs. people over-trusting the output. |
 | `AIRM-182` Persistence of corrupted or sensitive data in agent memory | `AIRM-047` Persistence of sensitive data in embeddings, caches, or model weights | Parallel: sensitive data persisting in agent memory and in embeddings, caches, or weights. |
-| `AIRM-179` Third-party tool/connector servers as an unvetted execution surface | `AIRM-142` Vendor diligence missing: are prompts retained, trained on, or shared? | Safeguard: tool and connector servers need the vendor diligence applied to models and libraries. |
+| `AIRM-179` Third-party tool/connector servers as an unvetted execution surface | `AIRM-142` Vendor diligence missing: are prompts retained, trained on, or shared? | Parallel: tool and connector servers need the vendor diligence applied to models and libraries. |
 | `AIRM-122` Uncontrolled continuous learning introducing drift | `AIRM-065` Training-data poisoning that degrades or backdoors model behavior | Same outcome, different cause: drift from uncontrolled learning vs. poisoning deliberately fed into the learning loop. |
 | `AIRM-124` Prompts and retrieval config changed outside change control | `AIRM-080` Tampering with model artifacts, prompts, or configuration | Same outcome, different cause: prompts and configuration changed by accident vs. tampered with on purpose. |
-| `AIRM-114` Denial-of-wallet: attackers run up AI compute costs | `AIRM-164` Runaway inference / training costs without FinOps discipline | Same outcome, different cause: costs run up by an attacker vs. by unmanaged use of your own systems. |
+| `AIRM-114` Denial-of-wallet: attackers run up AI compute costs | `AIRM-164` Uncontrolled AI consumption driving up inference spend | Same outcome, different cause: costs run up by an attacker vs. by unmanaged use of your own systems. |
 | `AIRM-004` Unclear ownership and accountability (RACI) for AI risk decisions | `AIRM-005` No clear executive owner for AI adoption | Kept separate on purpose: who accepts AI risk vs. who drives AI adoption (see Scope decisions). |
 | `AIRM-153` Inadequate AI literacy across the workforce | `AIRM-195` Leaders manage AI like a conventional IT rollout | Kept separate on purpose: staff literacy in using AI vs. leaders' understanding of how AI changes the organization. |
 | `AIRM-160` Reputational damage amplified when AI fails in public | `AIRM-161` Customers distrust or avoid AI-mediated services | Kept separate on purpose: damage from a visible failure vs. customers avoiding AI channels with or without one. |
 | `AIRM-178` Agent identity misuse, impersonation, or delegated-credential abuse | `AIRM-196` Insiders use AI agents to reach beyond their own access | Same outcome, different cause: someone abusing the agent's identity vs. an insider steering a sanctioned agent. |
 | `AIRM-057` Lack of robustness to edge cases and distribution shift | `AIRM-197` Inputs crafted to evade AI detection models | Same outcome, different cause: brittle behavior on unusual inputs vs. inputs crafted to exploit it. |
 | `AIRM-058` Small changes to the input produce very different output | `AIRM-197` Inputs crafted to evade AI detection models | Same outcome, different cause: input sensitivity in ordinary use vs. adversarial inputs that exploit it. |
+| `AIRM-042` Use of copyrighted or licensed material in training without rights | `AIRM-131` AI-generated output that closely reproduces or imitates others' copyrighted work or trademarks | Parallel: rights infringed through what goes into a model vs. what comes out of it. |
+| `AIRM-198` Customers and partners feeding our data into their AI, with no terms or visibility | `AIRM-133` Vendor contracts lacking AI terms: training use, output ownership, change notice | Mirror image: our data in a vendor's AI vs. our data in a customer's or partner's AI. |
+| `AIRM-198` Customers and partners feeding our data into their AI, with no terms or visibility | `AIRM-142` Vendor diligence missing: are prompts retained, trained on, or shared? | Mirror image: what a vendor's AI does with our data vs. what a customer's or partner's AI does with it. |
+| `AIRM-198` Customers and partners feeding our data into their AI, with no terms or visibility | `AIRM-193` Our advantage erodes as competitors and customers approximate it with AI | Kept separate on purpose: our data used past the terms we set vs. our advantage approximated from public information. |
+| `AIRM-199` No guardrails on what customer-facing AI says in our name | `AIRM-039` No guardrails keeping confidential or personal data out of model output | Parallel: guardrails on what our AI says in our name vs. on the confidential data it can reveal. |
+| `AIRM-199` No guardrails on what customer-facing AI says in our name | `AIRM-071` Direct prompt injection altering behavior or bypassing guardrails | Safeguard: content guardrails limit what a hijacked assistant can publish. |
+| `AIRM-200` No way to find and make whole everyone a flawed AI decision affected | `AIRM-019` No way to identify which artifacts AI produced, so a model flaw cannot be scoped | Parallel: scoping which artifacts a flaw touched vs. which people it harmed. |
+| `AIRM-200` No way to find and make whole everyone a flawed AI decision affected | `AIRM-088` Bias amplification / homogenization from feedback and scale | Safeguard: one flaw at scale reaches many people; remediating them is how the loss is contained. |
+| `AIRM-201` No tested off-switch or fallback for a misbehaving AI feature | `AIRM-176` No human checkpoint or working interrupt / kill switch for an agent mid-task | Parallel: an off-switch for a customer-facing AI feature vs. an interrupt for an agent mid-task. |
+| `AIRM-201` No tested off-switch or fallback for a misbehaving AI feature | `AIRM-156` Capability atrophy — inability to operate if AI is unavailable | Parallel: turning the AI off vs. being able to operate once it is off. |
+| `AIRM-202` AI makes false statements about real people or organizations | `AIRM-052` Hallucinated or meaning-changing output accepted as reliable | A specific case of hallucination with its own loss: false statements about real people or organizations. |
+| `AIRM-203` Agents that rewrite their own instructions or tools | `AIRM-122` Uncontrolled continuous learning introducing drift | Parallel: a model that changes itself through continuous learning vs. an agent that changes its own instructions or tools. |
+| `AIRM-204` Fear-driven AI bans push use into the shadows | `AIRM-002` Ungoverned ‘shadow AI’ adoption outside sanctioned channels | A ban drives use into the unsanctioned channels Governance owns. |
+| `AIRM-205` Untrusted content treated as instructions | `AIRM-072` Indirect / cross-domain prompt injection via retrieved content | Safeguard: keeping retrieved content from acting as instructions is the defense against indirect injection. |
+| `AIRM-205` Untrusted content treated as instructions | `AIRM-181` Context-window manipulation altering agent behavior | Safeguard: untrusted content an agent reads is how its context is manipulated. |
+| `AIRM-205` Untrusted content treated as instructions | `AIRM-199` No guardrails on what customer-facing AI says in our name | Parallel: guarding what goes into the model vs. what comes out. |
 
 
 ---
@@ -813,7 +850,7 @@ Excluded by the incremental-risk lens — already on every enterprise register.
 Kept only the slice the enterprise owns (its workforce, its reputation).
 
 **Pure controls and threats**  
-Excluded by form. Entries are risk factors (conditions, failure modes, and events), never a control to implement ('implement MFA') or a threat actor ('an attacker'). A factor may imply a missing or deficient control condition; that is in form. A proposal that arrives as a control is inverted into the condition it prevents and checked against neighboring factors before it is added or declined.
+Excluded by form. Entries are risk factors (conditions that contribute to risk: causes, missing or weak safeguards, amplifiers), never a control to implement ('implement MFA') or a threat actor ('an attacker'). A factor may imply a missing or deficient control condition; that is in form. A proposal that arrives as a control is inverted into the condition it prevents and checked against neighboring factors before it is added or declined.
 
 
 ### Retained when challenged
@@ -897,7 +934,7 @@ SOURCE: external four-category framing (2024) naming AI-generated code that ampl
 SOURCE: mirror-image review of AIRM-119 (silent vendor updates) and AIRM-168, October 2026. ADDED in v1.3 as AIRM-192. CONDITION: changes to the model, prompts, or guardrails behind an AI-powered service we provide, made without notice to the customers and deployers who depend on it, so their validations, disclosures, and controls silently go stale. WHY AI-SPECIFIC (Gate B): the provider cannot fully enumerate what changed, because a statistical system has no change manifest (the provider-side view of AIRM-110); customers bind to behavior rather than an interface, so a change invalidates their model validation and explanations with no interface break to trip an alarm; and change cadence is continuous rather than release-based. The immaturity of provider change discipline is real but will fade; these three will not. CORROBORATION: EU AI Act substantial-modification concept (Art 25) and provider information duties to deployers (Art 13); NIST GenAI #12 value chain and component integration. Verify Art 13 sub-paragraph at build. PROPOSED: D6 Transparency, disclosure & provenance (owner is product and legal, not operations). See-also AIRM-119 (mirror) and AIRM-129. Face: Execution.
 
 **No response capability for the case where your own agent harms a third party**  
-SOURCE: CSA CISO post-mortem recommendation to stand up two separate agentic response teams (victim and perpetrator). DECLINED as a separate factor. The recommendation is a control; the conditions it addresses are covered by D10 'Harm to non-users and third parties', D8 'Liability for harm caused by AI decisions or outputs', and D7 incident management.
+SOURCE: CSA CISO post-mortem recommendation to stand up two separate agentic response teams (victim and perpetrator). DECLINED as a separate factor. The recommendation is a control; the conditions it addresses are covered by D10 AIRM-162 (people affected by AI decisions they did not initiate), D8 AIRM-130 (liability for AI harm), and D7 incident management.
 
 **Inability to mass-rotate credentials or rebuild clusters at scale**  
 SOURCE: CSA CISO post-mortem recommendations on ephemeral credentials and immutable infrastructure. DECLINED: generic resilience engineering. Fails the Gate B bounding principle — the delta is 'faster', which is not a specific nameable AI mechanism.
@@ -957,10 +994,50 @@ SOURCE: raised in review of the containment factor. Guardrails, access scopes, e
 | v1.3 | October 2026 | x-ref (see-also) | AIRM-015, 036, 038, 039, 044, 056, 063, 069, 079, 080, 082, 083, 090, 093, 101, 108, 109, 110, 112, 113, 132, 139, 140, 149, 170, 172, 176, 177, 178, 189 | Markers removed where the v1.2 pair linked different risks; each such link is now a see-also pointer (count both). The AIRM-015 / AIRM-093 link was dropped. |
 | v1.3 | October 2026 | cross-ref sheet | — | 12 new see-also pointers, three of them between neighboring factors kept separate on purpose (AIRM-004/005, 153/195, 160/161; see Scope decisions), plus 22 converted from v1.2 pairs. |
 | v1.3 | October 2026 | documentation | — | Scope exclusion narrowed to others' adversarial or malicious use of AI, so the scope is wider. 'Two-faced pair' renamed 'split pair'; the routing rule renamed accordingly. |
+| v2.0 | November 2026 | schema | — | Column J, Condition type, added to the Taxonomy sheet and the CSV (tenth column, at the end). Values: cause, safeguard gap, amplifier, outcome. Columns A–I unchanged. |
+| v2.0 | November 2026 | added | AIRM-198 | Added. No terms or visibility over how customers and partners use our data, insights, or AI outputs in their own AI. D8 Contractual & licensing. Safeguard gap. |
+| v2.0 | November 2026 | added | AIRM-199 | Added. No content guardrails on what a customer-facing AI service can publish or say on the organization's behalf. D6. Safeguard gap. |
+| v2.0 | November 2026 | added | AIRM-200 | Added. No ability to identify, notify and remediate everyone a flawed AI decision or output affected. D8. Safeguard gap. |
+| v2.0 | November 2026 | added | AIRM-201 | Added. No tested way to disable, or fall back from, a misbehaving customer-facing AI feature. D7 Incident management. Safeguard gap. Agents mid-task remain AIRM-176. |
+| v2.0 | November 2026 | added | AIRM-202 | Added. AI output making false or defamatory statements about real people or organizations. D6. Cause. |
+| v2.0 | November 2026 | added | AIRM-203 | Added. Agents able to change their own instructions, tools, memory, or code. D12. Cause. |
+| v2.0 | November 2026 | added | AIRM-204 | Added. Fear-driven bans or blanket restrictions on AI use. D2. Cause. Mirror of AIRM-026 (failing to weigh inaction). |
+| v2.0 | November 2026 | added | AIRM-205 | Added. Untrusted content the AI processes treated with the authority of the organization's own instructions. D5. Safeguard gap. Sources: OWASP LLM01 (2026); CSA AICM AIS-15. |
+| v2.0 | November 2026 | reworded | AIRM-005 | Widened: names the criteria for starting, scaling, or stopping an initiative, as well as who decides. |
+| v2.0 | November 2026 | reworded | AIRM-029 | Form: illustrative list marked 'e.g.'. No change in meaning. |
+| v2.0 | November 2026 | reworded | AIRM-030 | Widened: provenance and integrity; adds fine-tuning and retrieval (RAG) data and data not verified before use. |
+| v2.0 | November 2026 | reworded | AIRM-039 | NARROWED and recast: now the missing guardrail that keeps confidential or personal data out of model output. The disclosure itself is the outcome of a scenario; its causes include AIRM-041, 047, 085 and 182. Condition type: safeguard gap. |
+| v2.0 | November 2026 | reworded | AIRM-052 | Widened: adds summaries and transformations that change what the source said. |
+| v2.0 | November 2026 | reworded | AIRM-054 | Widened: adds fairness testing; 'red-teaming' restated as adversarial testing. |
+| v2.0 | November 2026 | reworded | AIRM-068 | Widened: model, reasoning, or insight extraction through API or product use. |
+| v2.0 | November 2026 | reworded | AIRM-082 | Widened: adds usage limits on endpoints. |
+| v2.0 | November 2026 | reworded | AIRM-092 | Clarified from a harm to its cause: inappropriate or unsafe output reaching minors or vulnerable users. |
+| v2.0 | November 2026 | reworded | AIRM-098 | Form: illustrative list marked 'e.g.'. No change in meaning. |
+| v2.0 | November 2026 | reworded | AIRM-107 | Widened: adds containment of AI tool or code execution at runtime, not only test and development environments. |
+| v2.0 | November 2026 | reworded | AIRM-108 | Widened: monitoring must be acted on, and covers biased outcomes. |
+| v2.0 | November 2026 | reworded | AIRM-120 | Sharpened: tested rollback to a known-good model version. |
+| v2.0 | November 2026 | reworded | AIRM-126 | CHANGED: from failing to meet high-risk obligations (the breach) to AI-specific obligations not identified or not built in before deployment (the condition). Broadened beyond high-risk systems. Check earlier mappings. |
+| v2.0 | November 2026 | reworded | AIRM-130 | Clarified: names what AI changes about liability (unsettled, hard to price or pass on). Condition type: amplifier. |
+| v2.0 | November 2026 | reworded | AIRM-131 | CHANGED from a loss to its cause: AI output that reproduces or imitates others' copyrighted work or trademarks. Check earlier mappings that used it for the claims themselves. |
+| v2.0 | November 2026 | reworded | AIRM-134 | Clarified from a violation to its cause: use of models outside their license terms. |
+| v2.0 | November 2026 | reworded | AIRM-136 | Clarified from a violation to its cause: data crossing borders through AI services, including hidden provider routing. |
+| v2.0 | November 2026 | reworded | AIRM-144 | Clarified: accountability for a vendor's AI stays with the organization. Condition type: amplifier. |
+| v2.0 | November 2026 | reworded | AIRM-162 | Clarified from a harm to its cause; illustrative list marked 'e.g.'. |
+| v2.0 | November 2026 | reworded | AIRM-164 | CHANGED: outcome removed. Now uncontrolled AI consumption (usage growth, agent loops, routine work routed to premium models). Check earlier mappings. |
+| v2.0 | November 2026 | reworded | AIRM-186 | NARROWED: agents able to take irreversible real-world actions. Unauthorized means are AIRM-174. Condition type: amplifier. |
+| v2.0 | November 2026 | reworded | AIRM-189 | Widened: integrity as well as lineage of models and AI components. |
+| v2.0 | November 2026 | reworded | AIRM-191 | Form: illustrative list marked 'e.g.'. No change in meaning. |
+| v2.0 | November 2026 | reworded | AIRM-195 | Form: illustrative list marked 'e.g.'. No change in meaning. |
+| v2.0 | November 2026 | x-ref | AIRM-042, 043, 131 | Intellectual-property split pair dissolved: 131 now names output, 042/043 training inputs, so they are different conditions. Markers removed; replaced by a see-also (042 → 131). Five split pairs remain, 11 marked factors. |
+| v2.0 | November 2026 | x-ref (see-also) | AIRM-044, 069, 077, 082, 083, 085, 109, 179 | Pointers updated to fit the reworded factors and condition types: 069 now points to 047; 044 to 042; relationship labels corrected on 077, 082, 083, 085, 109, 179. |
+| v2.0 | November 2026 | cross-ref sheet | — | 16 new see-also pointers (13 for the new factors). Total 70. |
+| v2.0 | November 2026 | sources | AIRM-039, 047, 065, 066, 071, 072, 073, 074, 075, 077, 078, 079, 114, 148, 149, 164, 175, 177, 181, 191 | OWASP Top 10 for LLM Applications locators moved from the 2025 to the 2026 edition: LLM03→04, LLM04→05, LLM05→10, LLM06→03, LLM07→08, LLM08→09, LLM10→06; LLM01 and LLM02 unchanged. |
+| v2.0 | November 2026 | sources | AIRM-190, 192, 197 | Locators made more precise: 192 EU Art 13(3)(c); 197 NIST AI 100-2 E2025 §2.2; 190 marked Original for the external-attribution framing. |
+| v2.0 | November 2026 | documentation | — | Factor rules restated: condition type; wording stops at the condition; safeguard gaps name the objective, not a technique; parenthetical lists start with 'e.g.'. The build checks condition types, the 'e.g.' rule, and that every see-also relationship fits the types it joins. |
 
 ---
 
-## Schema — column contract (frozen at v1.0)
+## Schema — column contract (columns A–I frozen at v1.0; J added at v2.0)
 
 | Col | Name | Contract |
 |---|---|---|
@@ -973,6 +1050,7 @@ SOURCE: raised in review of the containment factor. Guardrails, access scopes, e
 | G | X-ref | '→n' = this factor is one side of a split pair whose other side is owned by domain n (the poster's »n); count the pair once. Used only for split pairs. Every side of every pair carries a marker; the Cross-references sheet lists every factor ID on both sides, so use it, not this column, to count. See-also pointers are listed on the sheet and carry no marker. |
 | H | Status | 'active' or 'retired'. |
 | I | Superseded by | When a factor is merged or replaced: the surviving ID. |
+| J | Condition type | Added in v2.0. How the factor enters a scenario: How a factor enters a scenario. CAUSE: the first thing that goes wrong; fix it and the loss never starts. SAFEGUARD GAP: a missing or weak control; fix it and the first failure still happens, but a later step is stopped or the loss is softened. It is a condition on the scenarios it protects, never a scenario of its own. AMPLIFIER: changes how often losses happen, how far they spread, or how badly they land, without causing them. OUTCOME: names the loss event itself; few factors are outcomes, and each is a candidate for rewording to the condition behind it. A factor takes more than one value only when it plays different roles in different scenarios. Values: cause, safeguard gap, amplifier, outcome; more than one is separated by '; '. Blank on retired rows. Adding a value is a minor version; renaming or removing one is a major version. |
 
 ---
 
@@ -986,6 +1064,7 @@ Factor wording changes between versions. IDs do not. Cite IDs.
 | **v1.1** | September 2026 | 189 | Poster redesign: new typeface (Figtree), lighter header with a reading key, categories set as colored text, and cross-reference markers drawn as pills in the target domain's color. Cross-reference corrections: two markers that pointed at their own domain were removed (AIRM-046, AIRM-152), and AIRM-187 now shows both of its targets, Governance and Legal, where v1.0 printed only the first. The D1/D12 accountability pair (AIRM-006 / AIRM-187) was added to the Cross-references sheet, where it had been recorded only in Scope decisions. No factors added, removed, reworded, or re-homed; all identifiers unchanged. |
 | **v1.2** | September 2026 | 189 | Clarifications and cross-reference corrections from external review. Control framing: the map is not a control standard; factors may imply a missing or deficient control condition, but none is phrased as a control to implement and the map does not say which control closes a gap. Cross-references: »n now means one thing, the other face of a two-faced pair (count once). Both faces of all 15 pairs are marked, where v1.1 marked both faces of only four and left three pairs unmarked. The one-way see-also pointers that shared the same marker were moved to a new part of the Cross-references sheet (20 pointers, listed by ID) and no longer appear on the poster. The build now fails if a marker and the pair list disagree in either direction. Net: 32 markers on 30 factors, down from 35. The Transparency pair listed AIRM-092 in error; corrected to AIRM-093. The markdown corpus now carries the design principles (scope, retention gates, factor form, two-faced rule, markers). No factors added, removed, reworded, or re-homed; all identifiers unchanged. |
 | **v1.3** | October 2026 | 196 | Content release: 12 domains, 55 categories, 196 active factors. ADDED, 8 factors: agent actions third parties cannot attribute to you (AIRM-190); safety training stripped or eroded in a self-hosted model (AIRM-191); changes to your own AI service made without notice to customers (AIRM-192); your advantage eroding as competitors and customers approximate it with AI (AIRM-193); AI agents disintermediating you from your customers (AIRM-194); leaders managing AI like a conventional IT rollout (AIRM-195); insiders using AI agents to reach beyond their own access (AIRM-196); inputs crafted to evade AI detection models (AIRM-197). NEW CATEGORY: Competitive position (Strategy & Value Realization) holds AIRM-193, AIRM-194, and AIRM-026, moved from Use-case selection & sourcing. MERGED: AIRM-171 into AIRM-165; AIRM-171 keeps a retired tombstone row. REWORDED, 19 factors. Most widen or clarify the same condition. Four narrow it, so check any earlier mapping: AIRM-149 now covers abandoned dependencies only (known vulnerabilities are AIRM-079); AIRM-114 now covers deliberate denial-of-wallet only (unmanaged usage is AIRM-164); AIRM-122 now covers drift only (poisoning through a learning loop is AIRM-065); AIRM-153 now covers workforce literacy only (leadership understanding is AIRM-195). AIRM-161 is clarified from a consequence (eroded trust) to its cause (customers avoiding AI-mediated services). SCOPE: the exclusion now reads others' adversarial or malicious use of AI against you; the effect of competitors' and customers' AI on the value of your own strategy is in scope. CROSS-REFERENCES: every v1.2 pair was re-tested link by link against one question: would assessing both as separate scenarios count the same loss twice? Six split pairs remain (14 marked factors, down from 32); the other links became see-also pointers, which count both. 'Two-faced pair' is renamed 'split pair'. Identifiers, columns, and file names unchanged. |
+| **v2.0** | November 2026 | 204 | Major release: the rules for risk factors change, and a column is added. NEW COLUMN J, Condition type: how each factor enters a scenario. Cause (the first thing that goes wrong), safeguard gap (a missing or weak control), amplifier (makes losses more frequent, wider or worse without causing them), or outcome (names the loss event). This is a breaking change for any parser that checks the column count; columns A–I are unchanged. Counts: 122 causes, 68 safeguard gaps, 10 amplifiers, 4 outcomes. FACTOR RULES: wording stops at the condition, and the loss belongs to the scenario; safeguard gaps name the objective, not a technique; a list in parentheses is illustrative and starts with 'e.g.'. ADDED, 8 factors: our data in customers' and partners' AI (AIRM-198); guardrails on what customer-facing AI says in our name (AIRM-199); finding and remediating everyone a flawed AI decision affected (AIRM-200); an off-switch or fallback for a misbehaving AI feature (AIRM-201); AI making false statements about real people or organizations (AIRM-202); agents changing their own instructions or tools (AIRM-203); fear-driven AI bans (AIRM-204); untrusted content treated as instructions (AIRM-205). REWORDED, 25 factors. Several change meaning, so check any earlier mapping against the Change log: AIRM-039 now names the missing output guardrail, not the disclosure; AIRM-126 covers AI-specific obligations generally, not only high-risk ones, and names the condition rather than the breach; AIRM-131 names output reproducing others' work, not the claims that follow; AIRM-164 names uncontrolled consumption, not runaway cost; AIRM-186 names agents able to take irreversible actions (unauthorized means remain AIRM-174); AIRM-130 and AIRM-144 name how AI changes liability and accountability. CROSS-REFERENCES: the intellectual-property split pair (AIRM-042, 043 / 131) is now a see-also, leaving five split pairs (11 marked factors); see-also pointers grow from 54 to 70, and the build now checks that each pointer's stated relationship fits the condition types it joins. SOURCES: OWASP Top 10 for LLM Applications locators move to the 2026 edition. 12 domains, 55 categories, 204 active factors. Identifiers and file names unchanged. |
 
 ---
 
@@ -998,4 +1077,6 @@ Databricks DASF and AI Governance Framework are © Databricks, licensed CC BY-SA
 
 ---
 
-*AI Risk Map v1.3 · © 2026 Evan Wheeler · CC BY-SA 4.0. If you build on this, attribution and share-alike apply.*
+*AI Risk Map™ v2.0 · © 2026 Evan Wheeler · CC BY-SA 4.0. If you build on this, attribution and share-alike apply.*
+
+*AI Risk Map™ is a trademark of Evan Wheeler.*
