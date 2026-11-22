@@ -1,0 +1,4165 @@
+{
+ "title": "AI Risk Map",
+ "mark": "AI Risk Map™",
+ "trademark_notice": "AI Risk Map™ is a trademark of Evan Wheeler.",
+ "tagline": "A thought-starter for identifying AI-specific risk factors",
+ "version": "2.1",
+ "date": "November 2026",
+ "license": "CC BY-SA 4.0",
+ "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "copyright": "© 2026 Evan Wheeler",
+ "schema_version": "1.0",
+ "counts": {
+  "domains": 12,
+  "categories": 55,
+  "factors_active": 205,
+  "factors_retired": 1,
+  "condition_types": {
+   "cause": 120,
+   "safeguard gap": 74,
+   "amplifier": 11,
+   "outcome": 4
+  },
+  "factors_with_two_condition_types": 4,
+  "split_pairs": 5,
+  "see_also": 86
+ },
+ "domains": [
+  {
+   "n": 1,
+   "name": "AI Governance & Accountability"
+  },
+  {
+   "n": 2,
+   "name": "Strategy & Value Realization"
+  },
+  {
+   "n": 3,
+   "name": "Data & Privacy"
+  },
+  {
+   "n": 4,
+   "name": "Model Development & Performance"
+  },
+  {
+   "n": 5,
+   "name": "Security & Adversarial Threats"
+  },
+  {
+   "n": 6,
+   "name": "Safety, Ethics & Responsible AI"
+  },
+  {
+   "n": 7,
+   "name": "Operations & Resilience"
+  },
+  {
+   "n": 8,
+   "name": "Legal, Regulatory & Compliance"
+  },
+  {
+   "n": 9,
+   "name": "Third-Party & Model Supply Chain"
+  },
+  {
+   "n": 10,
+   "name": "Workforce, Human & Societal"
+  },
+  {
+   "n": 11,
+   "name": "Financial & Resource"
+  },
+  {
+   "n": 12,
+   "name": "Autonomy & Delegated Action (Agentic AI)"
+  }
+ ],
+ "categories": [
+  {
+   "domain": 1,
+   "name": "Governance & oversight"
+  },
+  {
+   "domain": 1,
+   "name": "Roles & accountability"
+  },
+  {
+   "domain": 1,
+   "name": "Policy & standards"
+  },
+  {
+   "domain": 1,
+   "name": "Risk-management integration"
+  },
+  {
+   "domain": 1,
+   "name": "Audit & assurance"
+  },
+  {
+   "domain": 2,
+   "name": "Competitive position"
+  },
+  {
+   "domain": 2,
+   "name": "AI strategy & roadmap"
+  },
+  {
+   "domain": 2,
+   "name": "Use-case selection & sourcing"
+  },
+  {
+   "domain": 2,
+   "name": "Value measurement / ROI"
+  },
+  {
+   "domain": 3,
+   "name": "Sourcing & provenance"
+  },
+  {
+   "domain": 3,
+   "name": "Quality & labeling"
+  },
+  {
+   "domain": 3,
+   "name": "Privacy & consent"
+  },
+  {
+   "domain": 3,
+   "name": "Training-data rights & IP"
+  },
+  {
+   "domain": 3,
+   "name": "Retention & disposal"
+  },
+  {
+   "domain": 4,
+   "name": "Design & training"
+  },
+  {
+   "domain": 4,
+   "name": "Accuracy & validation"
+  },
+  {
+   "domain": 4,
+   "name": "Robustness & drift"
+  },
+  {
+   "domain": 4,
+   "name": "Explainability"
+  },
+  {
+   "domain": 4,
+   "name": "Reproducibility & documentation"
+  },
+  {
+   "domain": 5,
+   "name": "Data & pipeline attacks"
+  },
+  {
+   "domain": 5,
+   "name": "Model attacks"
+  },
+  {
+   "domain": 5,
+   "name": "Inference-time (input) attacks"
+  },
+  {
+   "domain": 5,
+   "name": "Output & integration security"
+  },
+  {
+   "domain": 5,
+   "name": "Supply-chain & artifact integrity"
+  },
+  {
+   "domain": 5,
+   "name": "AI access & identity"
+  },
+  {
+   "domain": 6,
+   "name": "Bias & fairness"
+  },
+  {
+   "domain": 6,
+   "name": "Harmful / inaccurate output"
+  },
+  {
+   "domain": 6,
+   "name": "Transparency, disclosure & provenance"
+  },
+  {
+   "domain": 6,
+   "name": "Misuse & dual-use"
+  },
+  {
+   "domain": 6,
+   "name": "Human agency & over-reliance"
+  },
+  {
+   "domain": 7,
+   "name": "MLOps & deployment"
+  },
+  {
+   "domain": 7,
+   "name": "Monitoring & observability"
+  },
+  {
+   "domain": 7,
+   "name": "Availability & scalability"
+  },
+  {
+   "domain": 7,
+   "name": "Incident management"
+  },
+  {
+   "domain": 7,
+   "name": "Change & lifecycle management"
+  },
+  {
+   "domain": 8,
+   "name": "Regulatory compliance"
+  },
+  {
+   "domain": 8,
+   "name": "IP & liability"
+  },
+  {
+   "domain": 8,
+   "name": "Contractual & licensing"
+  },
+  {
+   "domain": 8,
+   "name": "Cross-border"
+  },
+  {
+   "domain": 9,
+   "name": "Foundation-model dependence"
+  },
+  {
+   "domain": 9,
+   "name": "Vendor due diligence"
+  },
+  {
+   "domain": 9,
+   "name": "Lock-in & portability"
+  },
+  {
+   "domain": 9,
+   "name": "Open-source component risk"
+  },
+  {
+   "domain": 10,
+   "name": "Skills & talent"
+  },
+  {
+   "domain": 10,
+   "name": "Deskilling & loss of institutional knowledge"
+  },
+  {
+   "domain": 10,
+   "name": "Workforce disruption / change"
+  },
+  {
+   "domain": 10,
+   "name": "Societal & reputational"
+  },
+  {
+   "domain": 11,
+   "name": "Cost & compute economics"
+  },
+  {
+   "domain": 11,
+   "name": "Investment / procurement"
+  },
+  {
+   "domain": 11,
+   "name": "Scaling & resource constraints"
+  },
+  {
+   "domain": 12,
+   "name": "Autonomy, alignment & oversight"
+  },
+  {
+   "domain": 12,
+   "name": "Tool access & authorization"
+  },
+  {
+   "domain": 12,
+   "name": "Memory & context integrity"
+  },
+  {
+   "domain": 12,
+   "name": "Multi-agent orchestration"
+  },
+  {
+   "domain": 12,
+   "name": "Action integrity & traceability"
+  }
+ ],
+ "factors": [
+  {
+   "id": "AIRM-001",
+   "domain": 1,
+   "category": "Governance & oversight",
+   "text": "Inadequate executive/board oversight of AI adoption and risk",
+   "poster_label": "Inadequate executive/board oversight of AI adoption and risk",
+   "sources": [
+    "NIST Govern",
+    "ISO A.2"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-002",
+   "domain": 1,
+   "category": "Governance & oversight",
+   "text": "Ungoverned ‘shadow AI’ adoption outside sanctioned channels",
+   "poster_label": "Ungoverned ‘shadow AI’ adoption outside sanctioned channels",
+   "sources": [
+    "NIST Govern",
+    "CRI GV-1.6.3",
+    "COSO GenAI 2026",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-003",
+   "domain": 1,
+   "category": "Governance & oversight",
+   "text": "Absence of an AI governance body or charter with a clear mandate",
+   "poster_label": "Absence of an AI governance body or charter with a clear mandate",
+   "sources": [
+    "ISO A.3"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-004",
+   "domain": 1,
+   "category": "Roles & accountability",
+   "text": "Unclear ownership and accountability (RACI) for AI risk decisions",
+   "poster_label": "Unclear ownership and accountability (RACI) for AI risk decisions",
+   "sources": [
+    "NIST Govern",
+    "ISO A.3"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-005",
+   "domain": 1,
+   "category": "Roles & accountability",
+   "text": "No clear executive owner for AI adoption: responsibility for strategy, prioritization, and integration into the business diffuses across technology, data science, and business leaders, with no convention for who decides, or against what criteria, to start, scale, or stop an initiative",
+   "poster_label": "No clear executive owner for AI adoption",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-006",
+   "domain": 1,
+   "category": "Roles & accountability",
+   "text": "Failure to define accountability for autonomous / agent-driven decisions — internally, and across the AI stack of model provider, platform, developer, and deployer, where the allocation shifts as autonomy increases",
+   "poster_label": "Accountability for agent decisions undefined, internally and across the AI stack",
+   "sources": [
+    "EU Art 14",
+    "EU Art 25 (amended 2026)",
+    "CSA AICM",
+    "CoSAI AI SRF"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-007",
+   "domain": 1,
+   "category": "Roles & accountability",
+   "text": "Segregation of duties collapses where the same person or agent configures the AI, operates it, and reviews its output",
+   "poster_label": "Segregation of duties collapses across AI config, operation, and review",
+   "sources": [
+    "COSO GenAI 2026",
+    "OWASP AISVS AC.8"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-008",
+   "domain": 1,
+   "category": "Policy & standards",
+   "text": "Absence of an AI acceptable-use policy and model-approval gates",
+   "poster_label": "Absence of an AI acceptable-use policy and model-approval gates",
+   "sources": [
+    "ISO A.2",
+    "NIST Govern"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-009",
+   "domain": 1,
+   "category": "Policy & standards",
+   "text": "AI policies not kept current with evolving capabilities and regulation",
+   "poster_label": "AI policies not kept current with evolving capabilities and regulation",
+   "sources": [
+    "ISO A.2",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-010",
+   "domain": 1,
+   "category": "Policy & standards",
+   "text": "Inconsistent standards across business units, as AI adoption proliferates independently faster than central standards can follow",
+   "poster_label": "Inconsistent standards as AI proliferates faster than governance",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-011",
+   "domain": 1,
+   "category": "Policy & standards",
+   "text": "No agreed definition of what counts as ‘AI’, leaving policy scope, inventory boundaries, and regulatory classification undefined",
+   "poster_label": "No agreed definition of ‘AI’, leaving policy and inventory scope undefined",
+   "sources": [
+    "CRI FS-AI-RMF GV-1.2.2"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-012",
+   "domain": 1,
+   "category": "Risk-management integration",
+   "text": "AI risk not integrated into enterprise risk management (ERM)",
+   "poster_label": "AI risk not integrated into enterprise risk management (ERM)",
+   "sources": [
+    "NIST Govern",
+    "CRI MG-1.2.1",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-013",
+   "domain": 1,
+   "category": "Risk-management integration",
+   "text": "Failure to conduct AI impact assessments for individuals and society",
+   "poster_label": "Failure to conduct AI impact assessments for individuals and society",
+   "sources": [
+    "EU Art 27 (amended 2026)",
+    "ISO A.5"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-014",
+   "domain": 1,
+   "category": "Risk-management integration",
+   "text": "No defined risk appetite or tolerance thresholds for AI",
+   "poster_label": "No defined risk appetite or tolerance thresholds for AI",
+   "sources": [
+    "NIST Govern",
+    "CRI GV-2.3.2",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-015",
+   "domain": 1,
+   "category": "Audit & assurance",
+   "text": "Inability to audit AI due to a missing or incomplete inventory of models, agents, and connectors, and their lineage",
+   "poster_label": "Inability to audit AI: no complete inventory of models, agents, and connectors",
+   "sources": [
+    "ISO A.4",
+    "NIST Govern",
+    "CRI GV-1.6.1"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-016",
+   "domain": 1,
+   "category": "Audit & assurance",
+   "text": "Insufficient internal-audit competence to assess AI controls",
+   "poster_label": "Insufficient internal-audit competence to assess AI controls",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-017",
+   "domain": 1,
+   "category": "Audit & assurance",
+   "text": "Absence of independent assurance over AI control effectiveness",
+   "poster_label": "Absence of independent assurance over AI control effectiveness",
+   "sources": [
+    "CRI GV-1.5.4",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-018",
+   "domain": 1,
+   "category": "Audit & assurance",
+   "text": "AI output relied upon as evidence in financial-reporting or other regulated control chains without recognizing the expansion of assurance scope",
+   "poster_label": "AI output relied on in financial-reporting controls without scope change",
+   "sources": [
+    "COSO GenAI 2026 p.13"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-019",
+   "domain": 1,
+   "category": "Audit & assurance",
+   "text": "No reliable way to identify which artifacts, code, or analyses were AI-generated, so a systemic model or prompt flaw cannot be scoped or remediated after the fact",
+   "poster_label": "No way to identify which artifacts AI produced, so a model flaw cannot be scoped",
+   "sources": [
+    "OWASP AISVS AC.9 / AC.10",
+    "COSO GenAI 2026 (AI bill of materials)"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-193",
+   "domain": 2,
+   "category": "Competitive position",
+   "text": "Advantages built on knowledge, data, or skilled work lose their value as competitors, and even customers, approximate them with general-purpose AI, faster and more cheaply than earlier automation allowed, and our own adoption of AI does not restore the advantage",
+   "poster_label": "Our advantage erodes as competitors and customers approximate it with AI",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-194",
+   "domain": 2,
+   "category": "Competitive position",
+   "text": "Third-party AI assistants and agents increasingly stand between the organization and its customers, searching, comparing, and choosing on the customer's behalf, so the organization loses direct access to the customer, brand preference counts for less, and its offering is compared as a commodity",
+   "poster_label": "AI agents disintermediate us from our customers",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-026",
+   "domain": 2,
+   "category": "Competitive position",
+   "text": "Failure to weigh the competitive risk of not adopting AI (inaction)",
+   "poster_label": "Failure to weigh the competitive risk of not adopting AI (inaction)",
+   "sources": [
+    "Databricks AIGF",
+    "Cloud Risk Map analog",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-020",
+   "domain": 2,
+   "category": "AI strategy & roadmap",
+   "text": "Lack of a coherent AI strategy aligned to objectives and risk appetite",
+   "poster_label": "Lack of a coherent AI strategy aligned to objectives and risk appetite",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-021",
+   "domain": 2,
+   "category": "AI strategy & roadmap",
+   "text": "AI adoption driven by hype rather than demonstrated business value",
+   "poster_label": "AI adoption driven by hype rather than demonstrated business value",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-022",
+   "domain": 2,
+   "category": "AI strategy & roadmap",
+   "text": "Inability to adapt the roadmap as foundation-model capabilities shift",
+   "poster_label": "Inability to adapt the roadmap as foundation-model capabilities shift",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-204",
+   "domain": 2,
+   "category": "AI strategy & roadmap",
+   "text": "Blanket bans or restrictions on AI use driven by fear rather than assessed risk, pushing use into unsanctioned tools and forgoing value",
+   "poster_label": "Fear-driven AI bans push use into the shadows",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-023",
+   "domain": 2,
+   "category": "Use-case selection & sourcing",
+   "text": "Selection of use cases without a clearly defined problem and success measure, or without weighing incremental risk against benefit",
+   "poster_label": "Use cases chosen without a clear problem, success measure, or risk–benefit weighing",
+   "sources": [
+    "CRI MP-3.2.1",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-024",
+   "domain": 2,
+   "category": "Use-case selection & sourcing",
+   "text": "‘Pilot purgatory’ — pilots stalling on data readiness, evaluation difficulty, or inability to demonstrate value",
+   "poster_label": "‘Pilot purgatory’ — pilots stalling on data readiness, evaluation difficulty, or inability to demonstrate value",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-025",
+   "domain": 2,
+   "category": "Use-case selection & sourcing",
+   "text": "Misjudged AI sourcing fork — train, fine-tune, retrieval-augment, or call an API — each carrying a different risk and obligation profile",
+   "poster_label": "Misjudged AI sourcing fork: train, fine-tune, RAG, or API",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-027",
+   "domain": 2,
+   "category": "Value measurement / ROI",
+   "text": "Unrealistic ROI expectations, where AI benefits are diffuse, hard to attribute, or depend on redesigning workflows around the AI rather than adding it to existing ones",
+   "poster_label": "Unrealistic ROI expectations, including returns that need workflow redesign",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-028",
+   "domain": 2,
+   "category": "Value measurement / ROI",
+   "text": "Inability to attribute value actually delivered by AI investments",
+   "poster_label": "Inability to attribute value actually delivered by AI investments",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-029",
+   "domain": 2,
+   "category": "Value measurement / ROI",
+   "text": "Hidden total cost of ownership (e.g., data, talent, integration) eroding returns",
+   "poster_label": "Hidden total cost of ownership (data, talent, integration) eroding returns",
+   "sources": [
+    "Databricks AIGF",
+    "CRI MP-3.2.2",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-030",
+   "domain": 3,
+   "category": "Sourcing & provenance",
+   "text": "Unknown, undocumented, or unverified provenance and integrity of training, fine-tuning, or retrieval (RAG) data",
+   "poster_label": "Unverified provenance or integrity of training, fine-tuning, or RAG data",
+   "sources": [
+    "NIST GenAI #10",
+    "DASF 1.6"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-031",
+   "domain": 3,
+   "category": "Sourcing & provenance",
+   "text": "Reliance on data scraped without lawful basis or clear rights",
+   "poster_label": "Reliance on data scraped without lawful basis or clear rights",
+   "sources": [
+    "EU Art 10 (amended 2026)",
+    "NIST Map"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-032",
+   "domain": 3,
+   "category": "Sourcing & provenance",
+   "text": "Inadequate data lineage to trace data through the AI pipeline",
+   "poster_label": "Inadequate data lineage to trace data through the AI pipeline",
+   "sources": [
+    "DASF 1.6"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-033",
+   "domain": 3,
+   "category": "Quality & labeling",
+   "text": "Poor data quality undermining model reliability",
+   "poster_label": "Poor data quality undermining model reliability",
+   "sources": [
+    "DASF 1.3"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-034",
+   "domain": 3,
+   "category": "Quality & labeling",
+   "text": "Inadequate or biased labeling introducing systematic error",
+   "poster_label": "Inadequate or biased labeling introducing systematic error",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-035",
+   "domain": 3,
+   "category": "Quality & labeling",
+   "text": "Stale data, including grounding and retrieval sources that drift out of date behind a confident-sounding model",
+   "poster_label": "Stale data, including grounding and retrieval sources that drift out of date behind a confident-sounding model",
+   "sources": [
+    "DASF 1.9"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-036",
+   "domain": 3,
+   "category": "Privacy & consent",
+   "text": "Personal data used for training without consent or purpose limitation",
+   "poster_label": "Personal data used for training without consent or purpose limitation",
+   "sources": [
+    "EU Art 10 (amended 2026)",
+    "NIST GenAI #4"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-037",
+   "domain": 3,
+   "category": "Privacy & consent",
+   "text": "Inability to honor data-subject rights once data is in a model",
+   "poster_label": "Inability to honor data-subject rights once data is in a model",
+   "sources": [
+    "GDPR",
+    "DASF 1.8",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-038",
+   "domain": 3,
+   "category": "Privacy & consent",
+   "text": "Re-identification of individuals from aggregated or model-derived data",
+   "poster_label": "Re-identification of individuals from aggregated or model-derived data",
+   "sources": [
+    "MIT 2.1"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-039",
+   "domain": 3,
+   "category": "Privacy & consent",
+   "text": "No guardrails preventing confidential or personal data from appearing in model output",
+   "poster_label": "No guardrails keeping confidential or personal data out of model output",
+   "sources": [
+    "OWASP LLM02",
+    "DASF 10.6"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-040",
+   "domain": 3,
+   "category": "Privacy & consent",
+   "text": "Sensitive or regulated data used in AI without classification, so handling and access controls are not applied",
+   "poster_label": "Unclassified sensitive data in AI, so handling controls never apply",
+   "sources": [
+    "Databricks AIGF",
+    "ISO A.7"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-041",
+   "domain": 3,
+   "category": "Privacy & consent",
+   "text": "Users pasting confidential or client data into a sanctioned AI tool, moving data outside its control boundary despite upstream access controls working",
+   "poster_label": "Confidential data pasted into an approved AI tool, leaving despite working controls",
+   "sources": [
+    "OWASP AISVS AC.3",
+    "COSO GenAI 2026",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-042",
+   "domain": 3,
+   "category": "Training-data rights & IP",
+   "text": "Use of copyrighted or licensed material in training without rights",
+   "poster_label": "Use of copyrighted or licensed material in training without rights",
+   "sources": [
+    "NIST GenAI #10",
+    "EU Art 53(1)(c) (amended 2026)"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-043",
+   "domain": 3,
+   "category": "Training-data rights & IP",
+   "text": "Contamination of datasets with third-party IP or trade secrets",
+   "poster_label": "Contamination of datasets with third-party IP or trade secrets",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-044",
+   "domain": 3,
+   "category": "Training-data rights & IP",
+   "text": "Inability to prove the organization held the rights to the training data it used",
+   "poster_label": "Inability to prove you held rights to the training data used",
+   "sources": [
+    "OWASP AISVS 1.1.2",
+    "DASF 1.8",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-045",
+   "domain": 3,
+   "category": "Retention & disposal",
+   "text": "Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery",
+   "poster_label": "Failure to preserve prompts, outputs, and agent traces subject to litigation hold or e-discovery",
+   "sources": [
+    "Cloud Risk Map analog",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-046",
+   "domain": 3,
+   "category": "Retention & disposal",
+   "text": "Inadequate retention / disposal, where deletion from source systems does not remove data already absorbed into models, embeddings, or caches",
+   "poster_label": "Deletion at source does not remove data absorbed into models",
+   "sources": [
+    "DASF 1.8",
+    "ISO A.7",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-047",
+   "domain": 3,
+   "category": "Retention & disposal",
+   "text": "Persistence of sensitive data in embeddings, caches, or model weights",
+   "poster_label": "Persistence of sensitive data in embeddings, caches, or model weights",
+   "sources": [
+    "OWASP LLM09",
+    "DASF 1.8",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-048",
+   "domain": 3,
+   "category": "Retention & disposal",
+   "text": "Failure to remove data across distributed / replicated AI stores",
+   "poster_label": "Failure to remove data across distributed / replicated AI stores",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-049",
+   "domain": 4,
+   "category": "Design & training",
+   "text": "Inappropriate model/algorithm choice for the problem and risk context",
+   "poster_label": "Inappropriate model/algorithm choice for the problem and risk context",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-050",
+   "domain": 4,
+   "category": "Design & training",
+   "text": "Poorly documented or untracked model development",
+   "poster_label": "Poorly documented or untracked model development",
+   "sources": [
+    "DASF 5.1"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-051",
+   "domain": 4,
+   "category": "Design & training",
+   "text": "Insecure or unmanaged hyperparameters and training configuration",
+   "poster_label": "Insecure or unmanaged hyperparameters and training configuration",
+   "sources": [
+    "DASF 5.3"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-052",
+   "domain": 4,
+   "category": "Accuracy & validation",
+   "text": "Fluent but incorrect output (hallucination), or summaries and transformations that change what the source said, accepted as reliable",
+   "poster_label": "Hallucinated or meaning-changing output accepted as reliable",
+   "sources": [
+    "NIST GenAI #2",
+    "DASF 9.8"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-053",
+   "domain": 4,
+   "category": "Accuracy & validation",
+   "text": "Validation/evaluation data not representative of real-world use, so performance can only be established once real users are exposed, as in pilots and phased rollouts",
+   "poster_label": "Validation data unrepresentative; real performance shows only with live users",
+   "sources": [
+    "DASF 6.2",
+    "MAS AIRG fn 28 / fn 45"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-054",
+   "domain": 4,
+   "category": "Accuracy & validation",
+   "text": "Skipped or insufficient adversarial, safety, and fairness testing before deployment",
+   "poster_label": "Skipped or insufficient red-teaming, safety, and fairness testing",
+   "sources": [
+    "EU Art 9",
+    "NIST Measure"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-055",
+   "domain": 4,
+   "category": "Accuracy & validation",
+   "text": "Absence of independent model validation / effective challenge",
+   "poster_label": "Absence of independent model validation / effective challenge",
+   "sources": [
+    "SR 11-7",
+    "CRI MS-2.5.1",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-056",
+   "domain": 4,
+   "category": "Robustness & drift",
+   "text": "Model drift degrading performance as data / conditions change",
+   "poster_label": "Model drift degrading performance as data / conditions change",
+   "sources": [
+    "DASF 5.2"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-057",
+   "domain": 4,
+   "category": "Robustness & drift",
+   "text": "Lack of robustness to edge cases and distribution shift",
+   "poster_label": "Lack of robustness to edge cases and distribution shift",
+   "sources": [
+    "NIST Measure"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-058",
+   "domain": 4,
+   "category": "Robustness & drift",
+   "text": "Small changes to the input produce very different output",
+   "poster_label": "Small changes to the input produce very different output",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-059",
+   "domain": 4,
+   "category": "Explainability",
+   "text": "Models used in high-stakes decisions whose decision logic cannot be inspected or explained (i.e., a black box). The reasons behind a given decision cannot be examined or challenged, and other decisions that share a flaw cannot be found.",
+   "poster_label": "Black-box models used in high-stakes decisions without interpretability",
+   "sources": [
+    "NIST Measure",
+    "EU Art 13",
+    "DASF 6.3"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-060",
+   "domain": 4,
+   "category": "Explainability",
+   "text": "Inability to produce adverse-action / decision explanations",
+   "poster_label": "Inability to produce adverse-action / decision explanations",
+   "sources": [
+    "EU Art 86",
+    "Colorado SB 26-189",
+    "CRI MS-2.9.2",
+    "DASF 6.3",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-061",
+   "domain": 4,
+   "category": "Explainability",
+   "text": "Over-reliance on post-hoc explanations that misrepresent the model",
+   "poster_label": "Over-reliance on post-hoc explanations that misrepresent the model",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-062",
+   "domain": 4,
+   "category": "Reproducibility & documentation",
+   "text": "Non-reproducible training pipelines undermining validation and audit",
+   "poster_label": "Non-reproducible training pipelines undermining validation and audit",
+   "sources": [
+    "DASF 5.1",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-063",
+   "domain": 4,
+   "category": "Reproducibility & documentation",
+   "text": "Inadequate model documentation / model cards",
+   "poster_label": "Inadequate model documentation / model cards",
+   "sources": [
+    "EU Art 11 (amended 2026)",
+    "NIST Map"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-064",
+   "domain": 4,
+   "category": "Reproducibility & documentation",
+   "text": "Loss of traceability between model versions, data, and results",
+   "poster_label": "Loss of traceability between model versions, data, and results",
+   "sources": [
+    "DASF 4.1"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-065",
+   "domain": 5,
+   "category": "Data & pipeline attacks",
+   "text": "Training-data poisoning that degrades or backdoors model behavior",
+   "poster_label": "Training-data poisoning that degrades or backdoors model behavior",
+   "sources": [
+    "DASF 3.1",
+    "OWASP LLM05",
+    "ATLAS AML.T0020"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-066",
+   "domain": 5,
+   "category": "Data & pipeline attacks",
+   "text": "Tampering with RAG / knowledge-base sources consumed at inference",
+   "poster_label": "Tampering with RAG / knowledge-base sources consumed at inference",
+   "sources": [
+    "OWASP LLM09",
+    "DASF 9.9"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-067",
+   "domain": 5,
+   "category": "Data & pipeline attacks",
+   "text": "Label-flipping or adversarial dataset partitioning to skew outputs",
+   "poster_label": "Label-flipping or adversarial dataset partitioning",
+   "sources": [
+    "DASF 3.3 / 2.4"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-068",
+   "domain": 5,
+   "category": "Model attacks",
+   "text": "Model, reasoning, or insight extraction through API or product use, reproducing what our AI learned, how it reasons, or what it produces",
+   "poster_label": "Model, reasoning, or insight extraction through use",
+   "sources": [
+    "DASF 8.2",
+    "ATLAS AML.T0024.002"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-069",
+   "domain": 5,
+   "category": "Model attacks",
+   "text": "Membership-inference or model-inversion exposing training data",
+   "poster_label": "Membership-inference or model-inversion exposing training data",
+   "sources": [
+    "DASF 9.2 / 9.5",
+    "NIST GenAI #4"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-070",
+   "domain": 5,
+   "category": "Model attacks",
+   "text": "Backdoored / trojaned pre-trained model from a public hub",
+   "poster_label": "Backdoored / trojaned pre-trained model from a public hub",
+   "sources": [
+    "DASF 7.1"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-071",
+   "domain": 5,
+   "category": "Inference-time (input) attacks",
+   "text": "Direct prompt injection altering behavior or bypassing guardrails",
+   "poster_label": "Direct prompt injection altering behavior or bypassing guardrails",
+   "sources": [
+    "OWASP LLM01",
+    "DASF 9.1"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-072",
+   "domain": 5,
+   "category": "Inference-time (input) attacks",
+   "text": "Indirect / cross-domain prompt injection via retrieved content",
+   "poster_label": "Indirect / cross-domain prompt injection via retrieved content",
+   "sources": [
+    "OWASP LLM01",
+    "DASF 9.1 / 9.9"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-073",
+   "domain": 5,
+   "category": "Inference-time (input) attacks",
+   "text": "Jailbreaks defeating safety controls and restrictions",
+   "poster_label": "Jailbreaks defeating safety controls and restrictions",
+   "sources": [
+    "OWASP LLM01",
+    "DASF 9.12"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-074",
+   "domain": 5,
+   "category": "Inference-time (input) attacks",
+   "text": "System-prompt leakage exposing operational instructions",
+   "poster_label": "System-prompt leakage exposing operational instructions",
+   "sources": [
+    "OWASP LLM08"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-197",
+   "domain": 5,
+   "category": "Inference-time (input) attacks",
+   "text": "Inputs crafted so a model misclassifies or misses what it is meant to catch, such as fraud, malware, or content and identity checks, without touching the model or its data",
+   "poster_label": "Inputs crafted to evade AI detection models",
+   "sources": [
+    "ATLAS AML.T0015",
+    "ATLAS AML.T0043",
+    "NIST AI 100-2 E2025 §2.2",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-205",
+   "domain": 5,
+   "category": "Inference-time (input) attacks",
+   "text": "Untrusted content the AI processes (e.g., user input, retrieved documents, tool results) treated with the same authority as the organization's own instructions",
+   "poster_label": "Untrusted content treated as instructions",
+   "sources": [
+    "OWASP LLM01",
+    "CSA AICM AIS-15"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-075",
+   "domain": 5,
+   "category": "Output & integration security",
+   "text": "Unsanitized output reaching downstream interpreters (code exec / XSS / SQLi)",
+   "poster_label": "Unsanitized output reaching downstream interpreters",
+   "sources": [
+    "OWASP LLM10"
+   ],
+   "condition_types": [
+    "cause",
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-076",
+   "domain": 5,
+   "category": "Output & integration security",
+   "text": "Interception or manipulation of the inference output stream",
+   "poster_label": "Interception or manipulation of the inference output stream",
+   "sources": [
+    "DASF 10.2"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-077",
+   "domain": 5,
+   "category": "Output & integration security",
+   "text": "Over-trusted output triggering unsafe automated actions",
+   "poster_label": "Over-trusted output triggering unsafe automated actions",
+   "sources": [
+    "OWASP LLM10 / LLM06"
+   ],
+   "condition_types": [
+    "cause",
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-078",
+   "domain": 5,
+   "category": "Supply-chain & artifact integrity",
+   "text": "Compromised or malicious model / component from the AI supply chain",
+   "poster_label": "Compromised or malicious model from the AI supply chain",
+   "sources": [
+    "OWASP LLM04",
+    "NIST GenAI #12"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-079",
+   "domain": 5,
+   "category": "Supply-chain & artifact integrity",
+   "text": "No timely identification and patching of known vulnerabilities in ML dependencies and libraries",
+   "poster_label": "Known vulnerabilities in ML dependencies not patched in time",
+   "sources": [
+    "OWASP LLM04"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-080",
+   "domain": 5,
+   "category": "Supply-chain & artifact integrity",
+   "text": "Tampering with model artifacts, prompts, or agent configuration in registries or during deployment",
+   "poster_label": "Tampering with model artifacts, prompts, or configuration",
+   "sources": [
+    "DASF 7.3",
+    "ATLAS AML.T0010.004",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-081",
+   "domain": 5,
+   "category": "Supply-chain & artifact integrity",
+   "text": "Model-invented package, image, or endpoint names that resolve to adversary-registered artifacts, because the same hallucination recurs across users and model families",
+   "poster_label": "Model-invented dependencies registered by attackers",
+   "sources": [
+    "OWASP AISVS AC.13"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-082",
+   "domain": 5,
+   "category": "AI access & identity",
+   "text": "Inadequate access controls and usage limits on serving endpoints and inference APIs",
+   "poster_label": "Weak access controls and usage limits on AI endpoints",
+   "sources": [
+    "DASF 9.11"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-083",
+   "domain": 5,
+   "category": "AI access & identity",
+   "text": "Over-privileged service accounts and keys for AI platform components (distinct from an agent's tool scope)",
+   "poster_label": "Over-privileged service accounts and keys for AI components",
+   "sources": [
+    "DASF 1.1",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-084",
+   "domain": 5,
+   "category": "AI access & identity",
+   "text": "Insecure storage / exposure of credentials and tokens, as AI tool, harness, and agent-framework sprawl outpaces credential governance",
+   "poster_label": "Credential sprawl as AI tools and agent frameworks outpace governance",
+   "sources": [
+    "DASF 13.19 / 13.27"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-085",
+   "domain": 5,
+   "category": "AI access & identity",
+   "text": "Retrieval and RAG pipelines serving content beyond the requesting user’s own entitlements, because authorization is applied when the index is built rather than when it is queried",
+   "poster_label": "Retrieval serving content beyond the user’s own entitlements",
+   "sources": [
+    "OWASP AISVS 5.2.2"
+   ],
+   "condition_types": [
+    "cause",
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-196",
+   "domain": 5,
+   "category": "AI access & identity",
+   "text": "Insiders direct a sanctioned AI assistant or agent, within its broad access, to find, aggregate, or move data or take actions beyond their own entitlements, with the activity attributed to the agent rather than the person",
+   "poster_label": "Insiders use AI agents to reach beyond their own access",
+   "sources": [
+    "OWASP ASI T3",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-086",
+   "domain": 6,
+   "category": "Bias & fairness",
+   "text": "Discriminatory or biased outputs causing disparate impact",
+   "poster_label": "Discriminatory or biased outputs causing disparate impact",
+   "sources": [
+    "NIST GenAI #6",
+    "Weidinger I",
+    "Shelby"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-087",
+   "domain": 6,
+   "category": "Bias & fairness",
+   "text": "Inequitable performance or accessibility across languages, demographics, and disabilities, marginalizing underrepresented groups",
+   "poster_label": "Inequitable performance across languages, demographics, and disabilities",
+   "sources": [
+    "MIT 1.3",
+    "Shelby QoS",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-088",
+   "domain": 6,
+   "category": "Bias & fairness",
+   "text": "Bias amplification / homogenization from feedback and scale",
+   "poster_label": "Bias amplification / homogenization from feedback and scale",
+   "sources": [
+    "NIST GenAI #6"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-089",
+   "domain": 6,
+   "category": "Bias & fairness",
+   "text": "Culturally insensitive or inappropriate output, or erosion of local norms, when AI is scaled across regions",
+   "poster_label": "Culturally inappropriate output as AI scales across regions",
+   "sources": [
+    "Databricks AIGF"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-090",
+   "domain": 6,
+   "category": "Harmful / inaccurate output",
+   "text": "Generation of toxic, dangerous, or hateful content",
+   "poster_label": "Generation of toxic, dangerous, or hateful content",
+   "sources": [
+    "NIST GenAI #3",
+    "Weidinger I"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-091",
+   "domain": 6,
+   "category": "Harmful / inaccurate output",
+   "text": "Harmful, misleading, or defamatory output driving decisions",
+   "poster_label": "Harmful, misleading, or defamatory output driving decisions",
+   "sources": [
+    "NIST GenAI #2",
+    "Original"
+   ],
+   "condition_types": [
+    "outcome"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-092",
+   "domain": 6,
+   "category": "Harmful / inaccurate output",
+   "text": "Inappropriate or unsafe AI output reaching minors or other vulnerable users",
+   "poster_label": "Inappropriate or unsafe AI output reaching minors or other vulnerable users",
+   "sources": [
+    "NIST GenAI #11",
+    "Colorado HB 26-1263"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-199",
+   "domain": 6,
+   "category": "Harmful / inaccurate output",
+   "text": "No content guardrails constraining what a customer-facing AI service can publish or say on the organization's behalf",
+   "poster_label": "No guardrails on what customer-facing AI says in our name",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-202",
+   "domain": 6,
+   "category": "Harmful / inaccurate output",
+   "text": "AI output that makes false or defamatory statements about real, identifiable people or organizations",
+   "poster_label": "AI makes false statements about real people or organizations",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-093",
+   "domain": 6,
+   "category": "Transparency, disclosure & provenance",
+   "text": "Failure to disclose to users that they are interacting with AI",
+   "poster_label": "Failure to disclose to users that they are interacting with AI",
+   "sources": [
+    "EU Art 50 (amended 2026)",
+    "Weidinger V"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-094",
+   "domain": 6,
+   "category": "Transparency, disclosure & provenance",
+   "text": "Undisclosed synthetic media / deepfakes lacking provenance",
+   "poster_label": "Undisclosed synthetic media / deepfakes lacking provenance",
+   "sources": [
+    "EU Art 50 (amended 2026)",
+    "NIST GenAI #8"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-095",
+   "domain": 6,
+   "category": "Transparency, disclosure & provenance",
+   "text": "Inadequate transparency to affected parties about AI's role",
+   "poster_label": "Inadequate transparency to affected parties about AI's role",
+   "sources": [
+    "EU Art 13",
+    "ISO A.8"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-192",
+   "domain": 6,
+   "category": "Transparency, disclosure & provenance",
+   "text": "Changes to the model, prompts, or guardrails behind an AI-powered service we provide, made without notice to the customers and deployers who depend on it, so their validations, disclosures, and controls silently go stale",
+   "poster_label": "Our AI service changes under customers without notice, so their validations go stale",
+   "sources": [
+    "EU Art 13(3)(c)",
+    "EU Art 25 (amended 2026)",
+    "NIST GenAI #12"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-096",
+   "domain": 6,
+   "category": "Misuse & dual-use",
+   "text": "Misuse of AI for disinformation, fraud, or social engineering",
+   "poster_label": "Misuse of AI for disinformation, fraud, or social engineering",
+   "sources": [
+    "NIST GenAI",
+    "Weidinger IV",
+    "IAISR"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-097",
+   "domain": 6,
+   "category": "Misuse & dual-use",
+   "text": "Dangerous-capability uplift: the model gives meaningful help toward chemical, biological, radiological, nuclear, or cyber attack capability",
+   "poster_label": "Model gives meaningful help toward weapons or cyberattack capability",
+   "sources": [
+    "NIST GenAI #1",
+    "Weidinger IV",
+    "IAISR"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-098",
+   "domain": 6,
+   "category": "Misuse & dual-use",
+   "text": "AI optimized for a proxy measure (e.g., engagement, conversion, or revenue) that diverges from users' interests, driving addiction, polarization, or unsuitable recommendations",
+   "poster_label": "AI optimized for a proxy measure that diverges from users' interests",
+   "sources": [
+    "Shelby societal",
+    "MAS AIRG §1.9(c)",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-099",
+   "domain": 6,
+   "category": "Human agency & over-reliance",
+   "text": "User over-trust / automation bias in AI outputs",
+   "poster_label": "User over-trust / automation bias in AI outputs",
+   "sources": [
+    "NIST GenAI #7",
+    "Weidinger V"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-100",
+   "domain": 6,
+   "category": "Human agency & over-reliance",
+   "text": "Anthropomorphism and emotional dependence on conversational AI",
+   "poster_label": "Anthropomorphism and emotional dependence on conversational AI",
+   "sources": [
+    "Weidinger V",
+    "Colorado HB 26-1263"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-101",
+   "domain": 6,
+   "category": "Human agency & over-reliance",
+   "text": "Erosion of meaningful human control over decisions",
+   "poster_label": "Erosion of meaningful human control over decisions",
+   "sources": [
+    "EU Art 14",
+    "MIT 5.2"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-102",
+   "domain": 6,
+   "category": "Human agency & over-reliance",
+   "text": "Human review, approval, and triage capacity cannot scale to the volume AI produces — code, alerts, content, decisions — so oversight gates degrade into rubber-stamping while still appearing effective",
+   "poster_label": "Review capacity cannot scale to AI output volume, degrading oversight to rubber-stamping",
+   "sources": [
+    "COSO GenAI 2026",
+    "OWASP AISVS AC.4",
+    "CRI MP-3.5.4"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-103",
+   "domain": 7,
+   "category": "MLOps & deployment",
+   "text": "Immature MLOps / fragile deployment pipelines",
+   "poster_label": "Immature MLOps / fragile deployment pipelines",
+   "sources": [
+    "DASF 11.1",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-104",
+   "domain": 7,
+   "category": "MLOps & deployment",
+   "text": "Inconsistent or unsanctioned (shadow) model deployment",
+   "poster_label": "Inconsistent or unsanctioned (shadow) model deployment",
+   "sources": [
+    "DASF 8.3",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-105",
+   "domain": 7,
+   "category": "MLOps & deployment",
+   "text": "Inadequate environment and configuration management across model versions, dependency pinning, and accelerator configuration, undermining reproducibility",
+   "poster_label": "Environment and config management gaps undermining reproducibility",
+   "sources": [
+    "DASF 12.5"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-106",
+   "domain": 7,
+   "category": "MLOps & deployment",
+   "text": "Training-serving skew: features or input data differ between training and production, degrading live performance",
+   "poster_label": "Training-serving skew degrading live performance",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-107",
+   "domain": 7,
+   "category": "MLOps & deployment",
+   "text": "Containment of AI tool or code execution, or of a test, evaluation, or development environment, fails — unverified, misconfigured, defeated, or degraded over time — allowing the system to reach production or third-party systems",
+   "poster_label": "AI tool-execution or test containment fails and AI reaches real systems",
+   "sources": [
+    "OpenAI/Anthropic 2026 incidents"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-108",
+   "domain": 7,
+   "category": "Monitoring & observability",
+   "text": "Absence of monitoring, acted on, for degraded performance, drift, biased outcomes, or abuse in any environment — including evaluation, test, and sandbox environments assumed to be contained",
+   "poster_label": "No monitoring, acted on, for drift, biased outcomes, or abuse",
+   "sources": [
+    "DASF 10.1",
+    "NIST Manage",
+    "CSA HF post-mortem"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-109",
+   "domain": 7,
+   "category": "Monitoring & observability",
+   "text": "Inadequate logging / audit of inputs, outputs, tool calls, agent decision paths, and the human authorization behind them",
+   "poster_label": "Inadequate logging of inputs, outputs, tool calls, agent decisions, and who authorized them",
+   "sources": [
+    "EU Art 12",
+    "DASF 10.1"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-110",
+   "domain": 7,
+   "category": "Monitoring & observability",
+   "text": "Inability to detect anomalous or degraded behavior, where non-determinism makes 'anomalous' hard to define and baseline",
+   "poster_label": "Non-determinism making anomalous behavior hard to define or detect",
+   "sources": [
+    "DASF 10.1",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-111",
+   "domain": 7,
+   "category": "Monitoring & observability",
+   "text": "Sanctioned agent activity indistinguishable from agentic attack in telemetry",
+   "poster_label": "Sanctioned agent activity indistinguishable from agentic attack in telemetry",
+   "sources": [
+    "CSA HF post-mortem"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-112",
+   "domain": 7,
+   "category": "Availability & scalability",
+   "text": "Inference latency or unavailability degrading dependent services",
+   "poster_label": "Inference latency or unavailability degrading dependent services",
+   "sources": [
+    "Databricks AIGF",
+    "CSA AICM",
+    "Original"
+   ],
+   "condition_types": [
+    "outcome"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-113",
+   "domain": 7,
+   "category": "Availability & scalability",
+   "text": "Inability to scale inference to peak demand",
+   "poster_label": "Inability to scale inference to peak demand",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-114",
+   "domain": 7,
+   "category": "Availability & scalability",
+   "text": "Deliberate resource exhaustion or denial-of-wallet: requests crafted to run up AI compute costs or exhaust capacity",
+   "poster_label": "Denial-of-wallet: attackers run up AI compute costs",
+   "sources": [
+    "OWASP LLM06"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-115",
+   "domain": 7,
+   "category": "Incident management",
+   "text": "Immature AI incident response and escalation processes",
+   "poster_label": "Immature AI incident response and escalation processes",
+   "sources": [
+    "NIST Manage",
+    "CRI GV-4.3.2",
+    "DASF 12.3",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-116",
+   "domain": 7,
+   "category": "Incident management",
+   "text": "Inability to investigate AI incidents due to non-determinism / poor logs",
+   "poster_label": "Inability to investigate AI incidents due to non-determinism / poor logs",
+   "sources": [
+    "DASF 12.3",
+    "CRI MS-2.4.4",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-117",
+   "domain": 7,
+   "category": "Incident management",
+   "text": "Inadequate content-moderation / trust-&-safety operations at scale",
+   "poster_label": "Inadequate content-moderation / trust-&-safety operations at scale",
+   "sources": [
+    "Colorado HB 26-1263",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-118",
+   "domain": 7,
+   "category": "Incident management",
+   "text": "Safety guardrails on models relied on for defense refusing to assist incident response, blocking analysis of attack data",
+   "poster_label": "Defensive model refuses to analyze attack data mid-incident",
+   "sources": [
+    "CSA HF post-mortem"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-201",
+   "domain": 7,
+   "category": "Incident management",
+   "text": "No tested way to quickly disable, or fall back from, a customer-facing AI feature that misbehaves",
+   "poster_label": "No tested off-switch or fallback for a misbehaving AI feature",
+   "sources": [
+    "NIST Manage 2.4",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-119",
+   "domain": 7,
+   "category": "Change & lifecycle management",
+   "text": "Vendor or model updates changing behavior, often silently or without notice",
+   "poster_label": "Vendor or model updates changing behavior, often silently or without notice",
+   "sources": [
+    "COSO GenAI 2026",
+    "OWASP AISVS 3.2.3",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-120",
+   "domain": 7,
+   "category": "Change & lifecycle management",
+   "text": "Inadequate versioning, change control, and tested rollback to a known-good model version",
+   "poster_label": "Inadequate versioning, change control, and tested rollback to a known-good model version",
+   "sources": [
+    "DASF 8.3",
+    "CRI MG-4.1.4",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-121",
+   "domain": 7,
+   "category": "Change & lifecycle management",
+   "text": "Unmanaged model decommissioning / sunset leaving orphaned dependencies",
+   "poster_label": "Unmanaged model decommissioning / sunset leaving orphaned dependencies",
+   "sources": [
+    "CRI GV-1.7.1",
+    "CRI MG-2.4.2",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-122",
+   "domain": 7,
+   "category": "Change & lifecycle management",
+   "text": "Uncontrolled continuous or online learning, where the model keeps changing in production without validation, introducing drift",
+   "poster_label": "Uncontrolled continuous learning introducing drift",
+   "sources": [
+    "DASF 5.2",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-123",
+   "domain": 7,
+   "category": "Change & lifecycle management",
+   "text": "Guardrails, access scopes, and approval gates re-verified less often than the AI system's capability and integration surface changes",
+   "poster_label": "Controls re-verified less often than the AI system changes",
+   "sources": [
+    "2026 sandbox-escape incidents",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-124",
+   "domain": 7,
+   "category": "Change & lifecycle management",
+   "text": "Prompts, system prompts, and retrieval configuration changed outside change control, though they determine system behavior as directly as code",
+   "poster_label": "Prompts and retrieval config changed outside change control",
+   "sources": [
+    "COSO GenAI 2026 Principle 11",
+    "OWASP AISVS AC.11"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-125",
+   "domain": 8,
+   "category": "Regulatory compliance",
+   "text": "Unknowingly deploying a prohibited or high-risk AI use case",
+   "poster_label": "Unknowingly deploying a prohibited or high-risk AI use case",
+   "sources": [
+    "EU Art 5 / Annex III"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-126",
+   "domain": 8,
+   "category": "Regulatory compliance",
+   "text": "AI-specific legal and regulatory obligations (e.g., risk management, documentation, human oversight) not identified, or not built into the system before it is deployed",
+   "poster_label": "AI obligations not identified or built in before deployment",
+   "sources": [
+    "EU Arts 9-15"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-127",
+   "domain": 8,
+   "category": "Regulatory compliance",
+   "text": "Inability to keep pace with fragmented, fast-changing AI regulation",
+   "poster_label": "Inability to keep pace with fragmented, fast-changing AI regulation",
+   "sources": [
+    "Colorado SB 26-189",
+    "CRI GV-1.1.1",
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-128",
+   "domain": 8,
+   "category": "Regulatory compliance",
+   "text": "User inability to contest or seek recourse on an AI-driven decision",
+   "poster_label": "User inability to contest or seek recourse on an AI-driven decision",
+   "sources": [
+    "EU Arts 85 / 86",
+    "Colorado SB 26-189"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-129",
+   "domain": 8,
+   "category": "Regulatory compliance",
+   "text": "Misclassifying the organization's regulatory role (deployer vs. provider), missing obligations triggered by fine-tuning or rebranding a model",
+   "poster_label": "Misclassified as deployer when fine-tuning makes you a provider",
+   "sources": [
+    "EU Arts 16 / 25"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-200",
+   "domain": 8,
+   "category": "Regulatory compliance",
+   "text": "No ability to identify everyone a flawed AI decision or output affected once the flaw is found, and to notify and remediate them",
+   "poster_label": "No way to find and make whole everyone a flawed AI decision affected",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-130",
+   "domain": 8,
+   "category": "IP & liability",
+   "text": "Unsettled liability for harm caused by AI decisions or outputs, leaving the organization exposed to claims it cannot price or pass on",
+   "poster_label": "Unsettled liability for harm caused by AI decisions",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-131",
+   "domain": 8,
+   "category": "IP & liability",
+   "text": "AI-generated output that closely reproduces or imitates others' copyrighted work or trademarks",
+   "poster_label": "AI-generated output that closely reproduces or imitates others' copyrighted work or trademarks",
+   "sources": [
+    "NIST GenAI #10",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-132",
+   "domain": 8,
+   "category": "IP & liability",
+   "text": "Uncertain ownership / copyrightability of AI-generated content",
+   "poster_label": "Uncertain ownership / copyrightability of AI-generated content",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-133",
+   "domain": 8,
+   "category": "Contractual & licensing",
+   "text": "Vendor contracts lacking AI-specific terms: training use of your data, output ownership, model-change notice, evaluation rights",
+   "poster_label": "Vendor contracts lacking AI terms: training use, output ownership, change notice",
+   "sources": [
+    "CRI GV-6.2.3",
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-134",
+   "domain": 8,
+   "category": "Contractual & licensing",
+   "text": "Use of open-weight or licensed models outside their license terms",
+   "poster_label": "Use of open-weight or licensed models outside their license terms",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-135",
+   "domain": 8,
+   "category": "Contractual & licensing",
+   "text": "Failure to update contracts as AI use and regulation evolve",
+   "poster_label": "Failure to update contracts as AI use and regulation evolve",
+   "sources": [
+    "CRI GV-6.2.3",
+    "Databricks AIGF",
+    "Cloud Risk Map analog",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-198",
+   "domain": 8,
+   "category": "Contractual & licensing",
+   "text": "No terms or visibility over how customers and partners use our data, insights, or AI outputs in their own AI, where training on them cannot be undone",
+   "poster_label": "Customers and partners feeding our data into their AI, with no terms or visibility",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-136",
+   "domain": 8,
+   "category": "Cross-border",
+   "text": "Personal or regulated data crossing borders through AI services, including inference requests a provider routes to other regions without visibility",
+   "poster_label": "Data crossing borders through AI services, including hidden routing",
+   "sources": [
+    "GDPR",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-137",
+   "domain": 8,
+   "category": "Cross-border",
+   "text": "Conflicting regional AI requirements the organization cannot reconcile for a single system (externally imposed)",
+   "poster_label": "Conflicting regional AI requirements the organization cannot reconcile for a single system (externally imposed)",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-138",
+   "domain": 8,
+   "category": "Cross-border",
+   "text": "Inability to evidence and audit AI compliance across jurisdictions (internal evidence burden)",
+   "poster_label": "Inability to evidence and audit AI compliance across jurisdictions (internal evidence burden)",
+   "sources": [
+    "CRI GV-1.1.4",
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-139",
+   "domain": 9,
+   "category": "Foundation-model dependence",
+   "text": "Concentration risk from dependence on a few model providers",
+   "poster_label": "Concentration risk from dependence on a few model providers",
+   "sources": [
+    "IAISR",
+    "CRI GV-6.1.8",
+    "Original"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-140",
+   "domain": 9,
+   "category": "Foundation-model dependence",
+   "text": "Systemic / correlated ‘model monoculture’ — shared-model failure, including the same defect or blind spot reproduced across everything one model produces",
+   "poster_label": "Model monoculture, including one model's blind spot reproduced across everything it produces",
+   "sources": [
+    "IAISR",
+    "Original"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-141",
+   "domain": 9,
+   "category": "Foundation-model dependence",
+   "text": "Provider deprecation or retirement of a model forcing unplanned migration",
+   "poster_label": "Provider deprecation or retirement of a model forcing unplanned migration",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-142",
+   "domain": 9,
+   "category": "Vendor due diligence",
+   "text": "Inadequate vendor due diligence, including whether prompts and outputs are retained, used for training, or exposed to sub-processors",
+   "poster_label": "Vendor diligence missing: are prompts retained, trained on, or shared?",
+   "sources": [
+    "NIST GenAI #12",
+    "CRI GV-6.1.4",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-188",
+   "domain": 9,
+   "category": "Vendor due diligence",
+   "text": "No defined method to assess whether a vendor's claimed AI capability is real, secure, and fit for purpose: conventional vendor assurance says nothing about model behavior, and the buyer inherits whatever sits behind the claim",
+   "poster_label": "No way to verify a vendor's 'AI-powered' claim before buying it",
+   "sources": [
+    "CRI GV-6.1.1",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-143",
+   "domain": 9,
+   "category": "Vendor due diligence",
+   "text": "Vendor viability risk in an unusually volatile provider market with frequent pivots and failures",
+   "poster_label": "Vendor viability risk in an unusually volatile provider market with frequent pivots and failures",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-144",
+   "domain": 9,
+   "category": "Vendor due diligence",
+   "text": "Accountability for a vendor's AI failures staying with the organization, whatever the contract says",
+   "poster_label": "Accountability for a vendor's AI failures staying with the organization, whatever the contract says",
+   "sources": [
+    "EU Art 25 (amended 2026)",
+    "Original"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-145",
+   "domain": 9,
+   "category": "Lock-in & portability",
+   "text": "Vendor / model lock-in limiting portability and leverage",
+   "poster_label": "Vendor / model lock-in limiting portability and leverage",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-146",
+   "domain": 9,
+   "category": "Lock-in & portability",
+   "text": "High switching cost from proprietary APIs and fine-tuning",
+   "poster_label": "High switching cost from proprietary APIs and fine-tuning",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-147",
+   "domain": 9,
+   "category": "Lock-in & portability",
+   "text": "Lack of exit provisions, where fine-tunes, embeddings, and prompt assets do not transfer between providers",
+   "poster_label": "Lack of exit provisions, where fine-tunes, embeddings, and prompt assets do not transfer between providers",
+   "sources": [
+    "Cloud Risk Map analog",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-148",
+   "domain": 9,
+   "category": "Open-source component risk",
+   "text": "Malicious or compromised open-source models / components",
+   "poster_label": "Malicious or compromised open-source models / components",
+   "sources": [
+    "OWASP LLM04",
+    "DASF 7.1",
+    "DASF 5.4"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-149",
+   "domain": 9,
+   "category": "Open-source component risk",
+   "text": "Open-source AI dependencies abandoned by their maintainers, leaving no fixes, support, or upgrade path",
+   "poster_label": "Open-source AI dependencies abandoned by their maintainers",
+   "sources": [
+    "OWASP LLM04",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-150",
+   "domain": 9,
+   "category": "Open-source component risk",
+   "text": "Opaque sub-processor chains, including models served behind a vendor's own API, or AI embedded as unannounced features in a service, without disclosure",
+   "poster_label": "Opaque sub-processors, including undisclosed models and embedded AI features",
+   "sources": [
+    "CRI GV-6.1.6",
+    "MAS AIRG §4.2 / fn 21",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-189",
+   "domain": 9,
+   "category": "Open-source component risk",
+   "text": "Models and AI components deployed without verifying their integrity or lineage: a tampered artifact goes undetected, and an upstream flaw cannot be scoped to the models that descend from it",
+   "poster_label": "Models deployed without verifying integrity or lineage",
+   "sources": [
+    "OWASP AISVS 6.2",
+    "Cisco/VAIL provenance-entanglement research 2026",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-191",
+   "domain": 9,
+   "category": "Open-source component risk",
+   "text": "Safety training absent, stripped, or eroded in a self-hosted or fine-tuned model (e.g., abliteration, drift from benign fine-tuning, or a variant sourced without it), so guardrails have nothing beneath them",
+   "poster_label": "Safety training stripped or eroded in a self-hosted model",
+   "sources": [
+    "NIST GenAI MS-2.7-008",
+    "IAISR",
+    "OWASP LLM04"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-151",
+   "domain": 10,
+   "category": "Skills & talent",
+   "text": "Shortage of AI and AI-risk talent, competing against AI-native employers for scarce skills",
+   "poster_label": "Shortage of AI and AI-risk talent, competing against AI-native employers for scarce skills",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-152",
+   "domain": 10,
+   "category": "Skills & talent",
+   "text": "Inability to retain specialists, who leave taking undocumented model and prompt knowledge with them",
+   "poster_label": "Inability to retain specialists, who leave taking undocumented model and prompt knowledge with them",
+   "sources": [
+    "Cloud Risk Map analog",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-153",
+   "domain": 10,
+   "category": "Skills & talent",
+   "text": "Inadequate AI literacy across the workforce, so staff cannot use, question, or oversee the AI they work with",
+   "poster_label": "Inadequate AI literacy across the workforce",
+   "sources": [
+    "EU Art 4 (amended 2026)",
+    "CRI GV-1.2.4",
+    "CSA AICM",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-195",
+   "domain": 10,
+   "category": "Skills & talent",
+   "text": "Leaders do not understand how AI differs from earlier technology change (e.g., probabilistic output, capability that shifts mid-rollout, value that depends on redesigning work), so they manage it as a conventional IT rollout and cannot guide the organization through adoption",
+   "poster_label": "Leaders manage AI like a conventional IT rollout",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-154",
+   "domain": 10,
+   "category": "Deskilling & loss of institutional knowledge",
+   "text": "Erosion of staff expertise through over-delegation to AI",
+   "poster_label": "Erosion of staff expertise through over-delegation to AI",
+   "sources": [
+    "MIT 5.2",
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-155",
+   "domain": 10,
+   "category": "Deskilling & loss of institutional knowledge",
+   "text": "Loss of institutional knowledge as AI replaces human processes",
+   "poster_label": "Loss of institutional knowledge as AI replaces human processes",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-156",
+   "domain": 10,
+   "category": "Deskilling & loss of institutional knowledge",
+   "text": "Capability atrophy — inability to operate if AI is unavailable",
+   "poster_label": "Capability atrophy — inability to operate if AI is unavailable",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-157",
+   "domain": 10,
+   "category": "Workforce disruption / change",
+   "text": "Change management underestimated — sponsorship, communication, and transition support for a change to the nature of the work itself, where capability keeps shifting mid-rollout",
+   "poster_label": "Change management underestimated as AI reshapes the work itself",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-158",
+   "domain": 10,
+   "category": "Workforce disruption / change",
+   "text": "Workforce resistance or low adoption driven by displacement fear or distrust of AI output",
+   "poster_label": "Workforce resistance or low adoption driven by displacement fear or distrust of AI output",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-159",
+   "domain": 10,
+   "category": "Workforce disruption / change",
+   "text": "Labor-relations and morale impacts of AI deployment",
+   "poster_label": "Labor-relations and morale impacts of AI deployment",
+   "sources": [
+    "MIT 6.2",
+    "Original"
+   ],
+   "condition_types": [
+    "outcome"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-160",
+   "domain": 10,
+   "category": "Societal & reputational",
+   "text": "Reputational damage from a visible AI failure or misuse, amplified because AI errors draw outsized attention and people lose confidence in an algorithm faster than in a person making the same mistake",
+   "poster_label": "Reputational damage amplified when AI fails in public",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-161",
+   "domain": 10,
+   "category": "Societal & reputational",
+   "text": "Customers and stakeholders distrust or avoid AI-mediated services, so adoption and returns fall short",
+   "poster_label": "Customers distrust or avoid AI-mediated services",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-162",
+   "domain": 10,
+   "category": "Societal & reputational",
+   "text": "AI decisions or actions affecting people who never chose to use the system (e.g., decision subjects, bystanders, communities)",
+   "poster_label": "AI decisions affecting people who never chose to use the system",
+   "sources": [
+    "Shelby societal"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-163",
+   "domain": 10,
+   "category": "Societal & reputational",
+   "text": "Overstating AI capability to customers, investors, or regulators (AI-washing), inviting enforcement and loss of trust",
+   "poster_label": "AI-washing: overstating capability to customers, investors, or regulators",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-164",
+   "domain": 11,
+   "category": "Cost & compute economics",
+   "text": "Uncontrolled AI consumption, as usage grows, agents loop, or routine work goes to premium models, driving up inference and training spend",
+   "poster_label": "Uncontrolled AI consumption driving up inference spend",
+   "sources": [
+    "OWASP LLM06",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-165",
+   "domain": 11,
+   "category": "Cost & compute economics",
+   "text": "Poor cost forecasting, because inference cost scales with usage rather than seats or provisioned capacity, and rises non-linearly as pilots reach production volume",
+   "poster_label": "Poor AI cost forecasting as usage scales to production",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-166",
+   "domain": 11,
+   "category": "Cost & compute economics",
+   "text": "Energy and water demands of AI training and inference, not measured or weighed in model and deployment choices, causing environmental harm and undermining sustainability commitments",
+   "poster_label": "AI's energy and water use unmeasured and unweighed",
+   "sources": [
+    "NIST GenAI #5",
+    "Weidinger VI",
+    "MIT 6.6"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-167",
+   "domain": 11,
+   "category": "Investment / procurement",
+   "text": "Stranded investment in failed or abandoned AI initiatives, including initiatives scaled before the evidence supported them or kept funded past the point of failure because their value is hard to attribute",
+   "poster_label": "Stranded investment, including AI scaled too early or funded past failure",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "outcome"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-168",
+   "domain": 11,
+   "category": "Investment / procurement",
+   "text": "Procurement exposure where providers reprice tokens, tiers, or context windows unilaterally",
+   "poster_label": "Procurement exposure where providers reprice tokens, tiers, or context windows unilaterally",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-169",
+   "domain": 11,
+   "category": "Investment / procurement",
+   "text": "Cyber or liability insurance excludes, sub-limits, or reprices AI-related losses, or defines 'user' in terms that exclude non-human actors",
+   "poster_label": "Insurance excludes AI losses, or defines 'user' as human only",
+   "sources": [
+    "CSA HF post-mortem",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-170",
+   "domain": 11,
+   "category": "Scaling & resource constraints",
+   "text": "Compute, GPU, or power scarcity constraining scaling",
+   "poster_label": "Compute, GPU, or power scarcity constraining scaling",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-172",
+   "domain": 11,
+   "category": "Scaling & resource constraints",
+   "text": "Concentration of compute supply among few providers",
+   "poster_label": "Concentration of compute supply among few providers",
+   "sources": [
+    "IAISR",
+    "Original"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-173",
+   "domain": 12,
+   "category": "Autonomy, alignment & oversight",
+   "text": "Agent pursues unintended goals or misgeneralizes its objective",
+   "poster_label": "Agent pursues unintended goals or misgeneralizes its objective",
+   "sources": [
+    "IAISR",
+    "OWASP ASI T6"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-174",
+   "domain": 12,
+   "category": "Autonomy, alignment & oversight",
+   "text": "Agent pursues an authorized objective through unauthorized means",
+   "poster_label": "Agent pursues an authorized objective through unauthorized means",
+   "sources": [
+    "OpenAI 2026 incident",
+    "IAISR"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-175",
+   "domain": 12,
+   "category": "Autonomy, alignment & oversight",
+   "text": "Excessive autonomy / agency beyond intended mandate",
+   "poster_label": "Excessive autonomy / agency beyond intended mandate",
+   "sources": [
+    "OWASP LLM03",
+    "DASF 9.13"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-176",
+   "domain": 12,
+   "category": "Autonomy, alignment & oversight",
+   "text": "No working way to interrupt, halt, or roll back an agent mid-task",
+   "poster_label": "No working interrupt or kill switch for an agent mid-task",
+   "sources": [
+    "EU Art 14(4)(e)",
+    "OWASP ASI"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-206",
+   "domain": 12,
+   "category": "Autonomy, alignment & oversight",
+   "text": "No requirement for human approval before an agent takes an action above a set consequence threshold",
+   "poster_label": "No human approval before high-consequence agent actions",
+   "sources": [
+    "OWASP LLM03"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-203",
+   "domain": 12,
+   "category": "Autonomy, alignment & oversight",
+   "text": "Agents able to change their own instructions, tools, memory, or code, so their behavior drifts beyond what was approved",
+   "poster_label": "Agents that rewrite their own instructions or tools",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-177",
+   "domain": 12,
+   "category": "Tool access & authorization",
+   "text": "Agent granted a broader set of invokable tools / functions than its task requires",
+   "poster_label": "Agent granted a broader set of invokable tools / functions than its task requires",
+   "sources": [
+    "OWASP LLM03 / ASI"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-178",
+   "domain": 12,
+   "category": "Tool access & authorization",
+   "text": "Agent identity misuse, impersonation, or delegated-credential abuse",
+   "poster_label": "Agent identity misuse, impersonation, or delegated-credential abuse",
+   "sources": [
+    "OWASP ASI T9",
+    "DASF 13.9"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-179",
+   "domain": 12,
+   "category": "Tool access & authorization",
+   "text": "Third-party tool and connector servers adopted as a credentialed execution surface without the vetting applied to models or libraries",
+   "poster_label": "Third-party tool/connector servers as an unvetted execution surface",
+   "sources": [
+    "OWASP AISVS C10.1 / AC.2",
+    "CSA AICM"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-180",
+   "domain": 12,
+   "category": "Memory & context integrity",
+   "text": "Memory poisoning corrupting agent state across sessions",
+   "poster_label": "Memory poisoning corrupting agent state across sessions",
+   "sources": [
+    "OWASP ASI T1",
+    "DASF 13.1",
+    "ATLAS AML.T0080.000",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-181",
+   "domain": 12,
+   "category": "Memory & context integrity",
+   "text": "Context-window manipulation altering agent behavior",
+   "poster_label": "Context-window manipulation altering agent behavior",
+   "sources": [
+    "OWASP ASI",
+    "OWASP LLM01"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-182",
+   "domain": 12,
+   "category": "Memory & context integrity",
+   "text": "Persistence of corrupted or sensitive data in agent memory",
+   "poster_label": "Persistence of corrupted or sensitive data in agent memory",
+   "sources": [
+    "OWASP ASI",
+    "OWASP AISVS 8.3",
+    "Original"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-183",
+   "domain": 12,
+   "category": "Multi-agent orchestration",
+   "text": "Cascading failures or loops across interacting agents",
+   "poster_label": "Cascading failures or loops across interacting agents",
+   "sources": [
+    "OWASP ASI T5",
+    "MIT 7.6"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-184",
+   "domain": 12,
+   "category": "Multi-agent orchestration",
+   "text": "Misplaced inter-agent trust or agent collusion",
+   "poster_label": "Misplaced inter-agent trust or agent collusion",
+   "sources": [
+    "OWASP ASI T13",
+    "MIT 7.6"
+   ],
+   "condition_types": [
+    "cause",
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-185",
+   "domain": 12,
+   "category": "Multi-agent orchestration",
+   "text": "Emergent, unpredictable behavior in multi-agent systems",
+   "poster_label": "Emergent, unpredictable behavior in multi-agent systems",
+   "sources": [
+    "IAISR",
+    "MIT 7.6"
+   ],
+   "condition_types": [
+    "cause"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-186",
+   "domain": 12,
+   "category": "Action integrity & traceability",
+   "text": "Agents able to take irreversible real-world actions through tools, APIs, or code execution, so an error or hijack becomes a loss before anyone can intervene",
+   "poster_label": "Agents able to take irreversible real-world actions",
+   "sources": [
+    "OWASP ASI T2",
+    "DASF 13.2",
+    "Original"
+   ],
+   "condition_types": [
+    "amplifier"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-187",
+   "domain": 12,
+   "category": "Action integrity & traceability",
+   "text": "Accountability gap for harm caused by autonomous action",
+   "poster_label": "Accountability gap for harm caused by autonomous action",
+   "sources": [
+    "Databricks AIGF",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-190",
+   "domain": 12,
+   "category": "Action integrity & traceability",
+   "text": "Agent actions not attributable to the organization by the external parties they affect, so those parties cannot detect, warn of, or contest them",
+   "poster_label": "Third parties can't tell your agent acted, so no one can warn you",
+   "sources": [
+    "CSA HF post-mortem",
+    "OWASP ASI T8",
+    "Original"
+   ],
+   "condition_types": [
+    "safeguard gap"
+   ],
+   "status": "active",
+   "superseded_by": null
+  },
+  {
+   "id": "AIRM-171",
+   "domain": 11,
+   "category": "Scaling & resource constraints",
+   "text": "Cost non-linearity as usage scales to production volume",
+   "poster_label": "Cost non-linearity as usage scales to production volume",
+   "sources": [
+    "Original"
+   ],
+   "condition_types": [],
+   "status": "retired",
+   "superseded_by": "AIRM-165"
+  }
+ ],
+ "split_pairs": [
+  {
+   "concept": "Supply-chain compromise",
+   "side_a": [
+    "AIRM-078"
+   ],
+   "side_b": [
+    "AIRM-148"
+   ],
+   "note": "Same loss seen from two owners; count once"
+  },
+  {
+   "concept": "Hallucination",
+   "side_a": [
+    "AIRM-052"
+   ],
+   "side_b": [
+    "AIRM-091"
+   ],
+   "note": "Same loss seen from two owners; count once"
+  },
+  {
+   "concept": "Stranded investment",
+   "side_a": [
+    "AIRM-021",
+    "AIRM-024"
+   ],
+   "side_b": [
+    "AIRM-167"
+   ],
+   "note": "Same loss seen from two owners; count once"
+  },
+  {
+   "concept": "Jailbreak → dangerous uplift",
+   "side_a": [
+    "AIRM-073"
+   ],
+   "side_b": [
+    "AIRM-097"
+   ],
+   "note": "Same loss seen from two owners; count once"
+  },
+  {
+   "concept": "Accountability for autonomous action",
+   "side_a": [
+    "AIRM-006"
+   ],
+   "side_b": [
+    "AIRM-187"
+   ],
+   "note": "Same loss seen from two owners; count once"
+  }
+ ],
+ "see_also": [
+  {
+   "from": "AIRM-007",
+   "to": "AIRM-175",
+   "type": "Related",
+   "why": "Where the one collapsing configure / operate / review duties is an agent, Autonomy owns the agency-beyond-mandate view."
+  },
+  {
+   "from": "AIRM-018",
+   "to": "AIRM-138",
+   "type": "Related",
+   "why": "Once AI output sits inside a regulated control chain, the burden of evidencing that chain lands on Legal & Compliance."
+  },
+  {
+   "from": "AIRM-025",
+   "to": "AIRM-129",
+   "type": "Related",
+   "why": "Fine-tuning or rebranding a model can turn a deployer into a provider under the EU AI Act; the sourcing choice sets the legal role."
+  },
+  {
+   "from": "AIRM-029",
+   "to": "AIRM-165",
+   "type": "Related",
+   "why": "Hidden total cost of ownership shows up in Finance as usage-scaled inference cost that was never forecast."
+  },
+  {
+   "from": "AIRM-045",
+   "to": "AIRM-130",
+   "type": "Related",
+   "why": "Failure to preserve prompts, outputs, and agent traces becomes litigation exposure when a claim arrives."
+  },
+  {
+   "from": "AIRM-081",
+   "to": "AIRM-052",
+   "type": "Related",
+   "why": "The package-name attack depends on a hallucination the model repeats reliably; the accuracy defect is owned in Model Development."
+  },
+  {
+   "from": "AIRM-085",
+   "to": "AIRM-039",
+   "type": "Safeguard",
+   "why": "output guardrails are the last check when retrieval returns more than the user may see."
+  },
+  {
+   "from": "AIRM-102",
+   "to": "AIRM-117",
+   "type": "Related",
+   "why": "The same volume problem at operational scale: moderation and trust-and-safety teams cannot keep pace with AI output."
+  },
+  {
+   "from": "AIRM-104",
+   "to": "AIRM-002",
+   "type": "Related",
+   "why": "Shadow deployment in Operations is the production end of shadow AI adoption, which Governance owns."
+  },
+  {
+   "from": "AIRM-107",
+   "to": "AIRM-174",
+   "type": "Related",
+   "why": "In the 2026 incidents, containment failed because the agent pursued an authorized objective through unauthorized means."
+  },
+  {
+   "from": "AIRM-109",
+   "to": "AIRM-187",
+   "type": "Related",
+   "why": "Logs of who authorized an agent's action are what close the accountability gap after autonomous harm."
+  },
+  {
+   "from": "AIRM-119",
+   "to": "AIRM-141",
+   "type": "Kept separate on purpose",
+   "why": "an update changes how a model you still use behaves; a retirement removes the model and forces a migration."
+  },
+  {
+   "from": "AIRM-123",
+   "to": "AIRM-017",
+   "type": "Related",
+   "why": "Controls re-verified less often than the system changes is an assurance gap: no independent evidence the controls still work."
+  },
+  {
+   "from": "AIRM-134",
+   "to": "AIRM-189",
+   "type": "Related",
+   "why": "Open-weight license obligations can be inherited through a lineage the publisher label does not disclose."
+  },
+  {
+   "from": "AIRM-142",
+   "to": "AIRM-036",
+   "type": "Mirror image",
+   "why": "a vendor training on your prompts and outputs without agreement, and your organization training on people's personal data without consent."
+  },
+  {
+   "from": "AIRM-141",
+   "to": "AIRM-120",
+   "type": "Related",
+   "why": "A forced migration has to run through versioning, rollback, and change control in Operations."
+  },
+  {
+   "from": "AIRM-163",
+   "to": "AIRM-130",
+   "type": "Related",
+   "why": "Overstated AI capability invites enforcement and liability claims."
+  },
+  {
+   "from": "AIRM-169",
+   "to": "AIRM-130",
+   "type": "Related",
+   "why": "An insurance exclusion leaves the liability for AI-caused harm uninsured."
+  },
+  {
+   "from": "AIRM-187",
+   "to": "AIRM-130",
+   "type": "Related",
+   "why": "The accountability gap after autonomous harm meets Legal's general liability factor. Pointer runs specific to general, so AIRM-130 carries no return marker."
+  },
+  {
+   "from": "AIRM-188",
+   "to": "AIRM-163",
+   "type": "Related",
+   "why": "The buyer's side of AI capability claims; AIRM-163 is the seller's side, when your own organization overstates."
+  },
+  {
+   "from": "AIRM-079",
+   "to": "AIRM-149",
+   "type": "Safeguard",
+   "why": "timely patching limits the damage from a dependency its maintainers have abandoned."
+  },
+  {
+   "from": "AIRM-080",
+   "to": "AIRM-148",
+   "type": "Parallel",
+   "why": "compromise inside your own registries and pipeline vs. compromise upstream in an open-source component."
+  },
+  {
+   "from": "AIRM-189",
+   "to": "AIRM-078",
+   "type": "Safeguard",
+   "why": "lineage is how a compromised upstream model is scoped to everything that descends from it."
+  },
+  {
+   "from": "AIRM-044",
+   "to": "AIRM-042",
+   "type": "Safeguard",
+   "why": "proof of rights to training data is the defense when its use is challenged."
+  },
+  {
+   "from": "AIRM-042",
+   "to": "AIRM-132",
+   "type": "Parallel",
+   "why": "whether you may use the inputs vs. whether you own the outputs."
+  },
+  {
+   "from": "AIRM-069",
+   "to": "AIRM-036",
+   "type": "Same outcome, different cause",
+   "why": "training data extracted by an attacker vs. personal data used without consent."
+  },
+  {
+   "from": "AIRM-069",
+   "to": "AIRM-038",
+   "type": "Same outcome, different cause",
+   "why": "the model-derived part of re-identification overlaps with inference attacks."
+  },
+  {
+   "from": "AIRM-069",
+   "to": "AIRM-047",
+   "type": "Same outcome, different cause",
+   "why": "training data extracted on purpose vs. sensitive data persisting in model weights and surfacing in ordinary use."
+  },
+  {
+   "from": "AIRM-056",
+   "to": "AIRM-108",
+   "type": "Safeguard",
+   "why": "monitoring is how drift is caught; its absence is a condition on the drift scenario."
+  },
+  {
+   "from": "AIRM-056",
+   "to": "AIRM-110",
+   "type": "Safeguard",
+   "why": "drift is hard to catch when 'anomalous' cannot be defined for a non-deterministic system."
+  },
+  {
+   "from": "AIRM-139",
+   "to": "AIRM-172",
+   "type": "Parallel",
+   "why": "the same concentration pattern in model providers and in compute supply."
+  },
+  {
+   "from": "AIRM-140",
+   "to": "AIRM-172",
+   "type": "Parallel",
+   "why": "shared-model failure and concentrated compute supply both turn one provider's problem into everyone's."
+  },
+  {
+   "from": "AIRM-073",
+   "to": "AIRM-090",
+   "type": "Same outcome, different cause",
+   "why": "toxic content can follow a jailbreak, and can also come from the model's ordinary failures."
+  },
+  {
+   "from": "AIRM-082",
+   "to": "AIRM-178",
+   "type": "Kept separate on purpose",
+   "why": "access to the AI vs. an agent acting on others with its identity."
+  },
+  {
+   "from": "AIRM-083",
+   "to": "AIRM-178",
+   "type": "Kept separate on purpose",
+   "why": "credentials for AI components vs. an agent's delegated identity."
+  },
+  {
+   "from": "AIRM-015",
+   "to": "AIRM-063",
+   "type": "Parallel",
+   "why": "governance records vs. technical documentation."
+  },
+  {
+   "from": "AIRM-112",
+   "to": "AIRM-170",
+   "type": "Same outcome, different cause",
+   "why": "uptime and latency in operations vs. scarce compute supply."
+  },
+  {
+   "from": "AIRM-113",
+   "to": "AIRM-170",
+   "type": "Same outcome, different cause",
+   "why": "inability to scale to peak demand vs. compute that cannot be obtained."
+  },
+  {
+   "from": "AIRM-113",
+   "to": "AIRM-165",
+   "type": "Same outcome, different cause",
+   "why": "scaling that fails operationally vs. scaling that fails financially."
+  },
+  {
+   "from": "AIRM-101",
+   "to": "AIRM-176",
+   "type": "Safeguard",
+   "why": "a working interrupt is what preserves meaningful human control once an agent is acting."
+  },
+  {
+   "from": "AIRM-083",
+   "to": "AIRM-177",
+   "type": "Parallel",
+   "why": "over-broad credentials for AI components vs. over-broad tools for an agent."
+  },
+  {
+   "from": "AIRM-109",
+   "to": "AIRM-006",
+   "type": "Parallel",
+   "why": "logs of who authorized an agent's action are the evidence accountability depends on."
+  },
+  {
+   "from": "AIRM-077",
+   "to": "AIRM-099",
+   "type": "Kept separate on purpose",
+   "why": "unsafe actions triggered automatically vs. people over-trusting the output."
+  },
+  {
+   "from": "AIRM-182",
+   "to": "AIRM-047",
+   "type": "Parallel",
+   "why": "sensitive data persisting in agent memory and in embeddings, caches, or weights."
+  },
+  {
+   "from": "AIRM-179",
+   "to": "AIRM-142",
+   "type": "Parallel",
+   "why": "tool and connector servers need the vendor diligence applied to models and libraries."
+  },
+  {
+   "from": "AIRM-122",
+   "to": "AIRM-065",
+   "type": "Same outcome, different cause",
+   "why": "drift from uncontrolled learning vs. poisoning deliberately fed into the learning loop."
+  },
+  {
+   "from": "AIRM-124",
+   "to": "AIRM-080",
+   "type": "Same outcome, different cause",
+   "why": "prompts and configuration changed by accident vs. tampered with on purpose."
+  },
+  {
+   "from": "AIRM-114",
+   "to": "AIRM-164",
+   "type": "Same outcome, different cause",
+   "why": "costs run up by an attacker vs. by unmanaged use of your own systems."
+  },
+  {
+   "from": "AIRM-004",
+   "to": "AIRM-005",
+   "type": "Kept separate on purpose",
+   "why": "who accepts AI risk vs. who drives AI adoption (see Scope decisions)."
+  },
+  {
+   "from": "AIRM-153",
+   "to": "AIRM-195",
+   "type": "Kept separate on purpose",
+   "why": "staff literacy in using AI vs. leaders' understanding of how AI changes the organization."
+  },
+  {
+   "from": "AIRM-160",
+   "to": "AIRM-161",
+   "type": "Kept separate on purpose",
+   "why": "damage from a visible failure vs. customers avoiding AI channels with or without one."
+  },
+  {
+   "from": "AIRM-178",
+   "to": "AIRM-196",
+   "type": "Same outcome, different cause",
+   "why": "someone abusing the agent's identity vs. an insider steering a sanctioned agent."
+  },
+  {
+   "from": "AIRM-057",
+   "to": "AIRM-197",
+   "type": "Same outcome, different cause",
+   "why": "brittle behavior on unusual inputs vs. inputs crafted to exploit it."
+  },
+  {
+   "from": "AIRM-058",
+   "to": "AIRM-197",
+   "type": "Same outcome, different cause",
+   "why": "input sensitivity in ordinary use vs. adversarial inputs that exploit it."
+  },
+  {
+   "from": "AIRM-042",
+   "to": "AIRM-131",
+   "type": "Parallel",
+   "why": "rights infringed through what goes into a model vs. what comes out of it."
+  },
+  {
+   "from": "AIRM-198",
+   "to": "AIRM-133",
+   "type": "Mirror image",
+   "why": "our data in a vendor's AI vs. our data in a customer's or partner's AI."
+  },
+  {
+   "from": "AIRM-198",
+   "to": "AIRM-142",
+   "type": "Mirror image",
+   "why": "what a vendor's AI does with our data vs. what a customer's or partner's AI does with it."
+  },
+  {
+   "from": "AIRM-198",
+   "to": "AIRM-193",
+   "type": "Kept separate on purpose",
+   "why": "our data used past the terms we set vs. our advantage approximated from public information."
+  },
+  {
+   "from": "AIRM-199",
+   "to": "AIRM-039",
+   "type": "Parallel",
+   "why": "guardrails on what our AI says in our name vs. on the confidential data it can reveal."
+  },
+  {
+   "from": "AIRM-199",
+   "to": "AIRM-071",
+   "type": "Safeguard",
+   "why": "content guardrails limit what a hijacked assistant can publish."
+  },
+  {
+   "from": "AIRM-200",
+   "to": "AIRM-019",
+   "type": "Parallel",
+   "why": "scoping which artifacts a flaw touched vs. which people it harmed."
+  },
+  {
+   "from": "AIRM-200",
+   "to": "AIRM-088",
+   "type": "Safeguard",
+   "why": "one flaw at scale reaches many people; remediating them is how the loss is contained."
+  },
+  {
+   "from": "AIRM-201",
+   "to": "AIRM-176",
+   "type": "Parallel",
+   "why": "an off-switch for a customer-facing AI feature vs. an interrupt for an agent mid-task."
+  },
+  {
+   "from": "AIRM-201",
+   "to": "AIRM-156",
+   "type": "Parallel",
+   "why": "turning the AI off vs. being able to operate once it is off."
+  },
+  {
+   "from": "AIRM-202",
+   "to": "AIRM-052",
+   "type": "Related",
+   "why": "A specific case of hallucination with its own loss: false statements about real people or organizations."
+  },
+  {
+   "from": "AIRM-203",
+   "to": "AIRM-122",
+   "type": "Parallel",
+   "why": "a model that changes itself through continuous learning vs. an agent that changes its own instructions or tools."
+  },
+  {
+   "from": "AIRM-204",
+   "to": "AIRM-002",
+   "type": "Related",
+   "why": "A ban drives use into the unsanctioned channels Governance owns."
+  },
+  {
+   "from": "AIRM-205",
+   "to": "AIRM-072",
+   "type": "Safeguard",
+   "why": "keeping retrieved content from acting as instructions is the defense against indirect injection."
+  },
+  {
+   "from": "AIRM-205",
+   "to": "AIRM-181",
+   "type": "Safeguard",
+   "why": "untrusted content an agent reads is how its context is manipulated."
+  },
+  {
+   "from": "AIRM-205",
+   "to": "AIRM-199",
+   "type": "Parallel",
+   "why": "guarding what goes into the model vs. what comes out."
+  },
+  {
+   "from": "AIRM-199",
+   "to": "AIRM-052",
+   "type": "Safeguard",
+   "why": "content guardrails are the last check before a hallucinated answer reaches a customer in the organization's name."
+  },
+  {
+   "from": "AIRM-102",
+   "to": "AIRM-052",
+   "type": "Safeguard",
+   "why": "human review is how a hallucinated or meaning-changing summary is caught before it is relied on; at volume it degrades into rubber-stamping."
+  },
+  {
+   "from": "AIRM-202",
+   "to": "AIRM-096",
+   "type": "Same outcome, different cause",
+   "why": "a false statement from the model's own error vs. one a user steered it to produce."
+  },
+  {
+   "from": "AIRM-200",
+   "to": "AIRM-065",
+   "type": "Safeguard",
+   "why": "a poisoned model's decisions need the same scoping and remediation as an accidental flaw's."
+  },
+  {
+   "from": "AIRM-143",
+   "to": "AIRM-141",
+   "type": "Kept separate on purpose",
+   "why": "a vendor failing or changing direction vs. a model you depend on being retired."
+  },
+  {
+   "from": "AIRM-141",
+   "to": "AIRM-168",
+   "type": "Parallel",
+   "why": "a provider retiring a model vs. repricing it; both are supplier events the organization does not control."
+  },
+  {
+   "from": "AIRM-059",
+   "to": "AIRM-109",
+   "type": "Kept separate on purpose",
+   "why": "not being able to see why a model decided as it did vs. having no record of what it decided."
+  },
+  {
+   "from": "AIRM-059",
+   "to": "AIRM-200",
+   "type": "Kept separate on purpose",
+   "why": "not being able to tell which decisions share a flaw vs. not being able to reach and make whole the people behind them."
+  },
+  {
+   "from": "AIRM-109",
+   "to": "AIRM-200",
+   "type": "Kept separate on purpose",
+   "why": "the record of what was decided vs. the capability to turn that record into people found, told and made whole."
+  },
+  {
+   "from": "AIRM-064",
+   "to": "AIRM-109",
+   "type": "Parallel",
+   "why": "which model version and data produced a result vs. what was decided at run time and who authorized it."
+  },
+  {
+   "from": "AIRM-064",
+   "to": "AIRM-200",
+   "type": "Kept separate on purpose",
+   "why": "knowing which model version made a decision vs. finding and making whole the people it affected."
+  },
+  {
+   "from": "AIRM-176",
+   "to": "AIRM-186",
+   "type": "Safeguard",
+   "why": "an interrupt only helps while an action can still be stopped or undone."
+  },
+  {
+   "from": "AIRM-206",
+   "to": "AIRM-102",
+   "type": "Kept separate on purpose",
+   "why": "no approval gate vs. a gate that exists and is overwhelmed."
+  },
+  {
+   "from": "AIRM-206",
+   "to": "AIRM-175",
+   "type": "Safeguard",
+   "why": "required approval is what bounds an agent acting beyond its mandate."
+  },
+  {
+   "from": "AIRM-206",
+   "to": "AIRM-177",
+   "type": "Parallel",
+   "why": "limiting what an agent can do vs. requiring approval before it does it."
+  },
+  {
+   "from": "AIRM-101",
+   "to": "AIRM-206",
+   "type": "Safeguard",
+   "why": "a required approval preserves human control before the action, as an interrupt does during it."
+  }
+ ],
+ "companions": [
+  {
+   "name": "Four Faces of AI Risk",
+   "relationship": "optional second sort of the same factors; the map works without it",
+   "license": "CC BY-SA 4.0",
+   "file": "companions/four-faces/AI-Risk-Map-Four-Faces.json",
+   "url": "https://www.riskframework.org/four-faces/"
+  }
+ ]
+}

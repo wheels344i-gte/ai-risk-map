@@ -1,0 +1,241 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "AI Risk Map graph file",
+ "description": "Contract: adding a key or a see-also type is a minor change; renaming or removing one is a major change.",
+ "type": "object",
+ "required": [
+  "title",
+  "version",
+  "license",
+  "schema_version",
+  "domains",
+  "categories",
+  "factors",
+  "split_pairs",
+  "see_also"
+ ],
+ "properties": {
+  "title": {
+   "type": "string"
+  },
+  "mark": {
+   "type": "string"
+  },
+  "trademark_notice": {
+   "type": "string"
+  },
+  "tagline": {
+   "type": "string"
+  },
+  "version": {
+   "type": "string",
+   "pattern": "^[0-9]+\\.[0-9]+$"
+  },
+  "date": {
+   "type": "string"
+  },
+  "license": {
+   "type": "string"
+  },
+  "license_url": {
+   "type": "string"
+  },
+  "copyright": {
+   "type": "string"
+  },
+  "schema_version": {
+   "type": "string"
+  },
+  "counts": {
+   "type": "object"
+  },
+  "domains": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "n",
+     "name"
+    ],
+    "properties": {
+     "n": {
+      "type": "integer"
+     },
+     "name": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "categories": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "domain",
+     "name"
+    ],
+    "properties": {
+     "domain": {
+      "type": "integer"
+     },
+     "name": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "factors": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "domain",
+     "category",
+     "text",
+     "poster_label",
+     "sources",
+     "condition_types",
+     "status",
+     "superseded_by"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^AIRM-[0-9]{3}$"
+     },
+     "domain": {
+      "type": "integer"
+     },
+     "category": {
+      "type": "string"
+     },
+     "text": {
+      "type": "string"
+     },
+     "poster_label": {
+      "type": "string"
+     },
+     "sources": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "condition_types": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "cause",
+        "safeguard gap",
+        "amplifier",
+        "outcome"
+       ]
+      },
+      "maxItems": 2,
+      "uniqueItems": true
+     },
+     "status": {
+      "enum": [
+       "active",
+       "retired"
+      ]
+     },
+     "superseded_by": {
+      "anyOf": [
+       {
+        "type": "string",
+        "pattern": "^AIRM-[0-9]{3}$"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "split_pairs": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "concept",
+     "side_a",
+     "side_b"
+    ],
+    "properties": {
+     "concept": {
+      "type": "string"
+     },
+     "side_a": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^AIRM-[0-9]{3}$"
+      },
+      "minItems": 1
+     },
+     "side_b": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^AIRM-[0-9]{3}$"
+      },
+      "minItems": 1
+     },
+     "note": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "see_also": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "from",
+     "to",
+     "type",
+     "why"
+    ],
+    "properties": {
+     "from": {
+      "type": "string",
+      "pattern": "^AIRM-[0-9]{3}$"
+     },
+     "to": {
+      "type": "string",
+      "pattern": "^AIRM-[0-9]{3}$"
+     },
+     "type": {
+      "enum": [
+       "Safeguard",
+       "Same outcome, different cause",
+       "Parallel",
+       "Kept separate on purpose",
+       "Mirror image",
+       "Related"
+      ]
+     },
+     "why": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "companions": {
+   "type": "array",
+   "items": {
+    "type": "object"
+   }
+  }
+ }
+}

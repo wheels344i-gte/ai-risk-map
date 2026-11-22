@@ -10,9 +10,9 @@ Most teams naturally gravitate toward familiar concerns like hallucinations, pro
 
 It is not a risk library or exhaustive catalog. It is a practical tool designed to spark better conversations and uncover overlooked risks.
 
-12 domains · 55 categories · 204 risk factors · one page.
+12 domains · 55 categories · 205 risk factors · one page.
 
-**Using an earlier version?** v2.0 adds a tenth column, *Condition type*, and changes the meaning of several factors. If you parse the CSV or mapped controls to an earlier version, see [What changed in v2.0](#what-changed-in-v20) first.
+**Using an earlier version?** v2.1 adds one factor, narrows two, and gives a few factors a different or a second condition type. The columns are unchanged. See [What changed in v2.1](#what-changed-in-v21). If you are coming from v1.x, read [What changed in v2.0](#what-changed-in-v20) as well.
 
 ---
 
@@ -25,6 +25,8 @@ It is not a risk library or exhaustive catalog. It is a practical tool designed 
 | `AI-Risk-Map-Taxonomy.xlsx` | The workbook: every factor with its ID, source provenance, cross-references, scope decisions, and version history. | You want to see *why* something is or isn't on the map. |
 | `AI-Risk-Map.md` | The full corpus in one markdown file — factors plus all the reasoning, with a self-contained header. | You want to load the map into your own AI assistant and ask it questions. **Start here if you do that.** |
 | `AI-Risk-Map.csv` | Flat table, one row per factor, ten-column schema (column J added in v2.0). | You are mapping controls, tools, or systems to the map programmatically. |
+| `AI-Risk-Map.json` | The map as a graph: domains, categories, factors, split pairs by ID, and every see-also pointer with its type and reason. `AI-Risk-Map.schema.json` describes it. | You want the relationships between factors, which the CSV cannot carry: analysis, visualization, knowledge graphs. |
+| `companions/four-faces/` | Optional. Each factor's [Four Faces of AI Risk](https://www.riskframework.org/four-faces/) category, as a JSON file and as the full CSV with one added column. | You also use Four Faces and want to sort the map by kind of risk. The map does not depend on it. |
 | `AI-Risk-Map-preview.png` | Cropped detail used at the top of this page. | Social posts, slides — a readable teaser. |
 | `LICENSE` | CC BY-SA 4.0 legal text. | |
 
@@ -67,6 +69,8 @@ Passing a gate is admission, not priority. When there were more good candidates 
 
 Use it to filter: *"show me the safeguard gaps"* for a control mapping, *"show me the causes"* to start a scenario.
 
+**Two types on one factor.** A few factors carry both *cause* and *safeguard gap*. Each is a defect of ours that can start a loss with nobody misusing anything, and that someone can also exploit on purpose. Retrieval that serves content beyond a user's entitlements (`AIRM-085`) is the clearest: an employee asking an ordinary question is shown a confidential file (the defect is the cause), or an attacker goes looking for that file (the attacker's action is the cause, and the defect is the weak safeguard). They are two scenarios; scope each on its own and do not count the same loss twice. A filter for either type returns these factors.
+
 ## How to use it
 
 **In a workshop.** Put it on the wall. Walk the room through it domain by domain and ask: which of these have we not discussed? The columns furthest from the room's expertise are where the value is.
@@ -91,6 +95,33 @@ Columns A–I are frozen at v1.0, and column J was added in v2.0. Adding, removi
 | J | `Condition type` | `cause`, `safeguard gap`, `amplifier`, or `outcome`; more than one is separated by `; `. Blank on retired rows. Adding a value is a minor version; renaming or removing one is major. |
 
 The workbook's **Cross-references** sheet is authoritative. Part 1 lists each split pair with the factor IDs on both sides; Part 2 lists each see-also pointer from one ID to another. Use the sheet, not the `X-ref` column, to count. Factor-level changes between versions are on the **Change log** sheet.
+
+## What changed in v2.1
+
+v2.1 is a minor version. No column was added or changed, identifiers and file names are unchanged, and nothing you cited has disappeared. The full list is on the workbook's **Change log** sheet.
+
+**New to leverage**
+
+- **The map as a graph.** `AI-Risk-Map.json` carries what a flat table cannot: the hierarchy, split pairs by ID, and all 86 see-also pointers with their type and reason. A JSON Schema ships beside it.
+- **One factor.** No requirement for human approval before an agent takes an action above a set consequence threshold (`AIRM-206`), split from `AIRM-176`.
+- **Sixteen see-also pointers,** including the chain behind "we cannot find who was affected": a black-box model (`AIRM-059`), inadequate logging (`AIRM-109`), lost traceability (`AIRM-064`), and no way to find and make whole everyone affected (`AIRM-200`).
+- **An optional Four Faces companion.** `companions/four-faces/` gives each factor's Four Faces of AI Risk category. The map itself is unchanged by it. See *Mapping revisions* below.
+
+**Check against earlier work**
+
+- **Two factors are narrower.** `AIRM-176` now names the working interrupt or kill switch for an agent mid-task; the approval checkpoint is `AIRM-206`. `AIRM-141` now names a provider deprecating or retiring a model; a behavior change in a model you still use is `AIRM-119`, which now covers announced updates as well as silent ones.
+- **Two factors changed condition type.** `AIRM-079` (known vulnerabilities in ML dependencies not patched in time) is a safeguard gap, reworded to name the missing patching. `AIRM-059` (black-box models in high-stakes decisions) is an amplifier, with a fuller description: it weakens the checks that would catch a flaw, and does not start one.
+- **Four factors carry two condition types,** cause and safeguard gap: `AIRM-075`, `077`, `085`, `184`. See *Two types on one factor* above. Counts by type are now 120 causes, 74 safeguard gaps, 11 amplifiers and 4 outcomes, with those four counted under two types, so the counts sum to more than the 205 factors.
+- **If you parse the Condition type column,** split on `; ` before matching a value. The column has allowed more than one value since v2.0; this is the first release to use it.
+- **Wording.** `AIRM-143` no longer mentions deprecations, which are `AIRM-141`.
+
+### Mapping revisions (Four Faces companion)
+
+The companion files carry their own revision, separate from the map's version, and are pinned to the map version and the Four Faces version they were assigned under. A change to the mapping alone is a new revision here, not a new release of the map.
+
+| Revision | Date | AI Risk Map | Four Faces | Change |
+|---|---|---|---|---|
+| 1 | November 2026 | v2.1 | v1.2 | First release. 205 factors placed; 36 in two faces. Status: Open for comment. |
 
 ## What changed in v2.0
 
@@ -132,10 +163,10 @@ Not with what is here. Position, order, and ID number carry no meaning about lik
 Yes. The workbook's Taxonomy sheet and the CSV carry three ways to slice the map, and they combine:
 
 - **By owner:** Domain and Category (columns B and C). This is how the poster is laid out, so each function can find its own column.
-- **By role in a risk scenario:** Condition type (column J). Filter for *cause* to find where scenarios start, *safeguard gap* when mapping controls or checking coverage, and *amplifier* for what makes losses more frequent or more severe. A few factors are *outcome*. See [How the map is organized](#how-the-map-is-organized).
+- **By role in a risk scenario:** Condition type (column J). Filter for *cause* to find where scenarios start, *safeguard gap* when mapping controls or checking coverage, and *amplifier* for what makes losses more frequent or more severe. A few factors are *outcome*, and four carry both *cause* and *safeguard gap*. See [How the map is organized](#how-the-map-is-organized).
 - **By source:** Source(s) (column F), for example every factor citing the EU AI Act or OWASP.
 
-Combined, they answer questions like *"which safeguard gaps does Operations own?"* or *"which causes come from the OWASP Top 10?"* The map does not sort by likelihood or severity (see *Can I score or rank these?*). Relationships between factors are on the workbook's Cross-references sheet.
+Combined, they answer questions like *"which safeguard gaps does Operations own?"* or *"which causes come from the OWASP Top 10?"* The map does not sort by likelihood or severity (see *Can I score or rank these?*). Relationships between factors are on the workbook's Cross-references sheet and, in machine-readable form, in `AI-Risk-Map.json`.
 
 **Where do the factors come from?**
 Every factor carries a source citation in the workbook and markdown. Sources span regulation (EU AI Act, Colorado), standards (NIST AI RMF, GenAI Profile, and AI 100-2, ISO/IEC 42001), threat frameworks (OWASP LLM / Agentic / AISVS, MITRE ATLAS, Databricks DASF), internal-control and financial-services guidance (COSO, CRI FS-AI-RMF, MAS, SR 11-7), practitioner frameworks (CSA AICM, Databricks AI Governance Framework), and academic taxonomies (MIT AI Risk Repository, International AI Safety Report, Weidinger, Shelby). Every one of the 204 factors is traceable. 75 carry the author's own framing of a risk a cited framework names (`…; Original`). 36 are named by no reviewed framework at all; those cluster in Strategy and Workforce, which is where the map does work the technical frameworks do not.
@@ -144,7 +175,7 @@ Every factor carries a source citation in the workbook and markdown. Sources spa
 Crosswalked against 22 frameworks, regulations, and taxonomies; stress-tested through persona review and named-expert critique; reviewed by external practitioners; used as the validation standard for a separate 264-control catalog built on the CSA AI Controls Matrix; and put through a full citation audit before release in which every source locator was verified against the primary text and every `Original` tag was checked against every cited framework. The workbook's provenance appendix shows how many factors each source anchors.
 
 **How do I cite it?**
-> Wheeler, E. (2026). *AI Risk Map* v2.0. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map/releases/tag/v2.0
+> Wheeler, E. (2026). *AI Risk Map* v2.1. Licensed CC BY-SA 4.0. https://github.com/wheels344i-gte/ai-risk-map/releases/tag/v2.1
 
 Cite individual factors by ID: `AIRM-042`. Identifiers are permanent; factor wording can change between versions, so name the version when the exact wording matters.
 
@@ -154,7 +185,7 @@ File names carry no version number, so links don't break when a new version ship
 | You want | Link pattern |
 |---|---|
 | Always the current version (websites, slides, bookmarks) | `https://github.com/wheels344i-gte/ai-risk-map/blob/main/AI-Risk-Map.pdf` |
-| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/blob/v2.0/AI-Risk-Map.pdf` |
+| One specific version, unchanging (citations, audits) | `https://github.com/wheels344i-gte/ai-risk-map/blob/v2.1/AI-Risk-Map.pdf` |
 | The file itself, for tools, scripts, AI assistants, or embedding an image | Replace `blob` with `raw` in either link above |
 
 Replace `AI-Risk-Map.pdf` with any file in the table above. `blob` links open the file on GitHub with a preview and a download button; `raw` links return the file alone. To see what changed between versions, open a file's **History** on GitHub. The CSV and markdown show line-by-line differences, and the PNG and SVG can be compared side by side.

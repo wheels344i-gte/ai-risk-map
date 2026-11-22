@@ -1,0 +1,2030 @@
+{
+ "title": "AI Risk Map: Four Faces mapping",
+ "revision": 1,
+ "date": "November 2026",
+ "status": "Open for comment",
+ "map_version": "2.1",
+ "four_faces_version": "1.2",
+ "license": "CC BY-SA 4.0",
+ "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "copyright": "© 2026 Evan Wheeler",
+ "note": "Each active AI Risk Map factor placed in one or two of the Four Faces of AI Risk. The Attack face holds no factors: the map covers risk from an organization's own adoption of AI.",
+ "face_key": [
+  {
+   "n": 1,
+   "tag": "Strategy"
+  },
+  {
+   "n": 2,
+   "tag": "Execution"
+  },
+  {
+   "n": 3,
+   "tag": "Subversion"
+  },
+  {
+   "n": 4,
+   "tag": "Attack"
+  }
+ ],
+ "faces": [
+  {
+   "id": "AIRM-001",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-002",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-003",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-004",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-005",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-006",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-007",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-008",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-009",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-010",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-011",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-012",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-013",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-014",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-015",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-016",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-017",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-018",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-019",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-193",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-194",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-026",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-020",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-021",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-022",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-204",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-023",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-024",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-025",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-027",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-028",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-029",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-030",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-031",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-032",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-033",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-034",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-035",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-036",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-037",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-038",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-039",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-040",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-041",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-042",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-043",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-044",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-045",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-046",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-047",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-048",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-049",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-050",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-051",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-052",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-053",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-054",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-055",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-056",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-057",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-058",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-059",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-060",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-061",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-062",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-063",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-064",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-065",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-066",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-067",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-068",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-069",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-070",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-071",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-072",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-073",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-074",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-197",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-205",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-075",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-076",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-077",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-078",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-079",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-080",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-081",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-082",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-083",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-084",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-085",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-196",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-086",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-087",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-088",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-089",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-090",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-091",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-092",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-199",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-202",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-093",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-094",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-095",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-192",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-096",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-097",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-098",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-099",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-100",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-101",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-102",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-103",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-104",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-105",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-106",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-107",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-108",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-109",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-110",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-111",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-112",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-113",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-114",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-115",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-116",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-117",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-118",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-201",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-119",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-120",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-121",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-122",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-123",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-124",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-125",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-126",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-127",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-128",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-129",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-200",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-130",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-131",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-132",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-133",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-134",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-135",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-198",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-136",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-137",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-138",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-139",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-140",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-141",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-142",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-188",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-143",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-144",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-145",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-146",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-147",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-148",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-149",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-150",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-189",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-191",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-151",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-152",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-153",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-195",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-154",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-155",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-156",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-157",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-158",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-159",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-160",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-161",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-162",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-163",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-164",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-165",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-166",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    },
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-167",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-168",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-169",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-170",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-172",
+   "faces": [
+    {
+     "n": 1,
+     "tag": "Strategy"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-173",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-174",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-175",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-176",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-206",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-203",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-177",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-178",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-179",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-180",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-181",
+   "faces": [
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-182",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-183",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-184",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-185",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-186",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    },
+    {
+     "n": 3,
+     "tag": "Subversion"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-187",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  },
+  {
+   "id": "AIRM-190",
+   "faces": [
+    {
+     "n": 2,
+     "tag": "Execution"
+    }
+   ]
+  }
+ ],
+ "revisions": [
+  {
+   "revision": 1,
+   "date": "November 2026",
+   "map_version": "2.1",
+   "four_faces_version": "1.2",
+   "changes": []
+  }
+ ]
+}
